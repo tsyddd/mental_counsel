@@ -93,12 +93,13 @@ the video.
 diagnostic inspired by [CogniFold's CogEval-Bench](https://arxiv.org/abs/2605.13438).
 Five positive follow-up themes and five negative controls are each perturbed
 five times. The gold label is fixed before GPT-6-SOL paraphrases first-person
-events. Each ten-turn case spans two five-turn sessions and mixes three
-relevant experiences with unrelated turns. The full arm calls this project's
+events. Forty ten-turn cases span two five-turn sessions; ten thirty-turn cases
+remain in one session and are processed in six five-turn batches. Each case
+mixes three relevant experiences with unrelated turns. The full arm calls this project's
 memory extractor and event-to-concept-to-intent folding code. The ablation
 uses the same model with only the last six user turns, matching the gateway's
 recent-history window. The script reports binary intent detection accuracy,
-label accuracy, precision, recall, F1, and per-case mistakes. It does not
+label accuracy, precision, recall, F1, per-scenario results, and per-case mistakes. It does not
 claim to be the official CogEval-Bench or a clinical evaluation.
 
 The browser can create multiple sessions for one anonymous user and reopen their
