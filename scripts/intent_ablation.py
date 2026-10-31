@@ -131,7 +131,7 @@ def store_batch(user, turns, batch_no):
             db.execute("""INSERT INTO messages(id,session_id,role,content,created_at)
                 VALUES (%s,%s,'assistant','我在听，请继续。',%s)""",
                 (last,sid,start+timedelta(minutes=i*2+1)))
-    extract_memory({"user_id":user,"session_id":str(sid),"batch_no":batch_no,
+    extract_memory({"job_id":str(uuid.uuid4()),"user_id":user,"session_id":str(sid),"batch_no":batch_no,
                     "first_message_id":str(first),"last_message_id":str(last)})
 
 
