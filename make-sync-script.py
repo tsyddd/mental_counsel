@@ -11,6 +11,7 @@ paths = [
     "LONG_DIALOGUE_EVAL_REPORT.md",
     "scripts/roleplay_memory_demo.py", "scripts/long_dialogue_eval.py",
     "scripts/summarize_long_eval.py", "scripts/eval_cross_session.py",
+    "scripts/intent_ablation.py",
     "scripts/validate_intent_merge.py",
     "scripts/validate_pinned_preference.py",
 ]
@@ -32,3 +33,4 @@ for name in ["main.go", "auth.go", "experience.go"]:
               f"base64 -d /tmp/interview-{name}.b64 > /home/dashan/interview-platform-build/go/{name}",
               f"rm -f /tmp/interview-{name}.b64"]
 (root / "sync-dashan.sh").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
