@@ -87,6 +87,20 @@ routes, memory counts, and front/back-end checks in `checkpoints/long-dialogue-e
 The roleplay is synthetic; it is not a transcript or claim about the person in
 the video.
 
+## Intent ablation
+
+`scripts/intent_ablation.py` runs a project-specific 50-case synthetic
+diagnostic inspired by [CogniFold's CogEval-Bench](https://arxiv.org/abs/2605.13438).
+Five positive follow-up themes and five negative controls are each perturbed
+five times. The gold label is fixed before GPT-6-SOL paraphrases first-person
+events. Each ten-turn case spans two five-turn sessions and mixes three
+relevant experiences with unrelated turns. The full arm calls this project's
+memory extractor and event-to-concept-to-intent folding code. The ablation
+uses the same model with only the last six user turns, matching the gateway's
+recent-history window. The script reports binary intent detection accuracy,
+label accuracy, precision, recall, F1, and per-case mistakes. It does not
+claim to be the official CogEval-Bench or a clinical evaluation.
+
 The browser can create multiple sessions for one anonymous user and reopen their
 history. Each counselor response displays the memory route and rewritten query;
 the fifth user turn also displays the queued memory consolidation job.
