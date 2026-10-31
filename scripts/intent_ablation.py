@@ -2,19 +2,19 @@
 
 Gold follow-up needs are defined before GPT paraphrasing. Both arms use
 gpt-6-sol. The full arm invokes the deployed five-turn memory extractor and
-event->concept->intent fold; the ablation sees only the last four user turns.
+event->concept->intent fold; the ablation sees only the last six user turns,
+matching the gateway's 12-message recent-history window.
 This is a project-specific diagnostic set, not the official CogEval-Bench.
 """
 import argparse
 import json
-import math
 import os
 import uuid
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from relation_videoarm.api import APIClient, parse_json_object
-from platform_app.core import conn, embed
+from platform_app.core import conn
 from platform_app.worker import extract_memory
 
 OUTPUT = Path(os.getenv("INTENT_EVAL_OUTPUT", "/checkpoints/intent-ablation-50.json"))
@@ -149,23 +149,26 @@ def graph_prediction(user):
     return {"has_intent":True,"label":None,"raw_intents":raw,"events":events,"concepts":concepts}
 
 
-def nearest_label(text, canonical):
+def classify_label(client, text):
     if not text: return None
-    v = embed(["passage: " + text])[0]
-    def cosine(a,b):
-        return sum(x*y for x,y in zip(a,b)) / max(1e-9, math.sqrt(sum(x*x for x in a))*math.sqrt(sum(x*x for x in b)))
-    return max(canonical, key=lambda key: cosine(v,canonical[key]))
+    prompt=("将下列待确认意图映射到最相近的一个预定义方向；若没有对应项，返回null。"
+            "只依据意图文字，不要添加事实。返回JSON {label:string|null}。\n"
+            "方向: "+json.dumps(LABELS,ensure_ascii=False)+"\n意图: "+text)
+    data=parse_json_object(model_text(client.chat([
+        {"role":"system","content":"你是标签映射器，只输出JSON。"},
+        {"role":"user","content":prompt}],purpose="intent_label_mapping",max_tokens=150)))
+    return data.get("label") if data.get("label") in LABELS else None
 
 
 def baseline_prediction(client, turns):
-    prompt = ("你只能看最近4条用户发言，判断是否有由多个不同情景支持、尚待确认的跟进意图。"
+    prompt = ("你只能看最近6条用户发言，判断是否有由多个不同情景支持、尚待确认的跟进意图。"
               "一次性提及、已解决、明确拒绝和第三方经历都不算。证据不足返回false。"
               "若有，从选项中选一个；不要猜测诊断。返回JSON {has_intent:boolean,label:string|null}。"
               "选项: " + json.dumps(LABELS, ensure_ascii=False) + "\n最近发言: "
-              + json.dumps(turns[-4:], ensure_ascii=False))
+              + json.dumps(turns[-6:], ensure_ascii=False))
     data = parse_json_object(model_text(client.chat([
         {"role":"system","content":"你是严格的意图识别器，只输出JSON。"},
-        {"role":"user","content":prompt}], purpose="intent_last_four_baseline", max_tokens=250)))
+        {"role":"user","content":prompt}], purpose="intent_recent_history_baseline", max_tokens=250)))
     label = data.get("label") if data.get("label") in LABELS else None
     has_intent = data.get("has_intent") is True and label is not None
     return {"has_intent":has_intent,"label":label}
@@ -197,7 +200,6 @@ def main():
         saved=json.loads(OUTPUT.read_text(encoding="utf-8"))
         previous={item["id"]:item for item in saved.get("cases",[])}
         cases=[previous.get(item["id"],item) for item in cases]
-    canonical={key:embed(["passage: " + value])[0] for key,value in LABELS.items()}
     for index,case in enumerate(cases[:args.limit],1):
         if "full" in case and "baseline" in case: continue
         if "turns" not in case:
@@ -207,7 +209,7 @@ def main():
         store_batch(user,case["turns"][5:],2)
         full=graph_prediction(user)
         if full["has_intent"]:
-            full["label"]=nearest_label(full["raw_intents"][0]["label"],canonical)
+            full["label"]=classify_label(client,full["raw_intents"][0]["label"])
         case["full"]=full
         case["baseline"]=baseline_prediction(client,case["turns"])
         result={"source":"CogEval-inspired synthetic counseling set; not official CogEval-Bench",
