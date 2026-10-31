@@ -248,7 +248,7 @@ def surface_intent(user_id, concept_id, candidate_hint=""):
             return
         events = db.execute("""SELECT id,content FROM memories WHERE user_id=%s
             AND id=ANY(%s::uuid[]) AND layer='episodic' AND status='active'
-            ORDER BY created_at,id LIMIT 6""", (user_id, concept["memory_ids"])).fetchall()
+            ORDER BY created_at,id LIMIT 30""", (user_id, concept["memory_ids"])).fetchall()
     if len(events) < 3:
         return
     evidence = [{"id":str(item["id"]),"text":item["content"]} for item in events]
