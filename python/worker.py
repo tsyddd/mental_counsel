@@ -228,23 +228,59 @@ def fold_concept(user_id, label, memory_id, intent_label, event_text):
                   strength=LEAST(3.0,concepts.strength+0.2),last_seen_at=now()
                 RETURNING id,support_count""",
                 (uuid.uuid4(), user_id, label, event_terms, label_vector, memory_id, memory_id)).fetchone()
-        if row["support_count"] >= 3 and intent_label:
-            existing = db.execute("""SELECT id,label,support_count FROM intents
-                WHERE user_id=%s AND %s::uuid=ANY(concept_ids) AND status='tentative'
-                ORDER BY support_count DESC, created_at LIMIT 1""",
-                (user_id, row["id"])).fetchone()
-            if existing:
-                db.execute("""UPDATE intents SET support_count=GREATEST(support_count,%s),
-                    updated_at=now() WHERE id=%s""", (row["support_count"], existing["id"]))
-                db.execute("""UPDATE intents SET status='superseded',updated_at=now()
-                    WHERE user_id=%s AND %s::uuid=ANY(concept_ids)
-                    AND status='tentative' AND id<>%s""", (user_id, row["id"], existing["id"]))
-            else:
-                db.execute("""INSERT INTO intents(id,user_id,label,concept_ids,support_count)
-                    VALUES (%s,%s,%s,ARRAY[%s::uuid],%s)
-                    ON CONFLICT(user_id,label) DO UPDATE SET support_count=excluded.support_count,
-                    updated_at=now()""",
-                    (uuid.uuid4(), user_id, intent_label, row["id"], row["support_count"]))
+    if row["support_count"] >= 3 and row["support_count"] % 3 == 0:
+        surface_intent(user_id, row["id"], intent_label)
+
+
+def surface_intent(user_id, concept_id, candidate_hint=""):
+    """Judge intent from several grounded episodes after a concept reaches density."""
+    with conn() as db:
+        concept = db.execute("""SELECT label,memory_ids,support_count FROM concepts
+            WHERE user_id=%s AND id=%s""", (user_id, concept_id)).fetchone()
+        if not concept or concept["support_count"] < 3:
+            return
+        existing = db.execute("""SELECT id FROM intents WHERE user_id=%s
+            AND %s::uuid=ANY(concept_ids) AND status IN ('tentative','confirmed') LIMIT 1""",
+            (user_id, concept_id)).fetchone()
+        if existing:
+            db.execute("UPDATE intents SET support_count=GREATEST(support_count,%s) WHERE id=%s",
+                       (concept["support_count"], existing["id"]))
+            return
+        events = db.execute("""SELECT id,content FROM memories WHERE user_id=%s
+            AND id=ANY(%s::uuid[]) AND layer='episodic' AND status='active'
+            ORDER BY created_at,id LIMIT 6""", (user_id, concept["memory_ids"])).fetchall()
+    if len(events) < 3:
+        return
+    evidence = [{"id":str(item["id"]),"text":item["content"]} for item in events]
+    try:
+        proposal = llm_json(
+            "你负责从同一个人的多条情景证据中识别可供咨询师询问的近期跟进意图。"
+            "仅当至少两条不同经历共同显示尚未解决的需求、正在尝试改变的方向或明确目标时，"
+            "才提出一个简短、具体、非诊断性的 tentative_intent。"
+            "已经解决、明确拒绝、普通重复日常、第三方经历或证据不足时返回 null。"
+            "候选提示只是线索，不是事实。返回 JSON："
+            "{tentative_intent:string|null,support_ids:[支持该判断的事件ID]}。",
+            {"concept":concept["label"],"events":evidence,"candidate_hint":candidate_hint},
+            "intent_emergence", 500)
+    except Exception as exc:
+        print(f"intent emergence skipped: {type(exc).__name__}", flush=True)
+        return
+    intent = str(proposal.get("tentative_intent") or "").strip()
+    if intent.lower() in {"none", "null", "n/a", "无", "暂无"}:
+        return
+    valid_ids = {item["id"] for item in evidence}
+    support_ids = proposal.get("support_ids") or []
+    if not intent or not isinstance(support_ids,list) or len(valid_ids & set(map(str,support_ids))) < 2:
+        return
+    with conn() as db:
+        db.execute("""INSERT INTO intents(id,user_id,label,concept_ids,support_count)
+            VALUES (%s,%s,%s,ARRAY[%s::uuid],%s)
+            ON CONFLICT(user_id,label) DO UPDATE SET
+            concept_ids=CASE WHEN %s::uuid=ANY(intents.concept_ids) THEN intents.concept_ids
+              ELSE array_append(intents.concept_ids,%s::uuid) END,
+            support_count=GREATEST(intents.support_count,excluded.support_count),updated_at=now()""",
+            (uuid.uuid4(), user_id, intent, concept_id, concept["support_count"],
+             concept_id, concept_id))
 
 
 def extract_memory(job):
