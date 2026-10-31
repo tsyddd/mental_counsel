@@ -27,7 +27,7 @@ LABELS = {
 }
 
 # Each positive schema contains three distinct episodes supporting one need.
-# The seven remaining turns are distractors, including cross-topic details.
+# Four variants per theme span two sessions; one variant is a 30-turn session.
 POSITIVE = {
     "ask_help": [
         "周一数学题卡住，我想问老师却一直没开口，回家才自己查资料。",
@@ -72,23 +72,39 @@ DISTRACTORS = [
     "放学路上看到新开的文具店。", "体育课练了跳绳。",
     "周末和家人一起整理了书架。", "学校通知下周有运动会。",
     "我最近在看一本关于星空的书。",
+    "美术课上我们练习了水彩。", "教室窗边新放了一盆绿植。",
+    "周末我和家人逛了附近的公园。", "老师分享了一个科学实验视频。",
+    "我在校门口看到新开的书店。", "体育课大家练习了接力跑。",
+    "今天的午餐有土豆和青菜。", "同学推荐了一本地理杂志。",
+    "班级黑板报换了新的主题。", "我把旧笔记本整理到了抽屉。",
+    "英语课上我们读了一篇短文。", "回家路上看见路边的银杏树。",
+    "周末家里收拾了阳台的花盆。", "学校广播介绍了下周的活动。",
+    "我借了一本介绍海洋的图书。", "今天轮到我擦教室的黑板。",
+    "课间有人讨论最近的电影。", "我在文具店买了新的橡皮。",
+    "家里晚饭做了番茄汤。", "我们班今天换了座位表。",
+    "科学课展示了植物生长的图片。",
 ]
-POSITIONS = (0, 3, 7)
+SHORT_POSITIONS = (0, 3, 7)
+LONG_POSITIONS = (0, 13, 24)
 
 
 def seed_cases():
     cases = []
     for label, episodes in list(POSITIVE.items()) + list(NEGATIVE.items()):
         for variant in range(5):
+            mode = "single_30_turn" if variant == 4 else "cross_session"
+            positions = LONG_POSITIONS if mode == "single_30_turn" else SHORT_POSITIONS
+            turn_count = 30 if mode == "single_30_turn" else 10
             turns = []
-            for position in range(10):
-                if position in POSITIONS:
-                    text = episodes[POSITIONS.index(position)]
+            for position in range(turn_count):
+                if position in positions:
+                    text = episodes[positions.index(position)]
                 else:
                     text = DISTRACTORS[(position + variant * 2) % len(DISTRACTORS)]
                 turns.append(text)
             cases.append({"id": f"{label}-{variant+1}", "gold": label if label in POSITIVE else None,
-                          "gold_evidence_turns": [x+1 for x in POSITIONS] if label in POSITIVE else [],
+                          "mode": mode, "turn_count": turn_count,
+                          "gold_evidence_turns": [x+1 for x in positions] if label in POSITIVE else [],
                           "draft_turns": turns})
     return cases
 
@@ -101,27 +117,28 @@ def model_text(message):
 
 
 def paraphrase(client, case):
-    prompt = ("将下列10条虚构中学生第一人称话语改写成自然中文，保持每条事实、事件主体、"
+    prompt = (f"将下列{case['turn_count']}条虚构中学生第一人称话语改写成自然中文，保持每条事实、事件主体、"
               "已解决/拒绝状态与顺序；不要新增目标、心理诊断或意图。"
-              "返回JSON对象 {turns:[恰好10个字符串]}。\n"
+              f"返回JSON对象 {{turns:[恰好{case['turn_count']}个字符串]}}。\n"
               + json.dumps(case["draft_turns"], ensure_ascii=False))
     try:
         data = parse_json_object(model_text(client.chat([
             {"role":"system","content":"你只做忠实改写，严格输出JSON。"},
-            {"role":"user","content":prompt}], purpose="intent_case_generation", max_tokens=1700)))
+            {"role":"user","content":prompt}], purpose="intent_case_generation", max_tokens=4500)))
         turns = data.get("turns")
-        if isinstance(turns, list) and len(turns) == 10 and all(isinstance(x,str) and x.strip() for x in turns):
+        if isinstance(turns, list) and len(turns) == case["turn_count"] and all(isinstance(x,str) and x.strip() for x in turns):
             return turns, True
     except Exception:
         pass
     return case["draft_turns"], False
 
 
-def store_batch(user, turns, batch_no):
-    sid, first, last = uuid.uuid4(), None, None
-    start = datetime(2026, 8, 1, tzinfo=timezone.utc) + timedelta(days=batch_no * 10)
+def store_batch(user, turns, batch_no, session_id=None):
+    sid, first, last = session_id or uuid.uuid4(), None, None
+    start = datetime(2026, 8, 1, tzinfo=timezone.utc) + timedelta(minutes=batch_no * 20)
     with conn() as db:
-        db.execute("INSERT INTO sessions(id,user_id,agent_mode) VALUES (%s,%s,'counselor')", (sid,user))
+        if session_id is None:
+            db.execute("INSERT INTO sessions(id,user_id,agent_mode) VALUES (%s,%s,'counselor')", (sid,user))
         for i, turn in enumerate(turns):
             mid = uuid.uuid4()
             if first is None: first = mid
@@ -133,6 +150,7 @@ def store_batch(user, turns, batch_no):
                 (last,sid,start+timedelta(minutes=i*2+1)))
     extract_memory({"job_id":str(uuid.uuid4()),"user_id":user,"session_id":str(sid),"batch_no":batch_no,
                     "first_message_id":str(first),"last_message_id":str(last)})
+    return sid
 
 
 def graph_prediction(user):
@@ -206,8 +224,14 @@ def main():
         if "turns" not in case:
             case["turns"],case["gpt_paraphrase_valid"]=paraphrase(client,case)
         user="intent-eval-"+case["id"]+"-"+uuid.uuid4().hex[:8]
-        store_batch(user,case["turns"][:5],1)
-        store_batch(user,case["turns"][5:],2)
+        if case["mode"] == "single_30_turn":
+            session_id = None
+            for batch_no in range(6):
+                session_id = store_batch(user, case["turns"][batch_no*5:(batch_no+1)*5],
+                                         batch_no+1, session_id)
+        else:
+            store_batch(user,case["turns"][:5],1)
+            store_batch(user,case["turns"][5:],2)
         full=graph_prediction(user)
         if full["has_intent"]:
             full["label"]=classify_label(client,full["raw_intents"][0]["label"])
@@ -219,7 +243,7 @@ def main():
                 "full":metrics(cases,"full"),"baseline":metrics(cases,"baseline"),"cases":cases}
         OUTPUT.parent.mkdir(parents=True,exist_ok=True)
         OUTPUT.write_text(json.dumps(result,ensure_ascii=False,indent=2,default=str),encoding="utf-8")
-        print(json.dumps({"case":index,"id":case["id"],"gold":case["gold"],
+        print(json.dumps({"case":index,"id":case["id"],"mode":case["mode"],"gold":case["gold"],
                           "full":full["label"],"baseline":case["baseline"]["label"],
                           "done":result["n_completed"]},ensure_ascii=False),flush=True)
     print(json.dumps({"full":metrics(cases,"full"),"baseline":metrics(cases,"baseline")},ensure_ascii=False))
