@@ -320,10 +320,15 @@ def extract_memory(job):
             source_id, confidence, {"session_id": job["session_id"],
                                     "batch_no": job["batch_no"]}, layer="episodic")
         ids.append(mid)
-        concept = str(event.get("concept", "")).strip()
+        concept = str(event.get("concept") or "").strip()
+        if concept.lower() in {"none", "null", "n/a", "无", "暂无"}:
+            concept = ""
         if created and concept:
+            intent_label = str(event.get("tentative_intent") or "").strip()
+            if intent_label.lower() in {"none", "null", "n/a", "无", "暂无"}:
+                intent_label = ""
             fold_concept(job["user_id"], concept, mid,
-                         str(event.get("tentative_intent", "")).strip(), content)
+                         intent_label, content)
     for fact in payload.get("stable_memories", [])[:5]:
         if not isinstance(fact, dict):
             continue
