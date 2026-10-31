@@ -37,14 +37,20 @@ def model_text(client, prompt, purpose):
 def chat(http, session, text):
     r=http.post(f"{GATEWAY}/api/sessions/{session}/messages",json={"text":text},stream=True,timeout=(20,240))
     r.raise_for_status()
-    event=None;parts=[];done={}
-    for line in r.iter_lines(decode_unicode=True):
-        if not line:continue
-        if line.startswith("event: "):event=line[7:]
-        elif line.startswith("data: "):
-            data=json.loads(line[6:])
-            if event=="token":parts.append(data.get("text",""))
-            elif event=="done":done=data
+    parts=[];done={};buffer=b""
+    for chunk in r.iter_content(chunk_size=4096):
+        buffer+=chunk.replace(b"\r\n",b"\n")
+        while b"\n\n" in buffer:
+            frame,buffer=buffer.split(b"\n\n",1)
+            fields={}
+            for line in frame.split(b"\n"):
+                if b": " in line:
+                    key,value=line.split(b": ",1)
+                    fields[key]=value
+            if b"data" not in fields:continue
+            data=json.loads(fields[b"data"].decode("utf-8"))
+            if fields.get(b"event")==b"token":parts.append(data.get("text",""))
+            elif fields.get(b"event")==b"done":done=data
     return "".join(parts),done
 
 def wait_job(job_id):
@@ -95,3 +101,4 @@ def main():
     print(json.dumps({"output":str(OUTPUT),"summary":record["summary"],"judge":record["judge"]},ensure_ascii=False),flush=True)
 
 if __name__=="__main__":main()
+
