@@ -191,6 +191,7 @@ def metrics(cases, key):
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--start", type=int, default=0)
     parser.add_argument("--limit", type=int, default=50)
     args = parser.parse_args()
     client = APIClient()
@@ -200,7 +201,7 @@ def main():
         saved=json.loads(OUTPUT.read_text(encoding="utf-8"))
         previous={item["id"]:item for item in saved.get("cases",[])}
         cases=[previous.get(item["id"],item) for item in cases]
-    for index,case in enumerate(cases[:args.limit],1):
+    for index,case in enumerate(cases[args.start:args.start+args.limit],args.start+1):
         if "full" in case and "baseline" in case: continue
         if "turns" not in case:
             case["turns"],case["gpt_paraphrase_valid"]=paraphrase(client,case)
