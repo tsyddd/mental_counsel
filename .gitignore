@@ -1,0 +1,11 @@
+.env
+media/
+checkpoints/
+__pycache__/
+*.pyc
+.case-venv/
+gateway
+sync-dashan.sh
+user-data/
+*.log
+
