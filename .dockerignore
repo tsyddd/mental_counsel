@@ -1,0 +1,8 @@
+.env
+media
+checkpoints
+.case-venv
+gateway
+*.tar.gz
+__pycache__
+*.pyc

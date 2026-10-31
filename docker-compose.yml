@@ -1,0 +1,76 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: interview
+      POSTGRES_USER: interview
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ${PGDATA_HOST_PATH:-/home/dashan/interview-platform-pgdata}:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U interview -d interview"]
+      interval: 5s
+      retries: 20
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redisdata:/data
+  media-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    command: ["uvicorn", "platform_app.api:app", "--host", "0.0.0.0", "--port", "8000"]
+    env_file: .env
+    environment: &common
+      DATABASE_URL: postgresql://interview:${POSTGRES_PASSWORD}@postgres:5432/interview
+      REDIS_URL: redis://redis:6379/0
+      MEDIA_ROOT: /media
+      CHECKPOINT_ROOT: /checkpoints
+    volumes:
+      - ./media:/media:ro
+      - ./checkpoints:/checkpoints
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    command: ["python", "-m", "platform_app.worker"]
+    env_file: .env
+    environment: *common
+    volumes:
+      - ./media:/media:ro
+      - ./checkpoints:/checkpoints
+      - modelcache:/root/.cache
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile.go
+    env_file: .env
+    environment:
+      MEDIA_API_URL: http://media-api:8000
+      USER_DATA_ROOT: /data/users
+      DATABASE_URL: postgres://interview:${POSTGRES_PASSWORD}@postgres:5432/interview?sslmode=disable
+      REDIS_URL: redis:6379
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ${USER_DATA_HOST_PATH:-/home/dashan/interview-platform-userdata}:/data/users
+    depends_on:
+      postgres:
+        condition: service_healthy
+      media-api:
+        condition: service_started
+volumes:
+  redisdata:
+  modelcache:

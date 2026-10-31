@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>心序 · 跨会话咨询记忆</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="auth" class="auth-screen">
+    <div class="auth-art"><div class="orbit"><span></span><span></span><span></span></div><div class="brand-mark">心<span>序</span></div><h1>让每次对话<br>都能接续理解。</h1><p>从情景事件到意图线索，以可追溯的记忆支持持续交流。</p><div class="art-caption">CONVERSATION · MEMORY · EVIDENCE</div></div>
+    <div class="auth-panel"><div class="auth-card"><div class="eyebrow">WELCOME TO XINXU</div><h2 id="auth-title">欢迎回来</h2><p>登录后查看属于你的会话和长期记忆。</p><label id="name-field" hidden>显示名称<input id="display-name" autocomplete="name" placeholder="怎么称呼你"></label><label>邮箱<input id="email" type="email" autocomplete="username" placeholder="name@example.com"></label><label>密码<input id="password" type="password" autocomplete="current-password" placeholder="至少 10 位"></label><div id="auth-error" class="error"></div><button id="auth-submit" class="primary full">登录</button><button id="auth-switch" class="text-button full">还没有账户？创建账户</button><div class="auth-foot">演示项目 · 对话内容仅用于当前账户的记忆实验</div></div></div>
+  </div>
+  <div id="app" class="app" hidden>
+    <aside class="sidebar">
+      <div class="side-brand"><div class="logo">心</div><div><b>心序</b><small>对话记忆工作台</small></div></div>
+      <button id="new-session" class="new-button"><span>＋</span> 新建对话</button>
+      <div class="side-label">我的会话 <button id="refresh-sessions" title="刷新">↻</button></div>
+      <div id="session-list" class="session-list"></div>
+      <div class="side-bottom"><button id="load-demo" class="demo-button">✦ 载入跨会话案例</button><div class="account"><div id="avatar" class="avatar">我</div><div class="account-text"><b id="account-name">用户</b><small id="account-email"></small></div><button id="logout" title="退出登录">↪</button></div></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div><div class="eyebrow">SUPPORTIVE CONVERSATION</div><h2 id="session-title">新的对话</h2></div><div class="top-actions"><span class="status-dot"></span><span>已连接</span><select id="mode"><option value="counselor">心理咨询师</option><option value="interviewer">访谈者</option></select></div></header>
+      <div id="messages" class="messages"><div class="welcome"><div class="welcome-icon">✧</div><h1>从这里开始，慢慢说。</h1><p>可以直接聊当下，也可以问我是否记得之前提过的事。相应的记忆证据与处理过程会显示在右侧。</p><div class="suggestions"><button data-prompt="你好，我想聊聊最近的学习压力。">聊聊最近</button><button data-prompt="你还记得我之前提过的那件事吗？">回顾过去</button><button data-prompt="我希望你一次只问我一个问题。">设置交流偏好</button></div></div></div>
+      <div class="composer-wrap"><div class="composer"><textarea id="message" rows="2" placeholder="输入想说的话…  Enter 发送，Shift+Enter 换行"></textarea><div class="composer-bottom"><div id="route-pill" class="route-pill">记忆按需检索</div><button id="send" aria-label="发送">↑</button></div></div><div class="composer-note">这是用于研究与演示的支持性对话工具，重要结论请结合人工复核。</div></div>
+    </main>
+    <aside class="inspector"><div class="inspector-head"><div><div class="eyebrow">CONTEXT & EVIDENCE</div><h3>对话侧记</h3></div><button id="refresh-panel" title="刷新">↻</button></div><div class="tabs"><button data-tab="graph" class="active">事件图谱</button><button data-tab="preferences">偏好记录</button><button data-tab="trace">运行轨迹</button></div><div id="panel" class="panel"></div></aside>
+  </div>
+  <div id="toast" class="toast" hidden></div>
+  <script src="/app.js" defer></script>
+</body></html>
