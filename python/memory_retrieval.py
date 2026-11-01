@@ -25,22 +25,25 @@ def route_turn(text, recent):
     text = text.strip()
     if re.fullmatch(r"(你好|您好|谢谢|好的|嗯|哦|再见|晚安|早安|hi|hello|thanks)[!！。,.，\s]*", text, re.I):
         return {"route": "none", "queries": []}
-    # A self-contained new experience can be answered from the live turns.
-    # Retrieval is reserved for explicit or elliptical references to history.
-    history_markers = ("上次", "之前", "以前", "还记得", "提过", "当时", "进展", "变化",
-                       "又", "还是", "那件事", "曾经", "画像", "我的偏好", "你了解我",
-                       "你记得", "继续那个")
-    if not any(marker in text for marker in history_markers):
-        return {"route": "none", "queries": []}
+    # A direct question about a previously stated preference must search even
+    # when it does not contain words such as "remember" or "previously".
+    if (re.search(r"(?:你知道|你记得|还记得|告诉我).{0,12}(?:我|本人).{0,8}(?:喜欢|偏好|不喜欢)", text)
+            or re.search(r"我(?:喜欢|偏好|不喜欢)(?:什么|哪门|哪种|哪些)", text)):
+        return {"route": "preference", "queries": [text]}
+    # Classify every substantive turn from its meaning and the recent dialogue.
+    # A historical reference is a useful signal, never a prerequisite for recall.
     fallback = "goal" if any(token in text for token in ("目标", "进展", "计划", "改善得", "之前希望")) else "event"
     if any(token in text for token in ("回答方式", "怎么称呼", "我的偏好", "你还记得我喜欢")):
         fallback = "preference"
     try:
         result = llm_json(
-            "你是记忆检索路由器，不回答用户问题。判断当前回复是否必须引用跨会话信息。"
+            "你是记忆检索路由器，不回答用户问题。判断当前回复能否受益于这个用户的历史信息。"
             "仅从 none、event、goal、preference、event_goal 中选择 route。"
-            "简单寒暄、当前消息已足够回答时选 none；具体旧经历选 event；已确认目标或进展选 goal；"
-            "需要同时核对旧经历和目标时选 event_goal；明确询问旧偏好时选 preference。"
+            "简单寒暄、纯事实问答或本轮信息已完整且无需个性化时选 none；"
+            "涉及用户经历、情绪起因、同类情况或含糊指代时选 event；"
+            "涉及用户持续目标或进展时选 goal；涉及喜欢的事物、交流方式或选择倾向时选 preference；"
+            "需要同时核对经历和目标时选 event_goal。"
+            "即使没有‘之前’之类的词，只要历史信息能改善回答，也应检索。"
             "将省略指代结合最近对话改写为最多两个独立检索短句，不添加对话中没有的事实。"
             "返回 {route:string,queries:[string]}。",
             {"current_message": text, "recent_turns": recent[-4:]},
