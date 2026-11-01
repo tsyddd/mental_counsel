@@ -12,6 +12,7 @@ paths = [
     "scripts/roleplay_memory_demo.py", "scripts/long_dialogue_eval.py",
     "scripts/summarize_long_eval.py", "scripts/eval_cross_session.py",
     "scripts/intent_ablation.py",
+    "scripts/merge_intent_ablation.py",
     "scripts/validate_intent_merge.py",
     "scripts/validate_pinned_preference.py",
 ]
