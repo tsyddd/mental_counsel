@@ -198,7 +198,9 @@ def metrics(cases, key):
     tn = sum(x["gold"] is None and not x[key]["has_intent"] for x in rows)
     fp = sum(x["gold"] is None and x[key]["has_intent"] for x in rows)
     fn = sum(x["gold"] is not None and not x[key]["has_intent"] for x in rows)
-    exact = sum((x["gold"] == x[key]["label"]) for x in rows)
+    exact = sum((x["gold"] is None and not x[key]["has_intent"]) or
+                (x["gold"] is not None and x[key]["has_intent"] and x["gold"] == x[key]["label"])
+                for x in rows)
     precision = tp / (tp+fp) if tp+fp else 0
     recall = tp / (tp+fn) if tp+fn else 0
     return {"n":len(rows),"binary_accuracy":(tp+tn)/len(rows) if rows else 0,
