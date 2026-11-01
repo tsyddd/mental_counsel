@@ -27,8 +27,13 @@ def route_turn(text, recent):
         return {"route": "none", "queries": []}
     # A direct question about a previously stated preference must search even
     # when it does not contain words such as "remember" or "previously".
-    if (re.search(r"(?:你知道|你记得|还记得|告诉我).{0,12}(?:我|本人).{0,8}(?:喜欢|偏好|不喜欢)", text)
-            or re.search(r"我(?:喜欢|偏好|不喜欢)(?:什么|哪门|哪种|哪些)", text)):
+    asks_preference = (re.search(r"(?:你知道|你记得|还记得|告诉我).{0,12}(?:我|本人).{0,8}(?:喜欢|偏好|不喜欢)", text)
+                       or re.search(r"我(?:喜欢|偏好|不喜欢)(?:什么|哪门|哪种|哪些)", text))
+    asks_history = bool(re.search(r"反复|经历|困扰|变化|发生过|那件事|谈到的事", text))
+    if asks_preference and asks_history:
+        queries = [part.strip() for part in re.split(r"[？?。；;]", text) if part.strip()]
+        return {"route": "event_preference", "queries": queries[:2]}
+    if asks_preference:
         return {"route": "preference", "queries": [text]}
     # Classify every substantive turn from its meaning and the recent dialogue.
     # A historical reference is a useful signal, never a prerequisite for recall.
@@ -38,18 +43,18 @@ def route_turn(text, recent):
     try:
         result = llm_json(
             "你是记忆检索路由器，不回答用户问题。判断当前回复能否受益于这个用户的历史信息。"
-            "仅从 none、event、goal、preference、event_goal 中选择 route。"
+            "仅从 none、event、goal、preference、event_goal、event_preference 中选择 route。"
             "简单寒暄、纯事实问答或本轮信息已完整且无需个性化时选 none；"
             "涉及用户经历、情绪起因、同类情况或含糊指代时选 event；"
             "涉及用户持续目标或进展时选 goal；涉及喜欢的事物、交流方式或选择倾向时选 preference；"
-            "需要同时核对经历和目标时选 event_goal。"
+            "需要同时核对经历和目标时选 event_goal；同时询问偏好与经历时选 event_preference。"
             "即使没有‘之前’之类的词，只要历史信息能改善回答，也应检索。"
             "将省略指代结合最近对话改写为最多两个独立检索短句，不添加对话中没有的事实。"
             "返回 {route:string,queries:[string]}。",
             {"current_message": text, "recent_turns": recent[-4:]},
             "memory_route", 500)
         route = result.get("route", "none")
-        if route not in {"none", "event", "goal", "preference", "event_goal"}:
+        if route not in {"none", "event", "goal", "preference", "event_goal", "event_preference"}:
             route = fallback
         queries = [str(item).strip()[:200] for item in result.get("queries", [])
                    if isinstance(item, str) and item.strip()][:2]
@@ -127,7 +132,8 @@ def retrieve_context(user_id, text, recent):
     queries = decision["queries"]
     kinds = ({"event": ["person_event"], "goal": ["goal"],
               "preference": ["communication_preference", "preference"],
-              "event_goal": ["person_event", "goal"]})[route]
+              "event_goal": ["person_event", "goal"],
+              "event_preference": ["person_event", "communication_preference", "preference"]})[route]
     with conn() as db:
         ranked = {}
         for query in queries:
@@ -138,7 +144,12 @@ def retrieve_context(user_id, text, recent):
         chosen = sorted(ranked.values(), key=lambda item: item["score"], reverse=True)
         # Relative and absolute gates prevent irrelevant top-k results entering the prompt.
         peak = chosen[0]["score"] if chosen else 0.0
-        chosen = [row for row in chosen if row["score"] >= max(0.48, peak - 0.10)][:5]
+        if route == "event_preference":
+            # Preserve both requested memory types; one strong preference must
+            # not crowd all event evidence out of a combined question.
+            chosen = [row for row in chosen if row["score"] >= 0.40]
+        else:
+            chosen = [row for row in chosen if row["score"] >= max(0.48, peak - 0.10)][:5]
         event_rows = [row for row in chosen if row["kind"] == "person_event"][:3]
         goal_rows = [row for row in chosen if row["kind"] == "goal"][:2]
         preference_rows = [row for row in chosen if row["kind"] in
