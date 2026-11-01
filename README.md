@@ -102,6 +102,12 @@ recent-history window. The script reports binary intent detection accuracy,
 label accuracy, precision, recall, F1, per-scenario results, and per-case mistakes. It does not
 claim to be the official CogEval-Bench or a clinical evaluation.
 
+The completed 50-case run achieved **46/50 (92%)** binary intent accuracy
+with the full method versus **25/50 (50%)** using recent history alone.
+Cross-session cases were 37/40 versus 20/40; single-session 30-turn cases
+were 9/10 versus 5/10. See [the ablation report](INTENT_ABLATION_REPORT.md)
+for the protocol, error cases, and interpretation limits.
+
 The browser can create multiple sessions for one anonymous user and reopen their
 history. Each counselor response displays the memory route and rewritten query;
 the fifth user turn also displays the queued memory consolidation job.
