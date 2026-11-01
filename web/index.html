@@ -19,12 +19,14 @@
       <div class="side-bottom"><button id="load-demo" class="demo-button">✦ 载入跨会话案例</button><div class="account"><div id="avatar" class="avatar">我</div><div class="account-text"><b id="account-name">用户</b><small id="account-email"></small></div><button id="logout" title="退出登录">↪</button></div></div>
     </aside>
     <main class="main">
-      <header class="topbar"><div><div class="eyebrow">SUPPORTIVE CONVERSATION</div><h2 id="session-title">新的对话</h2></div><div class="top-actions"><span class="status-dot"></span><span>已连接</span><select id="mode"><option value="counselor">心理咨询师</option><option value="interviewer">访谈者</option></select></div></header>
+      <header class="topbar"><div class="top-heading"><button id="toggle-left" class="sidebar-toggle" title="收起会话栏" aria-label="收起会话栏">☰</button><div><div class="eyebrow">SUPPORTIVE CONVERSATION</div><h2 id="session-title">新的对话</h2></div></div><div class="top-actions"><span class="status-dot"></span><span>已连接</span><select id="mode"><option value="counselor">心理咨询师</option><option value="interviewer">访谈者</option></select><button id="toggle-right" class="sidebar-toggle" title="收起侧记栏" aria-label="收起侧记栏">◫</button></div></header>
       <div id="messages" class="messages"><div class="welcome"><div class="welcome-icon">✧</div><h1>从这里开始，慢慢说。</h1><p>可以直接聊当下，也可以问我是否记得之前提过的事。相应的记忆证据与处理过程会显示在右侧。</p><div class="suggestions"><button data-prompt="你好，我想聊聊最近的学习压力。">聊聊最近</button><button data-prompt="你还记得我之前提过的那件事吗？">回顾过去</button><button data-prompt="我希望你一次只问我一个问题。">设置交流偏好</button></div></div></div>
       <div class="composer-wrap"><div class="composer"><textarea id="message" rows="2" placeholder="输入想说的话…  Enter 发送，Shift+Enter 换行"></textarea><div class="composer-bottom"><div id="route-pill" class="route-pill">记忆按需检索</div><button id="send" aria-label="发送">↑</button></div></div><div class="composer-note">这是用于研究与演示的支持性对话工具，重要结论请结合人工复核。</div></div>
     </main>
     <aside class="inspector"><div class="inspector-head"><div><div class="eyebrow">CONTEXT & EVIDENCE</div><h3>对话侧记</h3></div><button id="refresh-panel" title="刷新">↻</button></div><div class="tabs"><button data-tab="graph" class="active">事件图谱</button><button data-tab="preferences">偏好记录</button><button data-tab="trace">运行轨迹</button></div><div id="panel" class="panel"></div></aside>
   </div>
+  <div id="graph-modal" class="graph-modal" hidden><div class="graph-modal-card"><div class="graph-modal-head"><div><div class="eyebrow">MEMORY GRAPH</div><h2>事件图谱</h2></div><button id="close-graph" aria-label="关闭图谱">×</button></div><div id="graph-modal-canvas" class="graph-scroll expanded"></div><p id="graph-modal-detail" class="graph-detail"></p></div></div>
   <div id="toast" class="toast" hidden></div>
+  <script src="/graph.js" defer></script>
   <script src="/app.js" defer></script>
 </body></html>
