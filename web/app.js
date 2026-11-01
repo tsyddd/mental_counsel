@@ -22,10 +22,38 @@ async function createSession(){const data=await post('/api/sessions',{mode:$('mo
 async function send(){const text=$('message').value.trim();if(!text||state.busy)return;state.busy=true;$('send').disabled=true;try{if(!state.session)await createSession();appendMessage('user',text);$('message').value='';const answer=appendMessage('assistant','');$('route-pill').textContent='正在整理上下文…';const r=await fetch('/api/sessions/'+state.session+'/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text}),credentials:'same-origin'});if(!r.ok){let err=await r.json();throw Error(err.error||'对话失败')}const reader=r.body.getReader(),decoder=new TextDecoder();let buffer='',done=false;while(!done){const chunk=await reader.read();done=chunk.done;buffer+=decoder.decode(chunk.value||new Uint8Array(),{stream:!done});const parts=buffer.split('\n\n');buffer=parts.pop();for(const raw of parts){const event=raw.match(/^event: (.+)/m)?.[1],line=raw.match(/^data: (.+)/m)?.[1];if(!line)continue;let payload;try{payload=JSON.parse(line)}catch{continue}if(event==='token'){answer.firstChild?answer.firstChild.textContent+=payload.text:answer.textContent+=payload.text;$('messages').scrollTop=$('messages').scrollHeight}else if(event==='done'){$('route-pill').textContent='记忆路由：'+(payload.memory_route||'none')+(payload.memory_job_id?' · 记忆整理已提交':'')}}}await loadSessions();await renderPanel()}catch(e){toast(e.message);$('route-pill').textContent='请求失败，请查看运行轨迹'}finally{state.busy=false;$('send').disabled=false}}
 function card(kind,label,text,sub){const box=node('div','memory-card '+kind);box.append(node('span','tag',label));box.append(node('p','',text));if(sub)box.append(node('small','',sub));return box}
 function section(title,items){const panel=$('panel');panel.append(node('div','section-title',title));if(!items.length)panel.append(node('p','muted','还没有相关记录。'));else for(const item of items)panel.append(item)}
-async function graphPanel(){const p=$('panel');p.append(node('p','panel-intro','情景事件在不同会话间累积；相似事件形成主题概念，再产生可向用户确认的意图线索。'));if(!state.user)return;const data=await api('/api/users/'+encodeURIComponent(state.user.user_id)+'/memory-graph');section('情景事件 · EPISODIC',(data.memories||[]).filter(x=>x.layer==='episodic').slice(0,12).map(x=>card('event','事件',x.content,'证据来源：'+x.source_type)));section('重复主题 · CONCEPT',(data.concepts||[]).slice(0,8).map(x=>card('concept','主题',x.label,'支持事件 '+x.support_count+' 条')));section('跟进意图 · INTENT',(data.intents||[]).filter(x=>x.status!=='superseded').slice(0,8).map(x=>card('intent',x.status==='confirmed'?'已确认':'待确认',x.label,'支持事件 '+x.support_count+' 条')))}
+async function graphPanel(){
+  const p=$('panel');
+  p.append(node('p','panel-intro','事件按时间排列，并通过主题连接到待确认意图。点击节点可查看完整内容。'));
+  if(!state.user)return;
+  const data=await api('/api/users/'+encodeURIComponent(state.user.user_id)+'/memory-graph');
+  const open=node('button','graph-open','展开图谱 ↗');
+  open.onclick=()=>openGraph(data);
+  p.append(open);
+  const canvas=node('div','graph-scroll preview');
+  const detail=node('p','graph-detail');
+  p.append(canvas,detail);
+  window.renderMemoryGraph(data,canvas,detail);
+}
+function openGraph(data){
+  $('graph-modal').hidden=false;
+  window.renderMemoryGraph(data,$('graph-modal-canvas'),$('graph-modal-detail'));
+}
 async function preferencePanel(){const p=$('panel');p.append(node('p','panel-intro','跨会话交流偏好以 Markdown 文件保存。自动提取的偏好和你补充的笔记会合并到下一轮上下文。'));const data=await api('/api/preferences');p.append(node('div','section-title','PREFERENCES.md'));p.append(node('pre','prefs-preview',data.markdown||''));p.append(node('div','section-title','我的补充'));const area=node('textarea','prefs-editor');area.placeholder='例如：请一次只问一个问题；我更喜欢简短的回复。';area.value=data.notes||'';p.append(area);const save=node('button','primary','保存偏好');save.style.marginTop='10px';save.onclick=async()=>{try{await api('/api/preferences',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({notes:area.value})});toast('偏好已保存');await preferencePanelRefresh()}catch(e){toast(e.message)}};p.append(save)}
 async function preferencePanelRefresh(){$('panel').replaceChildren();await preferencePanel()}
 async function tracePanel(){const p=$('panel');p.append(node('p','panel-intro','按时间记录输入、记忆路由、上下文组装、模型回复与异步整理。点击一条查看本阶段的结构化信息。'));if(!state.session){p.append(node('p','muted','选择或新建一个会话后查看。'));return}const data=await api('/api/sessions/'+state.session+'/trace');const line=node('div','trace-line');for(const event of data.events||[]){const box=node('div','trace-card');box.append(node('small','',new Date(event.created_at).toLocaleTimeString('zh-CN')));box.append(node('b','',event.title));const details=node('pre','',JSON.stringify(event.detail,null,2));details.hidden=true;box.onclick=()=>details.hidden=!details.hidden;box.append(details);line.append(box)}p.append(line);if(!(data.events||[]).length)p.append(node('p','muted','这一会话还没有轨迹。'))}
 async function renderPanel(){const p=$('panel');p.replaceChildren();for(const b of document.querySelectorAll('.tabs button'))b.classList.toggle('active',b.dataset.tab===state.tab);try{if(state.tab==='graph')await graphPanel();else if(state.tab==='preferences')await preferencePanel();else await tracePanel()}catch(e){p.append(node('p','muted',e.message))}}
 async function loadDemo(){try{const data=await post('/api/demo/load',{});toast('跨会话案例已载入');await loadSessions();await openSession(data.session_id);state.tab='graph';await renderPanel()}catch(e){toast(e.message)}}
-$('auth-switch').onclick=()=>authMode(!state.register);$('auth-submit').onclick=submitAuth;$('password').onkeydown=e=>{if(e.key==='Enter')submitAuth()};$('logout').onclick=async()=>{await post('/api/auth/logout',{});state.session=null;showAuth()};$('new-session').onclick=async()=>{try{await createSession()}catch(e){toast(e.message)}};$('refresh-sessions').onclick=loadSessions;$('send').onclick=send;$('message').onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send()}};$('load-demo').onclick=loadDemo;$('refresh-panel').onclick=renderPanel;for(const b of document.querySelectorAll('.tabs button'))b.onclick=()=>{state.tab=b.dataset.tab;renderPanel()};boot();
+$('auth-switch').onclick=()=>authMode(!state.register);$('auth-submit').onclick=submitAuth;$('password').onkeydown=e=>{if(e.key==='Enter')submitAuth()};$('logout').onclick=async()=>{await post('/api/auth/logout',{});state.session=null;showAuth()};$('new-session').onclick=async()=>{try{await createSession()}catch(e){toast(e.message)}};$('refresh-sessions').onclick=loadSessions;$('send').onclick=send;$('message').onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send()}};$('load-demo').onclick=loadDemo;$('refresh-panel').onclick=renderPanel;for(const b of document.querySelectorAll('.tabs button'))b.onclick=()=>{state.tab=b.dataset.tab;renderPanel()};
+function toggleSidebar(side){
+  const hidden=$('app').classList.toggle(side+'-hidden');
+  const button=$(side==='left'?'toggle-left':'toggle-right');
+  button.setAttribute('aria-expanded',String(!hidden));
+  button.title=hidden?'展开'+(side==='left'?'会话栏':'侧记栏'):'收起'+(side==='left'?'会话栏':'侧记栏');
+}
+$('toggle-left').onclick=()=>toggleSidebar('left');
+$('toggle-right').onclick=()=>toggleSidebar('right');
+$('close-graph').onclick=()=>$('graph-modal').hidden=true;
+$('graph-modal').onclick=e=>{if(e.target===$('graph-modal'))$('graph-modal').hidden=true};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')$('graph-modal').hidden=true});
+boot();
