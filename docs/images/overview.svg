@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#113f3c"/><stop offset="1" stop-color="#2b7769"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-opacity=".12"/></filter></defs>
+<rect width="1200" height="640" rx="28" fill="#f2f6f2"/><rect width="1200" height="640" rx="28" fill="url(#bg)"/>
+<text x="68" y="100" font-size="24" font-weight="700" fill="#d9f0e5" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">心序 XINXU</text>
+<text x="68" y="180" font-size="52" font-weight="700" fill="white" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">让每次对话，都能接续理解。</text>
+<text x="70" y="229" font-size="22" fill="#d0e6dd" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">访谈证据 · 跨会话记忆 · 可追溯意图</text>
+<g filter="url(#s)"><rect x="68" y="280" width="1064" height="284" rx="22" fill="#fcfdfb"/></g>
+<rect x="68" y="280" width="250" height="284" rx="22" fill="#e7f0e9"/><text x="95" y="325" font-size="24" font-weight="700" fill="#164d45" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">我的会话</text>
+<rect x="91" y="348" width="204" height="48" rx="12" fill="#cfe4d7"/><text x="110" y="379" font-size="18" fill="#245e50" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">＋ 新建对话</text>
+<text x="105" y="431" font-size="17" fill="#42675d" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">运动与科研 · 30 轮</text><text x="105" y="467" font-size="17" fill="#42675d" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">跨会话追问</text>
+<text x="346" y="325" font-size="22" font-weight="700" fill="#24433c" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">心理咨询师</text><rect x="345" y="350" width="450" height="59" rx="16" fill="#edf5ef"/><text x="365" y="386" font-size="17" fill="#2a5448" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">我喜欢体育课，最近实验总不稳定……</text>
+<rect x="365" y="428" width="440" height="82" rx="16" fill="#f4f6f2"/><text x="384" y="459" font-size="17" fill="#38594f" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">我记得运动能让你放松。关于实验，</text><text x="384" y="487" font-size="17" fill="#38594f" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">我们可以从最近一次排查说起。</text>
+<rect x="835" y="299" width="275" height="245" rx="16" fill="#f4f8f4"/><text x="855" y="332" font-size="21" font-weight="700" fill="#24594d" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">对话侧记</text>
+<text x="855" y="372" font-size="17" fill="#4d7064" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">● 事件图谱</text><text x="855" y="409" font-size="17" fill="#4d7064" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">● 偏好记录</text><text x="855" y="446" font-size="17" fill="#4d7064" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">● 运行轨迹</text><text x="855" y="492" font-size="14" fill="#748d80" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">示意图 · 合成案例</text>
+</svg>
