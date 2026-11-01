@@ -10,6 +10,7 @@ from pydantic import BaseModel, Field
 from .core import (conn, queue, safe_media_path, search_graph, answer_video, review_frames,
                    embed, vector_literal, record_tool_memory)
 from .memory_retrieval import retrieve_context
+from .explicit_preferences import store_explicit_preferences
 from .demo_case import load_demo
 
 app = FastAPI(title="Interview Media and Memory API")
@@ -35,6 +36,19 @@ class SeedRequest(BaseModel):
 class MemoryContextRequest(BaseModel):
     text: str = Field(min_length=1, max_length=4000)
     recent: list[dict[str, str]] = Field(default_factory=list, max_length=12)
+
+
+class ExplicitPreferenceRequest(BaseModel):
+    text: str = Field(min_length=1, max_length=4000)
+    session_id: uuid.UUID
+    message_id: uuid.UUID
+
+
+@app.post("/users/{user_id}/explicit-preference")
+def explicit_preference(user_id: str, req: ExplicitPreferenceRequest):
+    saved = store_explicit_preferences(user_id, str(req.session_id),
+                                       str(req.message_id), req.text)
+    return {"preferences": saved}
 
 
 @app.post("/users/{user_id}/memory-context")
