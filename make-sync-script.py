@@ -5,8 +5,8 @@ root = Path(__file__).parent
 remote = PurePosixPath("/media/4t_2/hanhp/interview-platform")
 paths = [
     "schema.sql", "docker-compose.yml", ".env.example", "python/api.py", "python/core.py", "python/worker.py", "python/demo_case.py",
-    "python/memory_retrieval.py",
-    "go/main.go", "go/auth.go", "go/experience.go", "web/index.html", "web/style.css", "web/app.js",
+    "python/memory_retrieval.py", "python/explicit_preferences.py",
+    "go/main.go", "go/auth.go", "go/experience.go", "web/index.html", "web/style.css", "web/app.js", "web/graph.js",
     "README.md", "CASE_STUDY.md", "MEMORY_DESIGN.md",
     "LONG_DIALOGUE_EVAL_REPORT.md",
     "scripts/roleplay_memory_demo.py", "scripts/long_dialogue_eval.py",
