@@ -201,6 +201,14 @@ func (s *server) chat(w http.ResponseWriter, r *http.Request) {
 	if err != nil { fail(w, 500, "could not save message"); return }
 	s.trace(userID, id, "input", "收到用户消息", map[string]any{"message_id": userMessageID, "characters": len([]rune(input.Text))})
 	_, _ = s.db.Exec(r.Context(), `UPDATE sessions SET last_message_at=now() WHERE id=$1`, id)
+	var explicit struct { Preferences []struct { ID string `json:"id"`; Content string `json:"content"` } `json:"preferences"` }
+	if err := s.mediaPostJSON(r.Context(), "/users/"+userID+"/explicit-preference",
+		map[string]any{"text": input.Text, "session_id": id, "message_id": userMessageID}, &explicit); err != nil {
+		log.Printf("explicit preference capture unavailable: %v", err)
+		s.trace(userID, id, "error", "明确偏好写入失败", map[string]any{"stage": "explicit_preference"})
+	} else if len(explicit.Preferences) > 0 {
+		s.trace(userID, id, "memory_write", "当轮记录明确偏好", map[string]any{"count": len(explicit.Preferences)})
+	}
 	// The ordered turns carry the ongoing conversation. Long-term memories
 	// supply evidence and preferences; they do not replace this history.
 	rows, err := s.db.Query(r.Context(), `SELECT role,content FROM messages
