@@ -9,7 +9,9 @@ def metrics(rows, arm):
     tn = sum(r["gold"] is None and not r[arm]["has_intent"] for r in rows)
     fp = sum(r["gold"] is None and r[arm]["has_intent"] for r in rows)
     fn = sum(r["gold"] is not None and not r[arm]["has_intent"] for r in rows)
-    exact = sum(r["gold"] == r[arm]["label"] for r in rows)
+    exact = sum((r["gold"] is None and not r[arm]["has_intent"]) or
+                (r["gold"] is not None and r[arm]["has_intent"] and r["gold"] == r[arm]["label"])
+                for r in rows)
     precision = tp / (tp + fp) if tp + fp else 0.0
     recall = tp / (tp + fn) if tp + fn else 0.0
     return {
