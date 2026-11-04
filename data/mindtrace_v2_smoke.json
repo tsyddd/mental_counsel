@@ -1,0 +1,276 @@
+{
+  "user_id": "e3405c53-4ddb-4355-b304-08c53f12d26e",
+  "synthetic": true,
+  "checks": {
+    "account_update": true,
+    "six_round_job": true,
+    "no_early_job": true,
+    "seventh_turn_waited": true,
+    "no_concept_layer": true,
+    "bounded_window": true,
+    "source_rounds": true,
+    "user_md_exists": true,
+    "intent_requires_confirmation": true,
+    "explicit_confirmation": true,
+    "tail_flushed": true,
+    "unauthorized_internal_route": true,
+    "cross_session_memory_retained": true
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "input": "我希望你一次只问一个问题，先听我把话说完。这是我长期的交流偏好。",
+      "answer": "好，我会先听你说完；需要提问时，一次只问一个。你可以按自己的节奏说。",
+      "waited": false,
+      "done": {
+        "memory_route": "fixed_window",
+        "memory_job_id": null,
+        "turn": 1,
+        "snapshot_version": 0,
+        "confirmations": []
+      }
+    },
+    {
+      "turn": 2,
+      "input": "这周有三天写作业到凌晨一点，第二天早读困得撑不住。",
+      "answer": "听起来这几天作业量或时间安排让你连续熬到凌晨一点，第二天还得早起，真的很累。你先继续说，我听着。",
+      "waited": false,
+      "done": {
+        "memory_route": "fixed_window",
+        "memory_job_id": null,
+        "turn": 2,
+        "snapshot_version": 0,
+        "confirmations": []
+      }
+    },
+    {
+      "turn": 3,
+      "input": "科学课做了个小实验，我把步骤记在本子上，感觉挺有意思。",
+      "answer": "听起来，科学课的小实验让你觉得挺有意思，你还把步骤记了下来。我在听，你可以接着说。",
+      "waited": false,
+      "done": {
+        "memory_route": "fixed_window",
+        "memory_job_id": null,
+        "turn": 3,
+        "snapshot_version": 0,
+        "confirmations": []
+      }
+    },
+    {
+      "turn": 4,
+      "input": "每天放学后先去上补习班，回到家九点多，还要完成学校作业。",
+      "answer": "放学后先上补习班，九点多才到家，还要写学校作业，留给你休息的时间很少。你先说，我听着。",
+      "waited": false,
+      "done": {
+        "memory_route": "fixed_window",
+        "memory_job_id": null,
+        "turn": 4,
+        "snapshot_version": 0,
+        "confirmations": []
+      }
+    },
+    {
+      "turn": 5,
+      "input": "原本周日下午有半天休息，后来又被排了一门课，连续两周没空下来。",
+      "answer": "原本周日下午还能休息半天，现在又加了一门课，连续两周都没有真正空下来。这样一来，平日熬夜、早读犯困，周末也没法恢复，确实会让人一直处在很疲惫的状态。你继续说，我先听着。",
+      "waited": false,
+      "done": {
+        "memory_route": "fixed_window",
+        "memory_job_id": null,
+        "turn": 5,
+        "snapshot_version": 0,
+        "confirmations": []
+      }
+    },
+    {
+      "turn": 6,
+      "input": "妈妈觉得成绩还没起色，下周还准备增加一门；我担心晚上又要更晚睡。",
+      "answer": "你已经有几天写作业到凌晨一点，第二天早读困得撑不住；周日的休息时间也没了。现在听说下周可能再加一门课，你担心睡得更晚，是很实际的担心，不是你不够努力。\n\n我先不急着替你想办法。你接着说，我听着。",
+      "waited": false,
+      "done": {
+        "memory_route": "fixed_window",
+        "memory_job_id": "90fe6266-c3dd-4ebe-af4a-599922b89846",
+        "turn": 6,
+        "snapshot_version": 0,
+        "confirmations": []
+      }
+    },
+    {
+      "turn": 7,
+      "input": "你能结合我前面说过的经历，讲讲现在有哪些事情值得先讨论吗？",
+      "answer": "可以。结合你刚才说的，以及此前会话 **d1a51aba-249e-46c7-8c14-1219842e7558** 中的经历，我觉得有几件事值得先讨论，不必一次谈完：\n\n1. **睡眠和白天的疲惫。** 你说这周有三天写作业到凌晨一点，第二天早读困得撑不住（此前会话第2轮）。这件事对你当下的影响很直接。\n2. **时间是怎么被排满的。** 放学后上补习班、九点多到家还要写作业（第4轮），周日下午原有的半天休息也连续两周没了（第5轮）。可以看看最让你吃力的是哪一段。\n3. **下周可能加课带来的担心。** 妈妈因为成绩还没起色想再加一门，你担心会睡得更晚（第6轮）。如果你愿意，我们可以一起理清你想让妈妈知道什么，而不是马上要求你去说服她。\n4. **学习里仍让你感兴趣的东西。** 你提到科学课的小实验很有意思，还记下了步骤（第3轮）。这也值得留意，不必让眼下的疲惫盖过它。\n\n这些只是可谈的方向，不是要你立刻决定怎么做。**你想先从哪一件说起？**",
+      "waited": true,
+      "done": {
+        "memory_route": "fixed_window",
+        "memory_job_id": null,
+        "turn": 7,
+        "snapshot_version": 1,
+        "confirmations": [
+          {
+            "id": "726687a1-6ca9-4df9-a335-3acd336f4c88",
+            "kind": "intent",
+            "question": "你愿意把“减少过重的学习安排，保证夜间睡眠和周末休息时间”作为后续讨论的方向吗？",
+            "payload": {
+              "intent_id": "f2924133-36d7-40db-a124-d1b3af2f4692"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "session_id": "d1a51aba-249e-46c7-8c14-1219842e7558",
+  "tail_job": "6e19ce49-970f-4eee-918c-274ecb6055fb",
+  "new_session_id": "62b3faec-dda4-4287-a79b-d7f91c3dbc69",
+  "memory": {
+    "events": [
+      {
+        "id": "22f44c25-1bee-4b3f-b0c6-ebdedf503d69",
+        "user_id": "e3405c53-4ddb-4355-b304-08c53f12d26e",
+        "content": "这周有三天写作业到凌晨一点，第二天早读困得撑不住。",
+        "subject": "user",
+        "occurred_at": "这周",
+        "source_ids": [
+          "daaf3b7a-a93f-40f1-8097-90455a82ad52"
+        ],
+        "source_session": "d1a51aba-249e-46c7-8c14-1219842e7558",
+        "start_turn": 2,
+        "end_turn": 2,
+        "created_at": "2026-11-04T13:58:22.606500+00:00"
+      },
+      {
+        "id": "1dce2352-816b-40e3-b241-2b460b65bca2",
+        "user_id": "e3405c53-4ddb-4355-b304-08c53f12d26e",
+        "content": "在科学课做了小实验，把步骤记在本子上，觉得挺有意思。",
+        "subject": "user",
+        "occurred_at": "",
+        "source_ids": [
+          "7c649dd1-df7f-46d7-ab2b-2e7a115760a0"
+        ],
+        "source_session": "d1a51aba-249e-46c7-8c14-1219842e7558",
+        "start_turn": 3,
+        "end_turn": 3,
+        "created_at": "2026-11-04T13:58:28.068319+00:00"
+      },
+      {
+        "id": "aca678dc-6077-4993-b826-0ac32e4e6e3c",
+        "user_id": "e3405c53-4ddb-4355-b304-08c53f12d26e",
+        "content": "每天放学后先上补习班，九点多到家后还要完成学校作业。",
+        "subject": "user",
+        "occurred_at": "每天放学后",
+        "source_ids": [
+          "712812cb-e4e1-4fdc-927e-8b4fa81472f5"
+        ],
+        "source_session": "d1a51aba-249e-46c7-8c14-1219842e7558",
+        "start_turn": 4,
+        "end_turn": 4,
+        "created_at": "2026-11-04T13:58:37.195632+00:00"
+      },
+      {
+        "id": "6fa233c5-c945-44bf-a31f-641dc46c6035",
+        "user_id": "e3405c53-4ddb-4355-b304-08c53f12d26e",
+        "content": "原本周日下午有半天休息，后来又被排了一门课，连续两周没空下来。",
+        "subject": "user",
+        "occurred_at": "连续两周",
+        "source_ids": [
+          "db5464b8-13ba-4dff-80f7-9fa1ff130371"
+        ],
+        "source_session": "d1a51aba-249e-46c7-8c14-1219842e7558",
+        "start_turn": 5,
+        "end_turn": 5,
+        "created_at": "2026-11-04T13:58:45.498643+00:00"
+      },
+      {
+        "id": "e669617c-15ba-41af-9acf-0e3f76750a6f",
+        "user_id": "e3405c53-4ddb-4355-b304-08c53f12d26e",
+        "content": "妈妈因成绩还没起色准备下周再增加一门课，用户担心晚上会睡得更晚。",
+        "subject": "user",
+        "occurred_at": "",
+        "source_ids": [
+          "85b3ac94-bd09-45d6-ba86-37c4cc329440"
+        ],
+        "source_session": "d1a51aba-249e-46c7-8c14-1219842e7558",
+        "start_turn": 6,
+        "end_turn": 6,
+        "created_at": "2026-11-04T13:58:50.579917+00:00"
+      }
+    ],
+    "intents": [
+      {
+        "id": "f2924133-36d7-40db-a124-d1b3af2f4692",
+        "label": "减少过重的学习安排，保证夜间睡眠和周末休息时间",
+        "category": "学习与休息平衡",
+        "status": "confirmed",
+        "source_session": "d1a51aba-249e-46c7-8c14-1219842e7558",
+        "extracted_turn": 6,
+        "updated_at": "2026-11-04T13:59:33.574213+00:00",
+        "support_event_ids": [
+          "22f44c25-1bee-4b3f-b0c6-ebdedf503d69",
+          "6fa233c5-c945-44bf-a31f-641dc46c6035",
+          "aca678dc-6077-4993-b826-0ac32e4e6e3c",
+          "e669617c-15ba-41af-9acf-0e3f76750a6f"
+        ],
+        "counter_event_ids": []
+      }
+    ],
+    "preferences": [
+      "长期交流偏好：一次只问一个问题，先听自己把话说完。来源：用户明确表述。"
+    ],
+    "snapshot": [
+      {
+        "user_id": "e3405c53-4ddb-4355-b304-08c53f12d26e",
+        "version": 1,
+        "session_id": "d1a51aba-249e-46c7-8c14-1219842e7558",
+        "processed_turn": 7,
+        "content": "[意图 f2924133-36d7-40db-a124-d1b3af2f4692 | 会话 d1a51aba-249e-46c7-8c14-1219842e7558 第6轮形成 | confirmed] 减少过重的学习安排，保证夜间睡眠和周末休息时间\n[事件 1dce2352-816b-40e3-b241-2b460b65bca2 | 会话 d1a51aba-249e-46c7-8c14-1219842e7558 第3-3轮 | 发生时间 未确定] 在科学课做了小实验，把步骤记在本子上，觉得挺有意思。\n[事件 22f44c25-1bee-4b3f-b0c6-ebdedf503d69 | 会话 d1a51aba-249e-46c7-8c14-1219842e7558 第2-2轮 | 发生时间 这周] 这周有三天写作业到凌晨一点，第二天早读困得撑不住。\n[事件 6fa233c5-c945-44bf-a31f-641dc46c6035 | 会话 d1a51aba-249e-46c7-8c14-1219842e7558 第5-5轮 | 发生时间 连续两周] 原本周日下午有半天休息，后来又被排了一门课，连续两周没空下来。\n[事件 aca678dc-6077-4993-b826-0ac32e4e6e3c | 会话 d1a51aba-249e-46c7-8c14-1219842e7558 第4-4轮 | 发生时间 每天放学后] 每天放学后先上补习班，九点多到家后还要完成学校作业。\n[事件 e669617c-15ba-41af-9acf-0e3f76750a6f | 会话 d1a51aba-249e-46c7-8c14-1219842e7558 第6-6轮 | 发生时间 未确定] 妈妈因成绩还没起色准备下周再增加一门课，用户担心晚上会睡得更晚。",
+        "event_ids": [
+          "1dce2352-816b-40e3-b241-2b460b65bca2",
+          "22f44c25-1bee-4b3f-b0c6-ebdedf503d69",
+          "6fa233c5-c945-44bf-a31f-641dc46c6035",
+          "aca678dc-6077-4993-b826-0ac32e4e6e3c",
+          "e669617c-15ba-41af-9acf-0e3f76750a6f"
+        ],
+        "intent_ids": [
+          "f2924133-36d7-40db-a124-d1b3af2f4692"
+        ],
+        "updated_at": "2026-11-04T13:59:54.593809+00:00"
+      }
+    ],
+    "jobs": [
+      {
+        "id": "90fe6266-c3dd-4ebe-af4a-599922b89846",
+        "start_turn": 1,
+        "end_turn": 6,
+        "status": "completed",
+        "result": {
+          "new_events": 5,
+          "window_chars": 777
+        },
+        "error": null,
+        "consolidate": false
+      },
+      {
+        "id": "6e19ce49-970f-4eee-918c-274ecb6055fb",
+        "start_turn": 7,
+        "end_turn": 7,
+        "status": "completed",
+        "result": {
+          "new_events": 0,
+          "window_chars": 777
+        },
+        "error": null,
+        "consolidate": true
+      }
+    ],
+    "confirmations": [
+      {
+        "id": "726687a1-6ca9-4df9-a335-3acd336f4c88",
+        "kind": "intent",
+        "payload": {
+          "intent_id": "f2924133-36d7-40db-a124-d1b3af2f4692"
+        },
+        "question": "你愿意把“减少过重的学习安排，保证夜间睡眠和周末休息时间”作为后续讨论的方向吗？",
+        "status": "accepted"
+      }
+    ]
+  }
+}

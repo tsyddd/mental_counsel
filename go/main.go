@@ -48,6 +48,7 @@ func fail(w http.ResponseWriter, status int, message string) {
 
 func (s *server) proxy(w http.ResponseWriter, r *http.Request) {
 	parts := strings.Split(strings.TrimPrefix(r.URL.Path, "/api/"), "/")
+	if len(parts)>0 && parts[0]=="v2" { fail(w,404,"not found");return }
 	if len(parts) >= 2 && parts[0] == "users" && parts[1] != currentUser(r) {
 		fail(w, 403, "user scope mismatch"); return
 	}
@@ -378,20 +379,26 @@ func main() {
 	s := &server{db: pool, rdb: rdb, media: env("MEDIA_API_URL", "http://media-api:8000"),
 		modelURL: env("OPENAI_BASE_URL", "https://api2.mcben.top/v1"),
 		model: env("RELATION_VIDEOARM_MODEL", "deepseek-v4.1-flash"),
-		key: os.Getenv("OPENAI_API_KEY"), client: &http.Client{Timeout: 5*time.Minute}}
+		key: os.Getenv("OPENAI_API_KEY"), client: &http.Client{Timeout: 8*time.Minute}}
 	if s.key == "" { log.Fatal(errors.New("OPENAI_API_KEY required")) }
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /api/auth/register", s.register)
 	mux.HandleFunc("POST /api/auth/login", s.login)
 	mux.HandleFunc("POST /api/auth/logout", s.logout)
 	mux.HandleFunc("GET /api/auth/me", s.me)
+	mux.HandleFunc("PUT /api/auth/me", s.updateMe)
+	mux.HandleFunc("DELETE /api/auth/me", s.deleteMe)
 	mux.HandleFunc("POST /api/sessions", s.createSession)
 	mux.HandleFunc("GET /api/sessions/{id}", s.getSession)
 	mux.HandleFunc("GET /api/users/{user}/sessions", s.listUserSessions)
-	mux.HandleFunc("POST /api/sessions/{id}/messages", s.chat)
+	mux.HandleFunc("POST /api/sessions/{id}/messages", s.chatV2)
+	mux.HandleFunc("POST /api/sessions/{id}/close", s.closeV2)
+	mux.HandleFunc("GET /api/memory", s.memoryStateV2)
+	mux.HandleFunc("POST /api/confirmations/{cid}", s.confirmationV2)
+	mux.HandleFunc("POST /api/preferences/remove", s.removePreferenceV2)
+	mux.HandleFunc("POST /api/memory/jobs/{jid}/retry", s.retryMemoryV2)
 	mux.HandleFunc("GET /api/sessions/{id}/trace", s.getTrace)
-	mux.HandleFunc("GET /api/preferences", s.getPreferences)
-	mux.HandleFunc("PUT /api/preferences", s.putPreferences)
+	mux.HandleFunc("GET /api/preferences", s.preferencesV2)
 	mux.HandleFunc("POST /api/demo/load", s.loadDemo)
 	mux.HandleFunc("GET /api/jobs/{id}/events", s.jobEvents)
 	mux.HandleFunc("/api/", s.proxy)

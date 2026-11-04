@@ -1,0 +1,5383 @@
+{
+  "dataset_sha256": "a2adeb125d020363ec9b38eaeef52fd59780d73d41873c0a75e617fba939d583",
+  "model": "gpt-6-sol",
+  "synthetic": true,
+  "paired_variants_not_independent": true,
+  "metric": "binary existence only; raw labels retained for review",
+  "results": [
+    {
+      "id": "study_load_long",
+      "scenario_id": "study_load",
+      "mode": "long",
+      "gold_has_intent": true,
+      "gold_category": "study_rest_balance",
+      "graph_prediction": true,
+      "baseline_prediction": true,
+      "graph_intents": [
+        {
+          "id": "ba39b56f-4711-4c99-ae76-914fe524a917",
+          "label": "改善作业写到深夜、早读困倦的状况",
+          "category": "作息与学业安排",
+          "status": "tentative",
+          "source_session": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "extracted_turn": 6,
+          "updated_at": "2026-11-04 13:57:03.052593+00:00",
+          "support_event_ids": [
+            "6fc6d192-6085-48ad-bad6-434191c21f3b",
+            "8f319188-bcd7-4914-b603-04dd706c0b57"
+          ],
+          "counter_event_ids": []
+        }
+      ],
+      "baseline_intents": [
+        {
+          "label": "缓解补习和作业挤占休息时间、导致熬夜困倦的压力",
+          "category": "学业与作息",
+          "support_message_ids": [
+            "b275bec1-7678-45ce-82aa-422f65ccff5b",
+            "959180e8-a5c6-4419-b5c6-33cbbb9bef91",
+            "22036b6a-7978-4157-bc68-853743d80bcd",
+            "6ebef492-0e6c-4a1c-9fe9-2f82cdc381f3"
+          ]
+        }
+      ],
+      "graph_correct": true,
+      "baseline_correct": true,
+      "event_count": 12,
+      "job_seconds": [
+        141.011,
+        78.993,
+        91.32,
+        81.054
+      ],
+      "user_id": "61520461-6758-4879-9d58-483c7aa987d0",
+      "sessions": {
+        "1": "cdba38ac-a2c5-491a-bb8a-347f12c534df"
+      },
+      "window_chars": 698,
+      "all_sources_have_turns": true,
+      "baseline_mapped_categories": [
+        "study_rest_balance"
+      ],
+      "baseline_category_correct": true,
+      "graph_mapped_categories": [
+        "study_rest_balance"
+      ],
+      "graph_category_correct": true,
+      "events": [
+        {
+          "id": "5958ed1f-74f6-4a2c-a497-65c5284c0b33",
+          "user_id": "61520461-6758-4879-9d58-483c7aa987d0",
+          "content": "今天午饭时，我和同学聊了一会儿学校的新图书角。",
+          "subject": "user",
+          "occurred_at": "今天午饭",
+          "source_ids": [
+            "df94989e-ba0b-44e1-ac7b-23804d73bd14"
+          ],
+          "source_session": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 13:54:54.316810+00:00"
+        },
+        {
+          "id": "6fc6d192-6085-48ad-bad6-434191c21f3b",
+          "user_id": "61520461-6758-4879-9d58-483c7aa987d0",
+          "content": "这周有三天我写完作业已经凌晨一点，早读时困得撑不住。",
+          "subject": "user",
+          "occurred_at": "这周",
+          "source_ids": [
+            "b275bec1-7678-45ce-82aa-422f65ccff5b"
+          ],
+          "source_session": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "start_turn": 2,
+          "end_turn": 2,
+          "created_at": "2026-11-04 13:54:57.111438+00:00"
+        },
+        {
+          "id": "d16570c7-ce8c-41ab-b411-99141428a223",
+          "user_id": "61520461-6758-4879-9d58-483c7aa987d0",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "subject": "user",
+          "occurred_at": "昨天",
+          "source_ids": [
+            "f0c24e05-c5e1-40ff-869a-9b701a36b67e"
+          ],
+          "source_session": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "start_turn": 3,
+          "end_turn": 3,
+          "created_at": "2026-11-04 13:55:07.590761+00:00"
+        },
+        {
+          "id": "e6baf673-4565-4e16-a7ac-1dad3746d41c",
+          "user_id": "61520461-6758-4879-9d58-483c7aa987d0",
+          "content": "科学课上我做了一个关于水的实验，记下了步骤，并觉得很有意思。",
+          "subject": "user",
+          "occurred_at": "科学课",
+          "source_ids": [
+            "92b48e52-1252-4926-8261-78d2436dc34b"
+          ],
+          "source_session": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "start_turn": 4,
+          "end_turn": 4,
+          "created_at": "2026-11-04 13:55:09.809749+00:00"
+        },
+        {
+          "id": "142fec87-62c3-4edd-95f9-6b0286a53b2b",
+          "user_id": "61520461-6758-4879-9d58-483c7aa987d0",
+          "content": "周末我和家人散步时看到了路边的银杏树，并聊了些日常小事。",
+          "subject": "user",
+          "occurred_at": "周末",
+          "source_ids": [
+            "c465d4a1-fcf0-4168-8286-d728db285bfc"
+          ],
+          "source_session": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "start_turn": 6,
+          "end_turn": 6,
+          "created_at": "2026-11-04 13:55:17.688554+00:00"
+        },
+        {
+          "id": "cac1038f-4564-4c34-8581-2fce28a6e002",
+          "user_id": "61520461-6758-4879-9d58-483c7aa987d0",
+          "content": "今天课间有人分享了一本科普书，我翻阅了几页关于海洋的内容。",
+          "subject": "user",
+          "occurred_at": "2026-10-01T11:14:00+00:00",
+          "source_ids": [
+            "80477d85-ff40-49f7-abad-ae238c97bf2c"
+          ],
+          "source_session": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "start_turn": 7,
+          "end_turn": 7,
+          "created_at": "2026-11-04 13:56:10.109546+00:00"
+        },
+        {
+          "id": "f4fd0a93-17b6-40d6-a214-c73867e3be8a",
+          "user_id": "61520461-6758-4879-9d58-483c7aa987d0",
+          "content": "我准备好了明天要用的文具，并把它们放在书桌左边。",
+          "subject": "user",
+          "occurred_at": "2026-10-01T11:16:00+00:00",
+          "source_ids": [
+            "6d6385f2-c9de-4d2d-a44c-27a9a2116811"
+          ],
+          "source_session": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "start_turn": 8,
+          "end_turn": 8,
+          "created_at": "2026-11-04 13:56:20.274103+00:00"
+        },
+        {
+          "id": "8f319188-bcd7-4914-b603-04dd706c0b57",
+          "user_id": "61520461-6758-4879-9d58-483c7aa987d0",
+          "content": "我每天放学后先去上补习班，回到家九点多后还要完成学校作业。",
+          "subject": "user",
+          "occurred_at": "2026-10-01T11:18:00+00:00",
+          "source_ids": [
+            "959180e8-a5c6-4419-b5c6-33cbbb9bef91"
+          ],
+          "source_session": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "start_turn": 9,
+          "end_turn": 9,
+          "created_at": "2026-11-04 13:56:23.180701+00:00"
+        },
+        {
+          "id": "a5b7fd74-d1f9-4d84-ac46-69a84c262a83",
+          "user_id": "61520461-6758-4879-9d58-483c7aa987d0",
+          "content": "体育课练习接力跑时，大家轮流计时，我的成绩比上次快一点。",
+          "subject": "user",
+          "occurred_at": "2026-10-01T11:20:00+00:00",
+          "source_ids": [
+            "66bdfdf3-d0b7-4d8a-90b0-e66c3b127746"
+          ],
+          "source_session": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "start_turn": 10,
+          "end_turn": 10,
+          "created_at": "2026-11-04 13:56:41.314758+00:00"
+        },
+        {
+          "id": "541d312d-c48b-4d53-9e95-5cf2c627916b",
+          "user_id": "61520461-6758-4879-9d58-483c7aa987d0",
+          "content": "班级更换了黑板报，主题是秋天的校园。",
+          "subject": "user",
+          "occurred_at": "2026-10-01T11:26:00+00:00",
+          "source_ids": [
+            "f1e1c788-e746-47e9-983e-cb6263cb362f"
+          ],
+          "source_session": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "start_turn": 13,
+          "end_turn": 13,
+          "created_at": "2026-11-04 13:57:42.800475+00:00"
+        },
+        {
+          "id": "7d388d53-285b-43a9-a037-00cbe847913f",
+          "user_id": "61520461-6758-4879-9d58-483c7aa987d0",
+          "content": "原本周日下午有半天休息，后来安排了新的辅导课，导致连续两周没有空下来。",
+          "subject": "user",
+          "occurred_at": "2026-10-01T11:34:00+00:00",
+          "source_ids": [
+            "22036b6a-7978-4157-bc68-853743d80bcd"
+          ],
+          "source_session": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "start_turn": 17,
+          "end_turn": 17,
+          "created_at": "2026-11-04 13:58:13.836268+00:00"
+        },
+        {
+          "id": "e36ca04a-7ea3-452a-b587-995efe9dc65c",
+          "user_id": "61520461-6758-4879-9d58-483c7aa987d0",
+          "content": "听到妈妈说下周再加一门课后，想到晚上可能又要更晚睡，感到发愁。",
+          "subject": "user",
+          "occurred_at": "昨天",
+          "source_ids": [
+            "6ebef492-0e6c-4a1c-9fe9-2f82cdc381f3"
+          ],
+          "source_session": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "start_turn": 22,
+          "end_turn": 22,
+          "created_at": "2026-11-04 13:59:15.548563+00:00"
+        }
+      ],
+      "snapshot": [
+        {
+          "user_id": "61520461-6758-4879-9d58-483c7aa987d0",
+          "version": 4,
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "processed_turn": 24,
+          "content": "[事件 d16570c7-ce8c-41ab-b411-99141428a223 | 会话 cdba38ac-a2c5-491a-bb8a-347f12c534df 第3-3轮 | 发生时间 昨天] 昨天我整理了书包，把旧练习纸放进了资料夹。\n[事件 cac1038f-4564-4c34-8581-2fce28a6e002 | 会话 cdba38ac-a2c5-491a-bb8a-347f12c534df 第7-7轮 | 发生时间 2026-10-01T11:14:00+00:00] 今天课间有人分享了一本科普书，我翻阅了几页关于海洋的内容。\n[事件 e6baf673-4565-4e16-a7ac-1dad3746d41c | 会话 cdba38ac-a2c5-491a-bb8a-347f12c534df 第4-4轮 | 发生时间 科学课] 科学课上我做了一个关于水的实验，记下了步骤，并觉得很有意思。\n[事件 f4fd0a93-17b6-40d6-a214-c73867e3be8a | 会话 cdba38ac-a2c5-491a-bb8a-347f12c534df 第8-8轮 | 发生时间 2026-10-01T11:16:00+00:00] 我准备好了明天要用的文具，并把它们放在书桌左边。\n[事件 541d312d-c48b-4d53-9e95-5cf2c627916b | 会话 cdba38ac-a2c5-491a-bb8a-347f12c534df 第13-13轮 | 发生时间 2026-10-01T11:26:00+00:00] 班级更换了黑板报，主题是秋天的校园。",
+          "event_ids": [
+            "d16570c7-ce8c-41ab-b411-99141428a223",
+            "cac1038f-4564-4c34-8581-2fce28a6e002",
+            "e6baf673-4565-4e16-a7ac-1dad3746d41c",
+            "f4fd0a93-17b6-40d6-a214-c73867e3be8a",
+            "541d312d-c48b-4d53-9e95-5cf2c627916b"
+          ],
+          "intent_ids": [],
+          "updated_at": "2026-11-04 13:59:48.121403+00:00"
+        }
+      ],
+      "messages": [
+        {
+          "id": "df94989e-ba0b-44e1-ac7b-23804d73bd14",
+          "role": "user",
+          "content": "今天午饭我和同学聊了一会儿学校的新图书角。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "3621d432-6c69-4d5d-af6a-a4da9da89004",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "b275bec1-7678-45ce-82aa-422f65ccff5b",
+          "role": "user",
+          "content": "这周有三天写完作业已经凌晨一点，早读时我困得撑不住。",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "8197f8d7-6166-45aa-b3fd-b1bf00a8bd51",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "f0c24e05-c5e1-40ff-869a-9b701a36b67e",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "025fdd31-709a-4741-8ad2-c7e839a3c210",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "92b48e52-1252-4926-8261-78d2436dc34b",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "5cd0e870-6af6-4c07-8687-984952b56a59",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "c9115c1f-1dd5-4307-bbd1-7e07f1b4bef2",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "9b754748-42f6-449a-b85b-1daee3b31dbf",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "c465d4a1-fcf0-4168-8286-d728db285bfc",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "a4ea104e-0373-4ed0-bd52-f784a3071d1a",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "80477d85-ff40-49f7-abad-ae238c97bf2c",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "899acae3-cb2c-4dcc-b0ea-24bdd015a196",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "6d6385f2-c9de-4d2d-a44c-27a9a2116811",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "a7308af9-1879-46df-8798-53df380d13ac",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "959180e8-a5c6-4419-b5c6-33cbbb9bef91",
+          "role": "user",
+          "content": "每天放学后先去上补习班，回到家九点多，还要完成学校作业。",
+          "turn_no": 9,
+          "sent_at": "2026-10-01T11:18:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "6d9df22a-8718-43b2-9fef-7f7138707bca",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 9,
+          "sent_at": "2026-10-01T11:18:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "66bdfdf3-d0b7-4d8a-90b0-e66c3b127746",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 10,
+          "sent_at": "2026-10-01T11:20:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "560504da-be2e-4fd1-ad58-72d8cbb6af60",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 10,
+          "sent_at": "2026-10-01T11:20:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "160dacd5-c957-4135-b588-6ff9cf1e4d07",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 11,
+          "sent_at": "2026-10-01T11:22:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "c6bdbb85-8e10-4df4-97ae-71f2bf7d35d5",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 11,
+          "sent_at": "2026-10-01T11:22:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "1b2ddc04-b22e-401c-932a-0a730da9a683",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 12,
+          "sent_at": "2026-10-01T11:24:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "15f1938e-d37a-489c-aa97-112161d65a0a",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 12,
+          "sent_at": "2026-10-01T11:24:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "f1e1c788-e746-47e9-983e-cb6263cb362f",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 13,
+          "sent_at": "2026-10-01T11:26:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "835281c9-deb6-4a00-b286-4a6f878c0c96",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 13,
+          "sent_at": "2026-10-01T11:26:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "ec8eff2e-70bf-4cf6-9125-caf0f4dd79d9",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 14,
+          "sent_at": "2026-10-01T11:28:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "1a53ebce-1d83-443d-93d5-4d648b5c650b",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 14,
+          "sent_at": "2026-10-01T11:28:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "cfcc37ae-75b3-403f-9f0f-1045d81f7def",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 15,
+          "sent_at": "2026-10-01T11:30:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "6e70a69a-4902-4c12-b3c3-7a014bcb449a",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 15,
+          "sent_at": "2026-10-01T11:30:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "0c6100dc-5fa7-461a-bda6-23fcd20e87bc",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 16,
+          "sent_at": "2026-10-01T11:32:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "cd80c4ea-3606-4e5b-875b-e8c77d53ed83",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 16,
+          "sent_at": "2026-10-01T11:32:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "22036b6a-7978-4157-bc68-853743d80bcd",
+          "role": "user",
+          "content": "原本周日下午有半天休息，后来安排了新的辅导课，连续两周都没有空下来。",
+          "turn_no": 17,
+          "sent_at": "2026-10-01T11:34:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "12999870-64c6-471d-9ac7-0a348b9a91c3",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 17,
+          "sent_at": "2026-10-01T11:34:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "e9096eeb-5fc5-4990-8ad8-3271ae280e06",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 18,
+          "sent_at": "2026-10-01T11:36:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "aa87f098-7964-4645-aed2-c492c1481af5",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 18,
+          "sent_at": "2026-10-01T11:36:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "621b2d38-2cf9-49de-803d-ad8572e51689",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 19,
+          "sent_at": "2026-10-01T11:38:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "ac39a231-a044-4af9-acaf-803724c6069d",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 19,
+          "sent_at": "2026-10-01T11:38:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "197e6992-49f7-4672-adcd-6e4670b3b327",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 20,
+          "sent_at": "2026-10-01T11:40:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "827a74ed-d0e5-4674-8391-43f491c31c2a",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 20,
+          "sent_at": "2026-10-01T11:40:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "42746845-5869-4348-b121-211c8f0804d7",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 21,
+          "sent_at": "2026-10-01T11:42:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "a31f5b6c-0c29-4c7b-aea8-d57ca6842e11",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 21,
+          "sent_at": "2026-10-01T11:42:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "6ebef492-0e6c-4a1c-9fe9-2f82cdc381f3",
+          "role": "user",
+          "content": "妈妈觉得成绩还没起色，昨天说下周再加一门课；我想到晚上又得更晚睡就发愁。",
+          "turn_no": 22,
+          "sent_at": "2026-10-01T11:44:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "9cc2b5a1-c5e1-4074-8e49-95f0beafb3e0",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 22,
+          "sent_at": "2026-10-01T11:44:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "ab0bf755-522e-4fa5-8156-02ffcdad63bd",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 23,
+          "sent_at": "2026-10-01T11:46:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "31040e76-d304-4e64-9fab-ad977842c317",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 23,
+          "sent_at": "2026-10-01T11:46:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "27ce0275-6759-4b9c-9e08-335acf6ac968",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 24,
+          "sent_at": "2026-10-01T11:48:00+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        },
+        {
+          "id": "78fd54c9-c901-428b-b5a1-05f17ab15d3c",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 24,
+          "sent_at": "2026-10-01T11:48:20+00:00",
+          "session_id": "cdba38ac-a2c5-491a-bb8a-347f12c534df",
+          "session_number": 1
+        }
+      ]
+    },
+    {
+      "id": "study_load_cross",
+      "scenario_id": "study_load",
+      "mode": "cross",
+      "gold_has_intent": true,
+      "gold_category": "study_rest_balance",
+      "graph_prediction": true,
+      "baseline_prediction": true,
+      "graph_intents": [
+        {
+          "id": "1ada5d13-826f-46a6-8b2c-96ad0772a98c",
+          "label": "调整补习与作业安排，保留休息时间并减少晚睡和早读困倦",
+          "category": "作息与学习安排",
+          "status": "tentative",
+          "source_session": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "extracted_turn": 6,
+          "updated_at": "2026-11-04 14:06:00.922533+00:00",
+          "support_event_ids": [
+            "74c7a85b-0617-4cdd-a41e-64e6b7bd020e",
+            "579d7e5e-45cf-4e12-9e44-5b3e68430b35",
+            "6651d0bf-3214-43c7-bc81-7199c8a36637",
+            "2c70a3e8-7729-435b-89df-a56afed33675"
+          ],
+          "counter_event_ids": []
+        }
+      ],
+      "baseline_intents": [
+        {
+          "label": "缓解补习和作业叠加造成的休息不足、晚睡与白天困倦",
+          "category": "学业压力与作息",
+          "support_message_ids": [
+            "6d43cdf2-53c1-4fc9-b933-4e859b0c7fcf",
+            "22a72d60-1e80-4ee6-ab3e-1452c4d1e9f6",
+            "b576ee0b-2180-4443-a289-802aeaacb9cc",
+            "58b52617-948d-4d5d-b475-117e1197c030"
+          ]
+        }
+      ],
+      "graph_correct": true,
+      "baseline_correct": true,
+      "event_count": 12,
+      "job_seconds": [
+        69.276,
+        43.102,
+        97.438,
+        57.964,
+        87.725,
+        75.395
+      ],
+      "user_id": "39e9fac2-b91e-4828-a29f-ebfa94523e3d",
+      "sessions": {
+        "1": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+        "2": "57765992-6c02-44a6-b648-d16517449e06",
+        "3": "8687be8c-935f-4027-976c-327fe4efa992"
+      },
+      "window_chars": 631,
+      "all_sources_have_turns": true,
+      "graph_mapped_categories": [
+        "study_rest_balance"
+      ],
+      "graph_category_correct": true,
+      "baseline_mapped_categories": [
+        "study_rest_balance"
+      ],
+      "baseline_category_correct": true,
+      "events": [
+        {
+          "id": "8f2f9844-d4d6-4945-93e5-bb2f680cd0ec",
+          "user_id": "39e9fac2-b91e-4828-a29f-ebfa94523e3d",
+          "content": "午饭时和同学聊了一会儿学校的新图书角。",
+          "subject": "user",
+          "occurred_at": "今天午饭",
+          "source_ids": [
+            "b963bb7c-2558-4e9d-bf1a-d68a2b930ad9"
+          ],
+          "source_session": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 14:00:31.109881+00:00"
+        },
+        {
+          "id": "6651d0bf-3214-43c7-bc81-7199c8a36637",
+          "user_id": "39e9fac2-b91e-4828-a29f-ebfa94523e3d",
+          "content": "这周有三天写完作业已经凌晨一点，早读时困得撑不住。",
+          "subject": "user",
+          "occurred_at": "这周",
+          "source_ids": [
+            "6d43cdf2-53c1-4fc9-b933-4e859b0c7fcf"
+          ],
+          "source_session": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "start_turn": 2,
+          "end_turn": 2,
+          "created_at": "2026-11-04 14:00:37.021102+00:00"
+        },
+        {
+          "id": "a6c54931-835e-4f72-b131-8d7bc856dde1",
+          "user_id": "39e9fac2-b91e-4828-a29f-ebfa94523e3d",
+          "content": "昨天整理了书包，把旧练习纸放进了资料夹。",
+          "subject": "user",
+          "occurred_at": "昨天",
+          "source_ids": [
+            "33b66400-0996-4829-bb29-a8c779d630cb"
+          ],
+          "source_session": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "start_turn": 3,
+          "end_turn": 3,
+          "created_at": "2026-11-04 14:00:45.660278+00:00"
+        },
+        {
+          "id": "7a8de3c2-967d-42ac-9f67-3a616c677045",
+          "user_id": "39e9fac2-b91e-4828-a29f-ebfa94523e3d",
+          "content": "科学课做了一个关于水的实验，记下了步骤，并觉得很有意思。",
+          "subject": "user",
+          "occurred_at": "科学课",
+          "source_ids": [
+            "de530ab7-66d9-4271-b408-f33e88b9bc86"
+          ],
+          "source_session": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "start_turn": 4,
+          "end_turn": 4,
+          "created_at": "2026-11-04 14:00:50.564019+00:00"
+        },
+        {
+          "id": "6c2c4dc5-a8b3-4bcf-8d83-ae9260129c9f",
+          "user_id": "39e9fac2-b91e-4828-a29f-ebfa94523e3d",
+          "content": "最近班级换了黑板报，内容是秋天的校园。",
+          "subject": "user",
+          "occurred_at": "最近",
+          "source_ids": [
+            "1ce6d879-f636-4762-84ef-b78f91b2483f"
+          ],
+          "source_session": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "start_turn": 5,
+          "end_turn": 5,
+          "created_at": "2026-11-04 14:00:57.822051+00:00"
+        },
+        {
+          "id": "642b42d0-7da2-4aee-9527-79789fa4eec2",
+          "user_id": "39e9fac2-b91e-4828-a29f-ebfa94523e3d",
+          "content": "周末和家人散步时看到了路边的银杏树，并聊了些日常小事。",
+          "subject": "user",
+          "occurred_at": "周末",
+          "source_ids": [
+            "0f60f7d5-ba74-487b-adef-23afd7304964"
+          ],
+          "source_session": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "start_turn": 6,
+          "end_turn": 6,
+          "created_at": "2026-11-04 14:01:03.723455+00:00"
+        },
+        {
+          "id": "6a0251ed-395a-4fd1-b54b-4b8451c38715",
+          "user_id": "39e9fac2-b91e-4828-a29f-ebfa94523e3d",
+          "content": "今天课间有人分享科普书时，用户翻看了其中几页关于海洋的内容。",
+          "subject": "user",
+          "occurred_at": "今天课间",
+          "source_ids": [
+            "cda62773-7922-4c34-9cdd-18b04b88fd2b"
+          ],
+          "source_session": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "start_turn": 7,
+          "end_turn": 7,
+          "created_at": "2026-11-04 14:01:31.842240+00:00"
+        },
+        {
+          "id": "e284e163-ef66-4c09-bd16-b5f9c16e73b9",
+          "user_id": "39e9fac2-b91e-4828-a29f-ebfa94523e3d",
+          "content": "用户准备好了明天要用的文具，并将其放在书桌左边。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "37b4b915-c562-4c6e-aa0d-31c82a28cc90"
+          ],
+          "source_session": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "start_turn": 8,
+          "end_turn": 8,
+          "created_at": "2026-11-04 14:01:38.583622+00:00"
+        },
+        {
+          "id": "2c70a3e8-7729-435b-89df-a56afed33675",
+          "user_id": "39e9fac2-b91e-4828-a29f-ebfa94523e3d",
+          "content": "每天放学后先去上补习班，回到家九点多后还要完成学校作业。",
+          "subject": "user",
+          "occurred_at": "每天放学后",
+          "source_ids": [
+            "22a72d60-1e80-4ee6-ab3e-1452c4d1e9f6"
+          ],
+          "source_session": "57765992-6c02-44a6-b648-d16517449e06",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 14:02:27.410528+00:00"
+        },
+        {
+          "id": "3d0f8729-af2f-4f0a-98ff-5fe2310e141e",
+          "user_id": "39e9fac2-b91e-4828-a29f-ebfa94523e3d",
+          "content": "体育课练习接力跑，和同学轮流计时，自己的成绩比上次快了一点。",
+          "subject": "user",
+          "occurred_at": "体育课",
+          "source_ids": [
+            "b6d96cc1-53c3-4731-9890-41095a653fc3"
+          ],
+          "source_session": "57765992-6c02-44a6-b648-d16517449e06",
+          "start_turn": 2,
+          "end_turn": 2,
+          "created_at": "2026-11-04 14:02:40.390541+00:00"
+        },
+        {
+          "id": "74c7a85b-0617-4cdd-a41e-64e6b7bd020e",
+          "user_id": "39e9fac2-b91e-4828-a29f-ebfa94523e3d",
+          "content": "原本周日下午有半天休息，后来安排了新的辅导课，连续两周都没有空下来。",
+          "subject": "user",
+          "occurred_at": "连续两周",
+          "source_ids": [
+            "b576ee0b-2180-4443-a289-802aeaacb9cc"
+          ],
+          "source_session": "8687be8c-935f-4027-976c-327fe4efa992",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 14:05:08.919735+00:00"
+        },
+        {
+          "id": "579d7e5e-45cf-4e12-9e44-5b3e68430b35",
+          "user_id": "39e9fac2-b91e-4828-a29f-ebfa94523e3d",
+          "content": "妈妈说下周再加一门课后，想到晚上可能更晚睡，感到发愁。",
+          "subject": "user",
+          "occurred_at": "昨天",
+          "source_ids": [
+            "58b52617-948d-4d5d-b475-117e1197c030"
+          ],
+          "source_session": "8687be8c-935f-4027-976c-327fe4efa992",
+          "start_turn": 6,
+          "end_turn": 6,
+          "created_at": "2026-11-04 14:05:49.043837+00:00"
+        }
+      ],
+      "snapshot": [
+        {
+          "user_id": "39e9fac2-b91e-4828-a29f-ebfa94523e3d",
+          "version": 6,
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "processed_turn": 8,
+          "content": "[事件 e284e163-ef66-4c09-bd16-b5f9c16e73b9 | 会话 a6ffae19-e3f0-42a2-89c4-daa1cafb5a57 第8-8轮 | 发生时间 未确定] 用户准备好了明天要用的文具，并将其放在书桌左边。\n[事件 6a0251ed-395a-4fd1-b54b-4b8451c38715 | 会话 a6ffae19-e3f0-42a2-89c4-daa1cafb5a57 第7-7轮 | 发生时间 今天课间] 今天课间有人分享科普书时，用户翻看了其中几页关于海洋的内容。\n[事件 7a8de3c2-967d-42ac-9f67-3a616c677045 | 会话 a6ffae19-e3f0-42a2-89c4-daa1cafb5a57 第4-4轮 | 发生时间 科学课] 科学课做了一个关于水的实验，记下了步骤，并觉得很有意思。\n[事件 a6c54931-835e-4f72-b131-8d7bc856dde1 | 会话 a6ffae19-e3f0-42a2-89c4-daa1cafb5a57 第3-3轮 | 发生时间 昨天] 昨天整理了书包，把旧练习纸放进了资料夹。\n[事件 8f2f9844-d4d6-4945-93e5-bb2f680cd0ec | 会话 a6ffae19-e3f0-42a2-89c4-daa1cafb5a57 第1-1轮 | 发生时间 今天午饭] 午饭时和同学聊了一会儿学校的新图书角。",
+          "event_ids": [
+            "e284e163-ef66-4c09-bd16-b5f9c16e73b9",
+            "6a0251ed-395a-4fd1-b54b-4b8451c38715",
+            "7a8de3c2-967d-42ac-9f67-3a616c677045",
+            "a6c54931-835e-4f72-b131-8d7bc856dde1",
+            "8f2f9844-d4d6-4945-93e5-bb2f680cd0ec"
+          ],
+          "intent_ids": [],
+          "updated_at": "2026-11-04 14:06:44.562283+00:00"
+        }
+      ],
+      "messages": [
+        {
+          "id": "b963bb7c-2558-4e9d-bf1a-d68a2b930ad9",
+          "role": "user",
+          "content": "今天午饭我和同学聊了一会儿学校的新图书角。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:00+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "45de0956-1958-44c4-b786-63a8455b75db",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:20+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "6d43cdf2-53c1-4fc9-b933-4e859b0c7fcf",
+          "role": "user",
+          "content": "这周有三天写完作业已经凌晨一点，早读时我困得撑不住。",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:00+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "8152ab99-9c4c-4714-8d77-79c7bd8eeb7f",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:20+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "33b66400-0996-4829-bb29-a8c779d630cb",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:00+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "444586d6-f73f-4b02-9587-9a518fea7af2",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:20+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "de530ab7-66d9-4271-b408-f33e88b9bc86",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:00+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "04718909-8324-4dbb-8ab2-dd4f60429631",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:20+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "1ce6d879-f636-4762-84ef-b78f91b2483f",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:00+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "76715629-945e-4313-a36b-b40f78efbc42",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:20+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "0f60f7d5-ba74-487b-adef-23afd7304964",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:00+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "2761dc4e-5308-47e8-9f29-5ccd27e84b79",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:20+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "cda62773-7922-4c34-9cdd-18b04b88fd2b",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:00+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "581caa50-b245-48e8-b6d3-556c7f857f7c",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:20+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "37b4b915-c562-4c6e-aa0d-31c82a28cc90",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:00+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "e96ed444-8a4e-4594-910a-52db78e4231e",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:20+00:00",
+          "session_id": "a6ffae19-e3f0-42a2-89c4-daa1cafb5a57",
+          "session_number": 1
+        },
+        {
+          "id": "22a72d60-1e80-4ee6-ab3e-1452c4d1e9f6",
+          "role": "user",
+          "content": "每天放学后先去上补习班，回到家九点多，还要完成学校作业。",
+          "turn_no": 1,
+          "sent_at": "2026-10-08T11:02:00+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "cc7f1730-f2f0-4d8a-847a-df5a99d0e5f2",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-08T11:02:20+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "b6d96cc1-53c3-4731-9890-41095a653fc3",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 2,
+          "sent_at": "2026-10-08T11:04:00+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "794a6b3c-08b1-4ec5-b819-c2f0ee20434c",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-08T11:04:20+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "d137a29a-4991-4791-a54a-3309ef166b84",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-08T11:06:00+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "2a13a00a-f9ea-490c-90d6-6987546a41b4",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-08T11:06:20+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "c2a95ce2-bef0-4394-9b51-4100ae1e0f37",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-08T11:08:00+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "44c45c6b-5ab0-4135-8908-9874ec16b048",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-08T11:08:20+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "3fb83df2-33f4-495d-b54c-04962bc52cfb",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-08T11:10:00+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "0900ce57-291c-4616-b17d-557108da576c",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-08T11:10:20+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "84b41cd1-ebf3-4335-84c9-f28420b8cdcf",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 6,
+          "sent_at": "2026-10-08T11:12:00+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "075d9f63-5bfa-4256-be5e-2d6c37a9b3e1",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-08T11:12:20+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "7a4739c5-df66-423b-907d-d0528956be35",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-08T11:14:00+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "c6184a23-a7cc-4bc4-94ca-7e063b9aced5",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-08T11:14:20+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "62f163c2-f8bb-46b5-abeb-23c84337cd5b",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-08T11:16:00+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "c6bc1b5f-9f7d-4567-952e-ec342609c4b5",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-08T11:16:20+00:00",
+          "session_id": "57765992-6c02-44a6-b648-d16517449e06",
+          "session_number": 2
+        },
+        {
+          "id": "b576ee0b-2180-4443-a289-802aeaacb9cc",
+          "role": "user",
+          "content": "原本周日下午有半天休息，后来安排了新的辅导课，连续两周都没有空下来。",
+          "turn_no": 1,
+          "sent_at": "2026-10-15T11:02:00+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "e1f13d3c-93f5-4740-9f78-e642d8e9fbbe",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-15T11:02:20+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "4b6067f1-b080-40f6-9560-a787107ebe97",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 2,
+          "sent_at": "2026-10-15T11:04:00+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "58b3ff2e-c60b-41b9-b21a-b31f5f0f72e9",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-15T11:04:20+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "5f504db2-e6e1-4387-b08b-7348458d63ca",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-15T11:06:00+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "67d5f5bb-3f0d-4c36-8b0f-d50ad9f250ac",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-15T11:06:20+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "8ade9aca-6ccf-478b-bb01-6433750cbe3f",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-15T11:08:00+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "cd279d0f-362b-4961-a5b6-704a4e91d2a4",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-15T11:08:20+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "90f2d544-e7d8-4596-a99f-f918eb620d62",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-15T11:10:00+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "92674fbc-ba6f-4250-9713-3586f9fbb7d9",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-15T11:10:20+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "58b52617-948d-4d5d-b475-117e1197c030",
+          "role": "user",
+          "content": "妈妈觉得成绩还没起色，昨天说下周再加一门课；我想到晚上又得更晚睡就发愁。",
+          "turn_no": 6,
+          "sent_at": "2026-10-15T11:12:00+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "0bbd17ea-2b71-408d-8205-779f8b551b47",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-15T11:12:20+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "90693851-b14f-41a5-b8fa-77102e1580a9",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-15T11:14:00+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "0fdb5282-f551-4564-a87d-635aba3691a2",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-15T11:14:20+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "b1c78db6-00ef-436e-bc44-64ffbb72adc0",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-15T11:16:00+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        },
+        {
+          "id": "5916f7ba-cef2-4ac5-9f0b-5e2c5f89c35a",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-15T11:16:20+00:00",
+          "session_id": "8687be8c-935f-4027-976c-327fe4efa992",
+          "session_number": 3
+        }
+      ]
+    },
+    {
+      "id": "peer_connection_long",
+      "scenario_id": "peer_connection",
+      "mode": "long",
+      "gold_has_intent": true,
+      "gold_category": "peer_participation",
+      "graph_prediction": true,
+      "baseline_prediction": true,
+      "graph_intents": [
+        {
+          "id": "1c7bca1b-5360-4fc5-90fe-17d636f074a8",
+          "label": "梳理想参与同伴活动却担心让别人不自在、因此未能加入的经历",
+          "category": "同伴参与",
+          "status": "tentative",
+          "source_session": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "extracted_turn": 6,
+          "updated_at": "2026-11-04 14:14:28.660212+00:00",
+          "support_event_ids": [
+            "2b047e22-5c19-4ef4-b1c3-80ab4fd68c1e",
+            "d77c8ad7-8feb-4772-8689-2f3bb65898b3",
+            "eb84e872-1add-4810-a97b-96aa78386591",
+            "10e6b675-7dc2-48fc-b24b-b7673bd62be9"
+          ],
+          "counter_event_ids": []
+        }
+      ],
+      "baseline_intents": [
+        {
+          "label": "想参与同学的集体活动，但因担心融入不了而迟疑、难受",
+          "category": "同伴交往",
+          "support_message_ids": [
+            "153e4f9a-f61d-4b08-951b-262e762b47c9",
+            "1f85cb67-fb06-49be-833b-ec64192b1f89",
+            "93b5bdd4-3fe1-49b8-b091-a260a3b90b31",
+            "54943d27-195f-4b4e-af35-afa52e009fd4"
+          ]
+        }
+      ],
+      "graph_correct": true,
+      "baseline_correct": true,
+      "event_count": 12,
+      "job_seconds": [
+        83.202,
+        79.428,
+        76.314,
+        94.888
+      ],
+      "user_id": "e53cf23c-61dc-4da3-8596-283b52d17b84",
+      "sessions": {
+        "1": "b15c1247-dfac-48d6-af46-5556a170d664"
+      },
+      "window_chars": 625,
+      "all_sources_have_turns": true,
+      "graph_mapped_categories": [
+        "peer_participation"
+      ],
+      "graph_category_correct": true,
+      "baseline_mapped_categories": [
+        "peer_participation"
+      ],
+      "baseline_category_correct": true,
+      "events": [
+        {
+          "id": "9eb766d7-5675-4c59-b938-fa0af4a6eb2f",
+          "user_id": "e53cf23c-61dc-4da3-8596-283b52d17b84",
+          "content": "午饭时和同学聊了一会儿学校的新图书角。",
+          "subject": "user",
+          "occurred_at": "今天午饭",
+          "source_ids": [
+            "5764f49b-3b25-4d98-8e0e-615bd6cb3856"
+          ],
+          "source_session": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 14:09:42.925651+00:00"
+        },
+        {
+          "id": "d77c8ad7-8feb-4772-8689-2f3bb65898b3",
+          "user_id": "e53cf23c-61dc-4da3-8596-283b52d17b84",
+          "content": "班级分组做海报时在旁边等着，最后没有加入；回家后还在想那次活动。",
+          "subject": "user",
+          "occurred_at": "上周",
+          "source_ids": [
+            "153e4f9a-f61d-4b08-951b-262e762b47c9"
+          ],
+          "source_session": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "start_turn": 2,
+          "end_turn": 2,
+          "created_at": "2026-11-04 14:09:45.043318+00:00"
+        },
+        {
+          "id": "c0ea3d74-9ca8-412c-86d7-c621552399d1",
+          "user_id": "e53cf23c-61dc-4da3-8596-283b52d17b84",
+          "content": "整理书包时，把旧练习纸放进了资料夹。",
+          "subject": "user",
+          "occurred_at": "昨天",
+          "source_ids": [
+            "95b97b4a-e77e-463d-a72e-d2977996ffc1"
+          ],
+          "source_session": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "start_turn": 3,
+          "end_turn": 3,
+          "created_at": "2026-11-04 14:09:48.167302+00:00"
+        },
+        {
+          "id": "9c752347-cf52-4e3f-8163-982f78de6397",
+          "user_id": "e53cf23c-61dc-4da3-8596-283b52d17b84",
+          "content": "科学课做关于水的实验时，记下了实验步骤，并觉得很有意思。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "73cde8cb-f9c5-48a9-bcdd-6f6d7a532a9e"
+          ],
+          "source_session": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "start_turn": 4,
+          "end_turn": 4,
+          "created_at": "2026-11-04 14:10:10.553805+00:00"
+        },
+        {
+          "id": "b2c8738b-cb84-4839-9ded-fc0396504886",
+          "user_id": "e53cf23c-61dc-4da3-8596-283b52d17b84",
+          "content": "和家人散步时看到了路边的银杏树，并聊了些日常小事。",
+          "subject": "user",
+          "occurred_at": "周末",
+          "source_ids": [
+            "037ddeac-0d1e-445f-800a-af99fad9ec21"
+          ],
+          "source_session": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "start_turn": 6,
+          "end_turn": 6,
+          "created_at": "2026-11-04 14:10:12.815678+00:00"
+        },
+        {
+          "id": "133e34e7-4bc1-437e-a792-7a0412ba6d12",
+          "user_id": "e53cf23c-61dc-4da3-8596-283b52d17b84",
+          "content": "今天课间有人分享科普书，用户翻看了几页关于海洋的内容。",
+          "subject": "user",
+          "occurred_at": "今天课间",
+          "source_ids": [
+            "14ce2274-b4c3-484f-a0fa-8c78613022d2"
+          ],
+          "source_session": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "start_turn": 7,
+          "end_turn": 7,
+          "created_at": "2026-11-04 14:10:59.859055+00:00"
+        },
+        {
+          "id": "0a1289dc-932f-48c6-8521-ad29efaf73c0",
+          "user_id": "e53cf23c-61dc-4da3-8596-283b52d17b84",
+          "content": "用户准备好了明天要用的文具，并放在书桌左边。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "1f5da084-468d-4569-9f2c-6990b8a68c03"
+          ],
+          "source_session": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "start_turn": 8,
+          "end_turn": 8,
+          "created_at": "2026-11-04 14:11:02.126571+00:00"
+        },
+        {
+          "id": "10e6b675-7dc2-48fc-b24b-b7673bd62be9",
+          "user_id": "e53cf23c-61dc-4da3-8596-283b52d17b84",
+          "content": "周三午休同学们玩游戏时，用户在门口看了一会儿就走了，下午一直觉得空落落的。",
+          "subject": "user",
+          "occurred_at": "周三午休",
+          "source_ids": [
+            "1f85cb67-fb06-49be-833b-ec64192b1f89"
+          ],
+          "source_session": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "start_turn": 9,
+          "end_turn": 9,
+          "created_at": "2026-11-04 14:11:05.052885+00:00"
+        },
+        {
+          "id": "301d0f38-b5fc-4924-a613-dbfac462f4c5",
+          "user_id": "e53cf23c-61dc-4da3-8596-283b52d17b84",
+          "content": "体育课上用户练习接力跑并参与计时，记得自己的成绩比上次快一点。",
+          "subject": "user",
+          "occurred_at": "体育课",
+          "source_ids": [
+            "d53a0246-4c8c-4982-9243-5d63c14dbfe0"
+          ],
+          "source_session": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "start_turn": 10,
+          "end_turn": 10,
+          "created_at": "2026-11-04 14:11:07.984941+00:00"
+        },
+        {
+          "id": "f0543064-e6b8-4325-8c83-b399dba0036d",
+          "user_id": "e53cf23c-61dc-4da3-8596-283b52d17b84",
+          "content": "班级最近更换了黑板报，主题是秋天的校园。",
+          "subject": "user",
+          "occurred_at": "最近",
+          "source_ids": [
+            "d79aa03b-10fb-474e-ac3f-4872caafed52"
+          ],
+          "source_session": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "start_turn": 13,
+          "end_turn": 13,
+          "created_at": "2026-11-04 14:12:36.270183+00:00"
+        },
+        {
+          "id": "eb84e872-1add-4810-a97b-96aa78386591",
+          "user_id": "e53cf23c-61dc-4da3-8596-283b52d17b84",
+          "content": "昨天社团分组时拿着材料不知道站在哪里，最后一个人完成任务，看到别人一起笑而感到难受。",
+          "subject": "user",
+          "occurred_at": "昨天",
+          "source_ids": [
+            "93b5bdd4-3fe1-49b8-b091-a260a3b90b31"
+          ],
+          "source_session": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "start_turn": 17,
+          "end_turn": 17,
+          "created_at": "2026-11-04 14:12:57.598906+00:00"
+        },
+        {
+          "id": "2b047e22-5c19-4ef4-b1c3-80ab4fd68c1e",
+          "user_id": "e53cf23c-61dc-4da3-8596-283b52d17b84",
+          "content": "一位同学邀请自己一起做展示；自己很高兴，但担心加入会让人不自在，因此没有答应。",
+          "subject": "user",
+          "occurred_at": "今天",
+          "source_ids": [
+            "54943d27-195f-4b4e-af35-afa52e009fd4"
+          ],
+          "source_session": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "start_turn": 22,
+          "end_turn": 22,
+          "created_at": "2026-11-04 14:13:50.237835+00:00"
+        }
+      ],
+      "snapshot": [
+        {
+          "user_id": "e53cf23c-61dc-4da3-8596-283b52d17b84",
+          "version": 4,
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "processed_turn": 24,
+          "content": "[事件 c0ea3d74-9ca8-412c-86d7-c621552399d1 | 会话 b15c1247-dfac-48d6-af46-5556a170d664 第3-3轮 | 发生时间 昨天] 整理书包时，把旧练习纸放进了资料夹。\n[事件 0a1289dc-932f-48c6-8521-ad29efaf73c0 | 会话 b15c1247-dfac-48d6-af46-5556a170d664 第8-8轮 | 发生时间 未确定] 用户准备好了明天要用的文具，并放在书桌左边。\n[事件 133e34e7-4bc1-437e-a792-7a0412ba6d12 | 会话 b15c1247-dfac-48d6-af46-5556a170d664 第7-7轮 | 发生时间 今天课间] 今天课间有人分享科普书，用户翻看了几页关于海洋的内容。\n[事件 9c752347-cf52-4e3f-8163-982f78de6397 | 会话 b15c1247-dfac-48d6-af46-5556a170d664 第4-4轮 | 发生时间 未确定] 科学课做关于水的实验时，记下了实验步骤，并觉得很有意思。\n[事件 f0543064-e6b8-4325-8c83-b399dba0036d | 会话 b15c1247-dfac-48d6-af46-5556a170d664 第13-13轮 | 发生时间 最近] 班级最近更换了黑板报，主题是秋天的校园。",
+          "event_ids": [
+            "c0ea3d74-9ca8-412c-86d7-c621552399d1",
+            "0a1289dc-932f-48c6-8521-ad29efaf73c0",
+            "133e34e7-4bc1-437e-a792-7a0412ba6d12",
+            "9c752347-cf52-4e3f-8163-982f78de6397",
+            "f0543064-e6b8-4325-8c83-b399dba0036d"
+          ],
+          "intent_ids": [],
+          "updated_at": "2026-11-04 14:14:28.782981+00:00"
+        }
+      ],
+      "messages": [
+        {
+          "id": "5764f49b-3b25-4d98-8e0e-615bd6cb3856",
+          "role": "user",
+          "content": "今天午饭我和同学聊了一会儿学校的新图书角。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "98042623-1dcf-49ed-b7c0-10cf58862f4d",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "153e4f9a-f61d-4b08-951b-262e762b47c9",
+          "role": "user",
+          "content": "上周班级分组做海报，我在旁边等着，最后没有加入，回家还在想那次活动。",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "2489a376-b2f3-4dc6-951a-43099868d29e",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "95b97b4a-e77e-463d-a72e-d2977996ffc1",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "9e7ebc1f-a894-4201-937a-1de1815c5667",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "73cde8cb-f9c5-48a9-bcdd-6f6d7a532a9e",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "515c2a41-b68b-4ed6-b102-5fce5b56b6a6",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "f7206ae7-7a4e-40fb-b570-10fa1f56abe6",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "d9c7b99e-9d9c-413e-aba9-aa137725f853",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "037ddeac-0d1e-445f-800a-af99fad9ec21",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "964fea9b-8ab5-47f0-a924-3da4d96b5972",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "14ce2274-b4c3-484f-a0fa-8c78613022d2",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "fc5a854c-1679-4e80-8469-8184c65f9c8d",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "1f5da084-468d-4569-9f2c-6990b8a68c03",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "51b667d3-25a4-4f44-b82c-9cc723b5ab67",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "1f85cb67-fb06-49be-833b-ec64192b1f89",
+          "role": "user",
+          "content": "周三午休同学们一起玩游戏，我站在门口看了一会儿就走了，下午总觉得空落落的。",
+          "turn_no": 9,
+          "sent_at": "2026-10-01T11:18:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "10249945-7be0-4717-a06e-e5d1e5b4ce3e",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 9,
+          "sent_at": "2026-10-01T11:18:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "d53a0246-4c8c-4982-9243-5d63c14dbfe0",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 10,
+          "sent_at": "2026-10-01T11:20:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "d2a6e964-e11c-4ec7-b04f-f189948b1cc8",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 10,
+          "sent_at": "2026-10-01T11:20:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "1ca5de40-b96b-486f-8eb4-693956c55b44",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 11,
+          "sent_at": "2026-10-01T11:22:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "e254ff94-ad2a-465e-98f4-605150c88cf9",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 11,
+          "sent_at": "2026-10-01T11:22:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "d85e6d68-0a34-473a-b861-20f4e1fa7d9e",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 12,
+          "sent_at": "2026-10-01T11:24:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "02bde4b5-80a7-4589-8c63-5cc01313943b",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 12,
+          "sent_at": "2026-10-01T11:24:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "d79aa03b-10fb-474e-ac3f-4872caafed52",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 13,
+          "sent_at": "2026-10-01T11:26:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "e5fdbee0-a71a-4964-bc1b-d6b5d90df48c",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 13,
+          "sent_at": "2026-10-01T11:26:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "8075f836-79d0-4b09-b58b-f2c87e6f04e6",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 14,
+          "sent_at": "2026-10-01T11:28:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "d68604a6-8abf-4bed-8d22-bb5c44cb1bb7",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 14,
+          "sent_at": "2026-10-01T11:28:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "096e8484-b5e1-4c6b-8bf7-08bb3d7690ba",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 15,
+          "sent_at": "2026-10-01T11:30:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "e5b6fd2f-0c13-4fdd-b502-e80fcbf3f413",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 15,
+          "sent_at": "2026-10-01T11:30:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "5178c401-8e19-42d6-adf9-4fb5eb71e709",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 16,
+          "sent_at": "2026-10-01T11:32:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "bed39dda-0521-4808-809f-2c3565a21b76",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 16,
+          "sent_at": "2026-10-01T11:32:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "93b5bdd4-3fe1-49b8-b091-a260a3b90b31",
+          "role": "user",
+          "content": "昨天社团又分了组，我拿着材料不知道站哪儿，最后一个人完成，看到别人一起笑有点难受。",
+          "turn_no": 17,
+          "sent_at": "2026-10-01T11:34:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "c742371b-5534-4e5b-86eb-794a82ffb788",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 17,
+          "sent_at": "2026-10-01T11:34:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "643b45ff-c509-4594-abf5-dd7965a912f0",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 18,
+          "sent_at": "2026-10-01T11:36:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "6941a87f-c1b0-46a6-9f24-bf98da930767",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 18,
+          "sent_at": "2026-10-01T11:36:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "991e76c1-1ed4-4424-9f10-998ac12e9b16",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 19,
+          "sent_at": "2026-10-01T11:38:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "f7a21a12-fa5e-4db2-b1be-ebe1244b0fbc",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 19,
+          "sent_at": "2026-10-01T11:38:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "0540bf8b-1a51-4c2b-8c0b-ed2ba7a173ee",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 20,
+          "sent_at": "2026-10-01T11:40:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "b95462ea-b668-4ef8-a61e-955dad4d95db",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 20,
+          "sent_at": "2026-10-01T11:40:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "52b81241-117c-4a26-b7c8-765a6b8709c4",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 21,
+          "sent_at": "2026-10-01T11:42:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "039deb76-fd36-4c55-8967-ae6ee2bc2087",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 21,
+          "sent_at": "2026-10-01T11:42:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "54943d27-195f-4b4e-af35-afa52e009fd4",
+          "role": "user",
+          "content": "今天一位同学叫我一起做展示，我很高兴但没答应，担心自己插进去会让人不自在。",
+          "turn_no": 22,
+          "sent_at": "2026-10-01T11:44:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "15aba097-d9c3-4e02-8ab0-611e4350fea2",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 22,
+          "sent_at": "2026-10-01T11:44:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "985a1839-093e-4227-aabc-c8fd029e80c5",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 23,
+          "sent_at": "2026-10-01T11:46:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "6541d960-72f0-4532-9299-9ec21d77ca5c",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 23,
+          "sent_at": "2026-10-01T11:46:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "d03fb9d5-8445-4a57-919e-5d6750429394",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 24,
+          "sent_at": "2026-10-01T11:48:00+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        },
+        {
+          "id": "9a72cd5e-5278-44d5-9ee9-ce41a5b63469",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 24,
+          "sent_at": "2026-10-01T11:48:20+00:00",
+          "session_id": "b15c1247-dfac-48d6-af46-5556a170d664",
+          "session_number": 1
+        }
+      ]
+    },
+    {
+      "id": "peer_connection_cross",
+      "scenario_id": "peer_connection",
+      "mode": "cross",
+      "gold_has_intent": true,
+      "gold_category": "peer_participation",
+      "graph_prediction": true,
+      "baseline_prediction": true,
+      "graph_intents": [
+        {
+          "id": "99686866-2995-4232-945a-ec704f7fbccd",
+          "label": "理解并应对想加入同伴活动却担心让人不自在的困扰",
+          "category": "学校与同伴互动",
+          "status": "tentative",
+          "source_session": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "extracted_turn": 6,
+          "updated_at": "2026-11-04 14:15:08.912504+00:00",
+          "support_event_ids": [
+            "4b040d06-7bc0-4329-baaf-d48b82da1ab7",
+            "35948b4b-8630-451a-9951-1ce7b5ca3fcd",
+            "73189e2e-f567-4af3-86a2-35c60b43fae1",
+            "5631362b-f4f3-4ef3-bb57-9a7b234f93c9"
+          ],
+          "counter_event_ids": []
+        }
+      ],
+      "baseline_intents": [
+        {
+          "label": "希望参与同伴活动或小组合作，但因担心打扰他人而犹豫，想改善被排除感和孤单感",
+          "category": "人际关系",
+          "support_message_ids": [
+            "92c12d81-c195-43ca-875e-2084f19ff3c0",
+            "f34a4544-96e0-47ab-b984-66fe2a49e8e0",
+            "e862f48d-b190-4153-bf54-8b8cd2948466",
+            "4adbdf86-8db5-467c-816b-4a0ce15df40e"
+          ]
+        }
+      ],
+      "graph_correct": true,
+      "baseline_correct": true,
+      "event_count": 11,
+      "job_seconds": [
+        79.11,
+        79.531,
+        74.24,
+        50.26,
+        72.824,
+        55.402
+      ],
+      "user_id": "cf705ec6-8ec6-40b6-a65e-270ea11b3f53",
+      "sessions": {
+        "1": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+        "2": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+        "3": "6f03bf09-4aac-4f93-b048-96087272b95f"
+      },
+      "window_chars": 623,
+      "all_sources_have_turns": true,
+      "graph_mapped_categories": [
+        "peer_participation"
+      ],
+      "graph_category_correct": true,
+      "baseline_mapped_categories": [
+        "peer_participation"
+      ],
+      "baseline_category_correct": true,
+      "events": [
+        {
+          "id": "9d0067b0-717d-4832-916c-f1b08b759fa0",
+          "user_id": "cf705ec6-8ec6-40b6-a65e-270ea11b3f53",
+          "content": "午饭时和同学聊了一会儿学校的新图书角。",
+          "subject": "user",
+          "occurred_at": "今天午饭",
+          "source_ids": [
+            "afeb300d-11f3-457a-a351-8163e0cd0e3b"
+          ],
+          "source_session": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 14:09:29.403465+00:00"
+        },
+        {
+          "id": "4b040d06-7bc0-4329-baaf-d48b82da1ab7",
+          "user_id": "cf705ec6-8ec6-40b6-a65e-270ea11b3f53",
+          "content": "班级分组做海报时在旁边等着，最后没有加入，回家后还在想那次活动。",
+          "subject": "user",
+          "occurred_at": "上周",
+          "source_ids": [
+            "92c12d81-c195-43ca-875e-2084f19ff3c0"
+          ],
+          "source_session": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "start_turn": 2,
+          "end_turn": 2,
+          "created_at": "2026-11-04 14:09:44.586374+00:00"
+        },
+        {
+          "id": "78f82c94-8e52-4f17-bc3b-0ad81faa3cfb",
+          "user_id": "cf705ec6-8ec6-40b6-a65e-270ea11b3f53",
+          "content": "整理书包时把旧练习纸放进了资料夹。",
+          "subject": "user",
+          "occurred_at": "昨天",
+          "source_ids": [
+            "5f51232a-d672-4265-9314-267afb4f97a2"
+          ],
+          "source_session": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "start_turn": 3,
+          "end_turn": 3,
+          "created_at": "2026-11-04 14:09:48.212123+00:00"
+        },
+        {
+          "id": "24e17e91-8fdf-41e7-9c3c-d3a9e2624e80",
+          "user_id": "cf705ec6-8ec6-40b6-a65e-270ea11b3f53",
+          "content": "科学课做关于水的实验时记下了步骤，觉得实验很有意思。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "90a3de14-f7d8-4c20-b106-f543ea8ce7b7"
+          ],
+          "source_session": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "start_turn": 4,
+          "end_turn": 4,
+          "created_at": "2026-11-04 14:09:49.996265+00:00"
+        },
+        {
+          "id": "35ff7692-466e-49b6-9162-49ece522ff74",
+          "user_id": "cf705ec6-8ec6-40b6-a65e-270ea11b3f53",
+          "content": "和家人散步时看到了路边的银杏树，并聊了些日常小事。",
+          "subject": "user",
+          "occurred_at": "周末",
+          "source_ids": [
+            "5faa0bca-3011-4dee-ab66-2f009406aae7"
+          ],
+          "source_session": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "start_turn": 6,
+          "end_turn": 6,
+          "created_at": "2026-11-04 14:10:12.922505+00:00"
+        },
+        {
+          "id": "e6a9a22e-3678-4f15-a50e-023455006bda",
+          "user_id": "cf705ec6-8ec6-40b6-a65e-270ea11b3f53",
+          "content": "今天课间有人分享了一本科普书，用户翻了几页关于海洋的内容。",
+          "subject": "user",
+          "occurred_at": "今天课间",
+          "source_ids": [
+            "4d6aeab8-804e-4353-9e64-726375f43249"
+          ],
+          "source_session": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "start_turn": 7,
+          "end_turn": 7,
+          "created_at": "2026-11-04 14:11:12.178778+00:00"
+        },
+        {
+          "id": "e72534b6-fa45-48cb-bc35-0b211c14e193",
+          "user_id": "cf705ec6-8ec6-40b6-a65e-270ea11b3f53",
+          "content": "用户准备好了明天要用的文具，并放在书桌左边。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "64ea5c05-2295-4dd9-9485-ff53f5dc3a7d"
+          ],
+          "source_session": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "start_turn": 8,
+          "end_turn": 8,
+          "created_at": "2026-11-04 14:11:32.225989+00:00"
+        },
+        {
+          "id": "35948b4b-8630-451a-9951-1ce7b5ca3fcd",
+          "user_id": "cf705ec6-8ec6-40b6-a65e-270ea11b3f53",
+          "content": "周三午休同学们一起玩游戏时，用户在门口看了一会儿就走了，下午总觉得空落落的。",
+          "subject": "user",
+          "occurred_at": "周三午休、下午",
+          "source_ids": [
+            "f34a4544-96e0-47ab-b984-66fe2a49e8e0"
+          ],
+          "source_session": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 14:12:08.310131+00:00"
+        },
+        {
+          "id": "050d0197-0a81-4ae1-9f1e-a9256d45c378",
+          "user_id": "cf705ec6-8ec6-40b6-a65e-270ea11b3f53",
+          "content": "体育课练接力跑时，用户参加了轮流计时，记得自己的成绩比上次快一点。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "60a032e8-185b-4df8-b568-00a537a3b560"
+          ],
+          "source_session": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "start_turn": 2,
+          "end_turn": 2,
+          "created_at": "2026-11-04 14:12:18.154197+00:00"
+        },
+        {
+          "id": "73189e2e-f567-4af3-86a2-35c60b43fae1",
+          "user_id": "cf705ec6-8ec6-40b6-a65e-270ea11b3f53",
+          "content": "社团分组时，用户拿着材料不知道站在哪儿，最后独自完成；看到别人一起笑，感到有点难受。",
+          "subject": "user",
+          "occurred_at": "昨天",
+          "source_ids": [
+            "e862f48d-b190-4153-bf54-8b8cd2948466"
+          ],
+          "source_session": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 14:14:18.713343+00:00"
+        },
+        {
+          "id": "5631362b-f4f3-4ef3-bb57-9a7b234f93c9",
+          "user_id": "cf705ec6-8ec6-40b6-a65e-270ea11b3f53",
+          "content": "一位同学邀请用户一起做展示；用户很高兴，但因担心加入会让人不自在而没有答应。",
+          "subject": "user",
+          "occurred_at": "今天",
+          "source_ids": [
+            "4adbdf86-8db5-467c-816b-4a0ce15df40e"
+          ],
+          "source_session": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "start_turn": 6,
+          "end_turn": 6,
+          "created_at": "2026-11-04 14:14:42.259781+00:00"
+        }
+      ],
+      "snapshot": [
+        {
+          "user_id": "cf705ec6-8ec6-40b6-a65e-270ea11b3f53",
+          "version": 6,
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "processed_turn": 8,
+          "content": "[事件 e6a9a22e-3678-4f15-a50e-023455006bda | 会话 a5678f53-2a4d-4e9d-a8f7-f426cc44a188 第7-7轮 | 发生时间 今天课间] 今天课间有人分享了一本科普书，用户翻了几页关于海洋的内容。\n[事件 e72534b6-fa45-48cb-bc35-0b211c14e193 | 会话 a5678f53-2a4d-4e9d-a8f7-f426cc44a188 第8-8轮 | 发生时间 未确定] 用户准备好了明天要用的文具，并放在书桌左边。\n[事件 24e17e91-8fdf-41e7-9c3c-d3a9e2624e80 | 会话 a5678f53-2a4d-4e9d-a8f7-f426cc44a188 第4-4轮 | 发生时间 未确定] 科学课做关于水的实验时记下了步骤，觉得实验很有意思。\n[事件 78f82c94-8e52-4f17-bc3b-0ad81faa3cfb | 会话 a5678f53-2a4d-4e9d-a8f7-f426cc44a188 第3-3轮 | 发生时间 昨天] 整理书包时把旧练习纸放进了资料夹。\n[事件 9d0067b0-717d-4832-916c-f1b08b759fa0 | 会话 a5678f53-2a4d-4e9d-a8f7-f426cc44a188 第1-1轮 | 发生时间 今天午饭] 午饭时和同学聊了一会儿学校的新图书角。",
+          "event_ids": [
+            "e6a9a22e-3678-4f15-a50e-023455006bda",
+            "e72534b6-fa45-48cb-bc35-0b211c14e193",
+            "24e17e91-8fdf-41e7-9c3c-d3a9e2624e80",
+            "78f82c94-8e52-4f17-bc3b-0ad81faa3cfb",
+            "9d0067b0-717d-4832-916c-f1b08b759fa0"
+          ],
+          "intent_ids": [],
+          "updated_at": "2026-11-04 14:15:41.619199+00:00"
+        }
+      ],
+      "messages": [
+        {
+          "id": "afeb300d-11f3-457a-a351-8163e0cd0e3b",
+          "role": "user",
+          "content": "今天午饭我和同学聊了一会儿学校的新图书角。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:00+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "501b20f3-ad0b-4c01-af76-cbd307e93855",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:20+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "92c12d81-c195-43ca-875e-2084f19ff3c0",
+          "role": "user",
+          "content": "上周班级分组做海报，我在旁边等着，最后没有加入，回家还在想那次活动。",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:00+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "67163f22-ee45-48d0-a2eb-9f36d172e97c",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:20+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "5f51232a-d672-4265-9314-267afb4f97a2",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:00+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "e6e15d01-6538-44e7-96df-9c3a3a56c531",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:20+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "90a3de14-f7d8-4c20-b106-f543ea8ce7b7",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:00+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "1f734894-c37c-44ab-b449-d12c65cfb1b4",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:20+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "05429264-0c81-4569-82e4-f5299b365412",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:00+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "169c99ed-5a04-452b-8570-c2828cce684d",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:20+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "5faa0bca-3011-4dee-ab66-2f009406aae7",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:00+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "c1d2ef26-48fb-4e04-99ba-2556c9bdb80e",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:20+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "4d6aeab8-804e-4353-9e64-726375f43249",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:00+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "f62d5dc7-7c4a-4ec8-bd5c-75a00fab3c83",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:20+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "64ea5c05-2295-4dd9-9485-ff53f5dc3a7d",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:00+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "7bdf6f8e-d35f-42e6-952c-7a63dfe911ed",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:20+00:00",
+          "session_id": "a5678f53-2a4d-4e9d-a8f7-f426cc44a188",
+          "session_number": 1
+        },
+        {
+          "id": "f34a4544-96e0-47ab-b984-66fe2a49e8e0",
+          "role": "user",
+          "content": "周三午休同学们一起玩游戏，我站在门口看了一会儿就走了，下午总觉得空落落的。",
+          "turn_no": 1,
+          "sent_at": "2026-10-08T11:02:00+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "e07851d9-471c-41a8-a588-b5ea3b9299bc",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-08T11:02:20+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "60a032e8-185b-4df8-b568-00a537a3b560",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 2,
+          "sent_at": "2026-10-08T11:04:00+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "70209c86-3923-4c69-a488-a0cdab5a4945",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-08T11:04:20+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "0609c5d1-a7b4-4613-8788-faa723ad532f",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-08T11:06:00+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "9410ebe1-15ea-41b5-b1af-116bf0021939",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-08T11:06:20+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "c23c41bd-30d4-4626-8541-58ebb0dcb932",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-08T11:08:00+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "52bdfc35-9e6f-4c82-a066-88b8c79a5f1b",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-08T11:08:20+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "8847cbec-6728-4612-99da-48e27e5758fd",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-08T11:10:00+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "8e93fd2c-441b-4e5d-bf40-f40828188987",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-08T11:10:20+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "c03b291b-1de8-4790-b098-35070a75b349",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 6,
+          "sent_at": "2026-10-08T11:12:00+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "3fa8e712-462f-49c0-bced-d31441265eb8",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-08T11:12:20+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "fc1a11cc-6877-48b9-8ff7-92de50ebdad3",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-08T11:14:00+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "01aecda3-2b27-46e2-9f2c-8b6f60b5e4d0",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-08T11:14:20+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "5b5f900c-d592-4b46-93f9-fa04cd579268",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-08T11:16:00+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "e22f1ac3-63d9-47da-991d-cf9487084374",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-08T11:16:20+00:00",
+          "session_id": "7cf2ecb9-c988-4e59-9ef8-a4fec3aa7762",
+          "session_number": 2
+        },
+        {
+          "id": "e862f48d-b190-4153-bf54-8b8cd2948466",
+          "role": "user",
+          "content": "昨天社团又分了组，我拿着材料不知道站哪儿，最后一个人完成，看到别人一起笑有点难受。",
+          "turn_no": 1,
+          "sent_at": "2026-10-15T11:02:00+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "bce58568-98f8-40df-aae7-0aa65001b0a2",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-15T11:02:20+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "f266fd51-3b80-45de-a8f3-99ac9f8d7528",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 2,
+          "sent_at": "2026-10-15T11:04:00+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "c86379c3-7ddc-40f0-afda-b20cc343e3ba",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-15T11:04:20+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "dc74f9c9-0013-4821-add5-ababbcb074fe",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-15T11:06:00+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "202f182f-9951-4b38-8cdf-994f36a68429",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-15T11:06:20+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "49a21eee-c055-4703-a4b7-5f041fa63fde",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-15T11:08:00+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "867fe9a0-c95d-4e48-987c-5cb98db3cb4f",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-15T11:08:20+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "62b4406b-4edc-4216-89bf-bb50bcc839b9",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-15T11:10:00+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "80e5e5af-b032-404e-9796-d2509f0c2eea",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-15T11:10:20+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "4adbdf86-8db5-467c-816b-4a0ce15df40e",
+          "role": "user",
+          "content": "今天一位同学叫我一起做展示，我很高兴但没答应，担心自己插进去会让人不自在。",
+          "turn_no": 6,
+          "sent_at": "2026-10-15T11:12:00+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "5225f8b6-ac3e-4ef7-8a33-d8ea2d0bc4f9",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-15T11:12:20+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "3af01c59-ec5d-4fc7-bc0e-ac66e8469c1d",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-15T11:14:00+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "c7d070b7-4a58-45e4-8bee-1dc651a8de67",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-15T11:14:20+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "803956d5-143f-46cd-8b8e-93cd61bbe6a6",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-15T11:16:00+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        },
+        {
+          "id": "7b55e9da-55f4-4e31-ae5f-f92681f06490",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-15T11:16:20+00:00",
+          "session_id": "6f03bf09-4aac-4f93-b048-96087272b95f",
+          "session_number": 3
+        }
+      ]
+    },
+    {
+      "id": "third_party_long",
+      "scenario_id": "third_party",
+      "mode": "long",
+      "gold_has_intent": false,
+      "gold_category": null,
+      "graph_prediction": false,
+      "baseline_prediction": false,
+      "graph_intents": [],
+      "baseline_intents": [],
+      "graph_correct": true,
+      "baseline_correct": true,
+      "event_count": 10,
+      "job_seconds": [
+        62.566,
+        79.239,
+        72.843,
+        90.364
+      ],
+      "user_id": "7ebeed4b-d358-4003-b2a9-e3e71c4c6d0a",
+      "sessions": {
+        "1": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e"
+      },
+      "window_chars": 646,
+      "all_sources_have_turns": true,
+      "baseline_mapped_categories": [],
+      "baseline_category_correct": true,
+      "graph_mapped_categories": [],
+      "graph_category_correct": true,
+      "events": [
+        {
+          "id": "675263fe-57a6-45aa-833b-dab6a04b7bb3",
+          "user_id": "7ebeed4b-d358-4003-b2a9-e3e71c4c6d0a",
+          "content": "今天午饭和同学聊了一会儿学校的新图书角。",
+          "subject": "user",
+          "occurred_at": "今天午饭",
+          "source_ids": [
+            "b0dbcf9c-2a05-4f2d-bab4-cfb4b471d3f4"
+          ],
+          "source_session": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 14:15:20.885746+00:00"
+        },
+        {
+          "id": "e40dd0ad-417d-43df-aee5-0d1ade125f5c",
+          "user_id": "7ebeed4b-d358-4003-b2a9-e3e71c4c6d0a",
+          "content": "昨天整理了书包，并把旧练习纸放进了资料夹。",
+          "subject": "user",
+          "occurred_at": "昨天",
+          "source_ids": [
+            "23b1bfa8-c5ea-4988-8f2a-8bda6d058052"
+          ],
+          "source_session": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "start_turn": 3,
+          "end_turn": 3,
+          "created_at": "2026-11-04 14:15:23.643142+00:00"
+        },
+        {
+          "id": "e0650e2b-7778-455a-bad5-60683636fd64",
+          "user_id": "7ebeed4b-d358-4003-b2a9-e3e71c4c6d0a",
+          "content": "科学课做了一个关于水的实验，记下了实验步骤，并觉得很有意思。",
+          "subject": "user",
+          "occurred_at": "科学课",
+          "source_ids": [
+            "392d6195-cd19-483f-bced-222c3ad60831"
+          ],
+          "source_session": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "start_turn": 4,
+          "end_turn": 4,
+          "created_at": "2026-11-04 14:15:43.600110+00:00"
+        },
+        {
+          "id": "c9e222a5-91bf-48be-9050-60eb45e8742b",
+          "user_id": "7ebeed4b-d358-4003-b2a9-e3e71c4c6d0a",
+          "content": "最近班级更换了黑板报，主题是秋天的校园。",
+          "subject": "user",
+          "occurred_at": "最近",
+          "source_ids": [
+            "651fc48e-dd79-46e9-bb35-204a0e04f335"
+          ],
+          "source_session": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "start_turn": 5,
+          "end_turn": 5,
+          "created_at": "2026-11-04 14:15:47.771294+00:00"
+        },
+        {
+          "id": "31aea866-11b7-4b4f-9f4f-1bd8f88f7f16",
+          "user_id": "7ebeed4b-d358-4003-b2a9-e3e71c4c6d0a",
+          "content": "周末和家人散步时看到了路边的银杏树，并聊了些日常小事。",
+          "subject": "user",
+          "occurred_at": "周末",
+          "source_ids": [
+            "264bd7c2-66d3-4da6-8636-0b6c6f616192"
+          ],
+          "source_session": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "start_turn": 6,
+          "end_turn": 6,
+          "created_at": "2026-11-04 14:15:56.478060+00:00"
+        },
+        {
+          "id": "a6e5411c-aa91-4e7d-b28a-dc270f2dfa98",
+          "user_id": "7ebeed4b-d358-4003-b2a9-e3e71c4c6d0a",
+          "content": "今天课间有人分享科普书，用户翻看了其中几页关于海洋的内容。",
+          "subject": "user",
+          "occurred_at": "今天课间",
+          "source_ids": [
+            "c286ad4b-36b8-4fe0-8113-ce53a35d886d"
+          ],
+          "source_session": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "start_turn": 7,
+          "end_turn": 7,
+          "created_at": "2026-11-04 14:16:23.467081+00:00"
+        },
+        {
+          "id": "e1daa52e-7416-4b34-a505-bfae0cf2b682",
+          "user_id": "7ebeed4b-d358-4003-b2a9-e3e71c4c6d0a",
+          "content": "用户准备好了明天要用的文具，并放在书桌左边。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "774b7073-1cfb-46cc-a97c-b372ffee9473"
+          ],
+          "source_session": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "start_turn": 8,
+          "end_turn": 8,
+          "created_at": "2026-11-04 14:16:31.543949+00:00"
+        },
+        {
+          "id": "25289c26-efe0-46bc-bff7-5c25fa00f105",
+          "user_id": "7ebeed4b-d358-4003-b2a9-e3e71c4c6d0a",
+          "content": "用户的作业安排正常，晚上能休息。",
+          "subject": "user",
+          "occurred_at": "晚上",
+          "source_ids": [
+            "db57c452-02c7-4a56-af1d-522880445d84"
+          ],
+          "source_session": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "start_turn": 9,
+          "end_turn": 9,
+          "created_at": "2026-11-04 14:16:39.674084+00:00"
+        },
+        {
+          "id": "911f879f-13dc-4ff2-b2f7-cb6785c19f78",
+          "user_id": "7ebeed4b-d358-4003-b2a9-e3e71c4c6d0a",
+          "content": "体育课练习接力跑时，用户参与轮流计时，记得自己的成绩比上次快一点。",
+          "subject": "user",
+          "occurred_at": "体育课",
+          "source_ids": [
+            "3cccee02-f840-4c49-acef-05baa024f319"
+          ],
+          "source_session": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "start_turn": 10,
+          "end_turn": 10,
+          "created_at": "2026-11-04 14:16:41.930104+00:00"
+        },
+        {
+          "id": "b5d59e6d-a903-489e-92fd-af92d3d4961a",
+          "user_id": "7ebeed4b-d358-4003-b2a9-e3e71c4c6d0a",
+          "content": "听到同学家里还想加课后感到有些感慨，同时表示自己目前没有这个困扰，也不需要为自己调整安排。",
+          "subject": "user",
+          "occurred_at": "最近",
+          "source_ids": [
+            "83153581-4148-40f2-8918-01ada6eaa231"
+          ],
+          "source_session": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "start_turn": 22,
+          "end_turn": 22,
+          "created_at": "2026-11-04 14:19:35.779306+00:00"
+        }
+      ],
+      "snapshot": [
+        {
+          "user_id": "7ebeed4b-d358-4003-b2a9-e3e71c4c6d0a",
+          "version": 4,
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "processed_turn": 24,
+          "content": "[事件 e40dd0ad-417d-43df-aee5-0d1ade125f5c | 会话 9be47cc7-ad7a-4edb-a56c-f9de0c52f43e 第3-3轮 | 发生时间 昨天] 昨天整理了书包，并把旧练习纸放进了资料夹。\n[事件 e0650e2b-7778-455a-bad5-60683636fd64 | 会话 9be47cc7-ad7a-4edb-a56c-f9de0c52f43e 第4-4轮 | 发生时间 科学课] 科学课做了一个关于水的实验，记下了实验步骤，并觉得很有意思。\n[事件 e1daa52e-7416-4b34-a505-bfae0cf2b682 | 会话 9be47cc7-ad7a-4edb-a56c-f9de0c52f43e 第8-8轮 | 发生时间 未确定] 用户准备好了明天要用的文具，并放在书桌左边。\n[事件 c9e222a5-91bf-48be-9050-60eb45e8742b | 会话 9be47cc7-ad7a-4edb-a56c-f9de0c52f43e 第5-5轮 | 发生时间 最近] 最近班级更换了黑板报，主题是秋天的校园。\n[事件 b5d59e6d-a903-489e-92fd-af92d3d4961a | 会话 9be47cc7-ad7a-4edb-a56c-f9de0c52f43e 第22-22轮 | 发生时间 最近] 听到同学家里还想加课后感到有些感慨，同时表示自己目前没有这个困扰，也不需要为自己调整安排。",
+          "event_ids": [
+            "e40dd0ad-417d-43df-aee5-0d1ade125f5c",
+            "e0650e2b-7778-455a-bad5-60683636fd64",
+            "e1daa52e-7416-4b34-a505-bfae0cf2b682",
+            "c9e222a5-91bf-48be-9050-60eb45e8742b",
+            "b5d59e6d-a903-489e-92fd-af92d3d4961a"
+          ],
+          "intent_ids": [],
+          "updated_at": "2026-11-04 14:19:54.971462+00:00"
+        }
+      ],
+      "messages": [
+        {
+          "id": "b0dbcf9c-2a05-4f2d-bab4-cfb4b471d3f4",
+          "role": "user",
+          "content": "今天午饭我和同学聊了一会儿学校的新图书角。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "8950abe3-6b6c-4010-bacb-9dcbdaf6d000",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "a484c439-2379-408e-843f-cbef993e9a81",
+          "role": "user",
+          "content": "同桌告诉我，她这周三天写作业到凌晨一点，早读很困；说的是她，不是我的情况。",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "24a9721c-baab-4a9c-a9ff-33584e1f4fa6",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "23b1bfa8-c5ea-4988-8f2a-8bda6d058052",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "e46851e1-f7cf-40e9-a435-98511073288c",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "392d6195-cd19-483f-bced-222c3ad60831",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "0a1f9d5c-6279-4ca4-b65b-91ec4ff6138f",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "651fc48e-dd79-46e9-bb35-204a0e04f335",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "a4ff698a-bdbf-429e-98f5-a2ea905f4619",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "264bd7c2-66d3-4da6-8636-0b6c6f616192",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "e141927a-d249-447d-9a62-b9185cdab58b",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "c286ad4b-36b8-4fe0-8113-ce53a35d886d",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "5afd8399-15ba-497f-870a-891f674bcde8",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "774b7073-1cfb-46cc-a97c-b372ffee9473",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "98aeea80-25c6-48ed-bf6d-ca3c6990b04d",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "db57c452-02c7-4a56-af1d-522880445d84",
+          "role": "user",
+          "content": "她说自己放学后补习，回家已经九点。我自己的作业安排正常，晚上能休息。",
+          "turn_no": 9,
+          "sent_at": "2026-10-01T11:18:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "4e20f2db-c0e1-4627-ae96-f89865bf3e6b",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 9,
+          "sent_at": "2026-10-01T11:18:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "3cccee02-f840-4c49-acef-05baa024f319",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 10,
+          "sent_at": "2026-10-01T11:20:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "6a3e5e4a-9b63-48ad-afcf-006f8d7055b5",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 10,
+          "sent_at": "2026-10-01T11:20:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "2866182f-2a7d-4e34-a2b8-fddef0b8b791",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 11,
+          "sent_at": "2026-10-01T11:22:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "1dcfbb63-2dc4-4ca5-8391-7d1d82fa228f",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 11,
+          "sent_at": "2026-10-01T11:22:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "4a3c4adf-692b-43d4-a20a-317d5ae7cd11",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 12,
+          "sent_at": "2026-10-01T11:24:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "4e6d2aab-f482-4a16-9060-2461c4b65e2d",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 12,
+          "sent_at": "2026-10-01T11:24:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "11f697aa-76f7-4528-9f83-4da2ea4dbe1a",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 13,
+          "sent_at": "2026-10-01T11:26:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "c0f1f919-3e4b-4f2f-911c-a0834c6c3e39",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 13,
+          "sent_at": "2026-10-01T11:26:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "39f5fa71-ae46-4e8e-873d-b9e43373ffec",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 14,
+          "sent_at": "2026-10-01T11:28:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "510b9e11-6b85-4f52-8ab3-07fb7b112a7d",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 14,
+          "sent_at": "2026-10-01T11:28:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "6267e4e4-c681-4b12-8967-70cc34847ae1",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 15,
+          "sent_at": "2026-10-01T11:30:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "5d3b205a-ab3a-404b-abfc-21d9f8fd135f",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 15,
+          "sent_at": "2026-10-01T11:30:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "12b046da-4b8d-4d2e-8d1d-c29082657a86",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 16,
+          "sent_at": "2026-10-01T11:32:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "355fe8a7-2a42-4d03-9de3-3f70ab32c5f2",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 16,
+          "sent_at": "2026-10-01T11:32:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "4eba3ee7-6e34-4f6e-a69b-6c4eda329bc6",
+          "role": "user",
+          "content": "同桌的妈妈给她周日又排了一门课。她来找我讲了这件事，我只是转述。",
+          "turn_no": 17,
+          "sent_at": "2026-10-01T11:34:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "bce6ee15-23d9-4c58-b960-ca75309efbb1",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 17,
+          "sent_at": "2026-10-01T11:34:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "8b4adc81-ceaa-4b7f-9de8-1ee52653d7e2",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 18,
+          "sent_at": "2026-10-01T11:36:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "a476f41a-617e-471f-8fec-2b46c9ed2481",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 18,
+          "sent_at": "2026-10-01T11:36:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "b1f56855-20c5-4c43-939e-28649cdfa3c6",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 19,
+          "sent_at": "2026-10-01T11:38:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "6cc75037-b43f-4efc-8810-a8a7c809237f",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 19,
+          "sent_at": "2026-10-01T11:38:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "6a1ab4c6-df66-4852-a7b7-bfcb0be15fae",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 20,
+          "sent_at": "2026-10-01T11:40:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "acade731-b3d3-42cb-b5ff-aae263835e00",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 20,
+          "sent_at": "2026-10-01T11:40:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "4f614867-7441-468e-a09e-35269c4c2282",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 21,
+          "sent_at": "2026-10-01T11:42:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "a38f1379-ecb6-4faa-9dfd-c5089e18e3c1",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 21,
+          "sent_at": "2026-10-01T11:42:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "83153581-4148-40f2-8918-01ada6eaa231",
+          "role": "user",
+          "content": "她家里还想加课，听完我有些感慨；但我目前没有这个困扰，也不需要为自己调整安排。",
+          "turn_no": 22,
+          "sent_at": "2026-10-01T11:44:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "1df75ba6-4066-463a-b0a0-3f7a95af4892",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 22,
+          "sent_at": "2026-10-01T11:44:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "662c3727-0a1d-4a3a-a0a8-4eee67aa0975",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 23,
+          "sent_at": "2026-10-01T11:46:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "76f474ae-88f0-4c00-824b-8555178732ca",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 23,
+          "sent_at": "2026-10-01T11:46:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "6b15ef23-2db3-496f-9a56-d1bda6ed288d",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 24,
+          "sent_at": "2026-10-01T11:48:00+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        },
+        {
+          "id": "67613e32-28e0-4a54-b2f2-2d2b0c210a7e",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 24,
+          "sent_at": "2026-10-01T11:48:20+00:00",
+          "session_id": "9be47cc7-ad7a-4edb-a56c-f9de0c52f43e",
+          "session_number": 1
+        }
+      ]
+    },
+    {
+      "id": "third_party_cross",
+      "scenario_id": "third_party",
+      "mode": "cross",
+      "gold_has_intent": false,
+      "gold_category": null,
+      "graph_prediction": false,
+      "baseline_prediction": false,
+      "graph_intents": [],
+      "baseline_intents": [],
+      "graph_correct": true,
+      "baseline_correct": true,
+      "event_count": 9,
+      "job_seconds": [
+        34.626,
+        35.389,
+        76.984,
+        43.681,
+        86.689,
+        43.818
+      ],
+      "user_id": "f85c7167-c9a3-4133-9144-37d30738c227",
+      "sessions": {
+        "1": "b099a868-5504-421b-a069-061db92963b9",
+        "2": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+        "3": "43715e74-92cc-4924-9e26-7d309170c5b9"
+      },
+      "window_chars": 635,
+      "all_sources_have_turns": true,
+      "baseline_mapped_categories": [],
+      "baseline_category_correct": true,
+      "graph_mapped_categories": [],
+      "graph_category_correct": true,
+      "events": [
+        {
+          "id": "9bfe1c34-9914-4b25-a053-ea822773e7ba",
+          "user_id": "f85c7167-c9a3-4133-9144-37d30738c227",
+          "content": "今天午饭时，用户和同学聊了一会儿学校的新图书角。",
+          "subject": "user",
+          "occurred_at": "今天午饭",
+          "source_ids": [
+            "f5f4f4ed-c37f-41af-a916-a3cd82fd065c"
+          ],
+          "source_session": "b099a868-5504-421b-a069-061db92963b9",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 14:16:37.200418+00:00"
+        },
+        {
+          "id": "646eb1fc-e968-40c9-b7f2-2fc0eb8005f7",
+          "user_id": "f85c7167-c9a3-4133-9144-37d30738c227",
+          "content": "昨天，用户整理书包，把旧练习纸放进了资料夹。",
+          "subject": "user",
+          "occurred_at": "昨天",
+          "source_ids": [
+            "c51bb01c-862b-4e7b-83bc-38e99e09a627"
+          ],
+          "source_session": "b099a868-5504-421b-a069-061db92963b9",
+          "start_turn": 3,
+          "end_turn": 3,
+          "created_at": "2026-11-04 14:16:39.476043+00:00"
+        },
+        {
+          "id": "be6560f3-66f7-4ebc-92b3-e726fe9c76a3",
+          "user_id": "f85c7167-c9a3-4133-9144-37d30738c227",
+          "content": "科学课上，用户做了关于水的实验，记下步骤，并觉得实验很有意思。",
+          "subject": "user",
+          "occurred_at": "科学课",
+          "source_ids": [
+            "880b63ff-5147-46ac-914b-685f02f9dc10"
+          ],
+          "source_session": "b099a868-5504-421b-a069-061db92963b9",
+          "start_turn": 4,
+          "end_turn": 4,
+          "created_at": "2026-11-04 14:16:48.597956+00:00"
+        },
+        {
+          "id": "dc32880d-8e13-4303-8f75-a30ebb83aaad",
+          "user_id": "f85c7167-c9a3-4133-9144-37d30738c227",
+          "content": "周末，用户和家人散步时看到了路边的银杏树，并聊了些日常小事。",
+          "subject": "user",
+          "occurred_at": "周末",
+          "source_ids": [
+            "a891bf86-8fd9-474d-b411-5488726a9572"
+          ],
+          "source_session": "b099a868-5504-421b-a069-061db92963b9",
+          "start_turn": 6,
+          "end_turn": 6,
+          "created_at": "2026-11-04 14:16:51.107886+00:00"
+        },
+        {
+          "id": "6837b5b5-502a-49c6-8145-d8b3ec3d19b4",
+          "user_id": "f85c7167-c9a3-4133-9144-37d30738c227",
+          "content": "课间有人分享了一本科普书，用户翻了几页关于海洋的内容。",
+          "subject": "user",
+          "occurred_at": "今天课间",
+          "source_ids": [
+            "4a61bfec-f0da-41b4-8c5f-c5a5798959eb"
+          ],
+          "source_session": "b099a868-5504-421b-a069-061db92963b9",
+          "start_turn": 7,
+          "end_turn": 7,
+          "created_at": "2026-11-04 14:17:09.467199+00:00"
+        },
+        {
+          "id": "bd0c918d-1c70-4300-a0d4-d52c7ceb43ed",
+          "user_id": "f85c7167-c9a3-4133-9144-37d30738c227",
+          "content": "用户把明天要用的文具准备好，放在书桌左边。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "5a406e45-df92-423a-97ee-fe733b3e8016"
+          ],
+          "source_session": "b099a868-5504-421b-a069-061db92963b9",
+          "start_turn": 8,
+          "end_turn": 8,
+          "created_at": "2026-11-04 14:17:12.664726+00:00"
+        },
+        {
+          "id": "12fbb5db-d530-47b8-8950-d2d1842082ac",
+          "user_id": "f85c7167-c9a3-4133-9144-37d30738c227",
+          "content": "自己的作业安排正常，晚上能够休息。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "aae3092e-fd5e-487c-934c-66b77fccad37"
+          ],
+          "source_session": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 14:18:17.571028+00:00"
+        },
+        {
+          "id": "286f9f39-a83a-4405-af21-9d4f83ec4669",
+          "user_id": "f85c7167-c9a3-4133-9144-37d30738c227",
+          "content": "体育课练习接力跑，大家轮流计时，自己的成绩比上次快一点。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "0102111b-937c-4628-96b1-beea5f71fa26"
+          ],
+          "source_session": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "start_turn": 2,
+          "end_turn": 2,
+          "created_at": "2026-11-04 14:18:21.326355+00:00"
+        },
+        {
+          "id": "1fc79f87-ce21-40ef-aeae-8abb68d14716",
+          "user_id": "f85c7167-c9a3-4133-9144-37d30738c227",
+          "content": "听说同桌家里还想加课后，用户有些感慨；用户表示自己目前没有这个困扰，也不需要为此调整安排。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "9d670ff3-a06e-4622-a9f2-33ed2a4073e1"
+          ],
+          "source_session": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "start_turn": 6,
+          "end_turn": 6,
+          "created_at": "2026-11-04 14:20:54.058975+00:00"
+        }
+      ],
+      "snapshot": [
+        {
+          "user_id": "f85c7167-c9a3-4133-9144-37d30738c227",
+          "version": 6,
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "processed_turn": 8,
+          "content": "[事件 6837b5b5-502a-49c6-8145-d8b3ec3d19b4 | 会话 b099a868-5504-421b-a069-061db92963b9 第7-7轮 | 发生时间 今天课间] 课间有人分享了一本科普书，用户翻了几页关于海洋的内容。\n[事件 bd0c918d-1c70-4300-a0d4-d52c7ceb43ed | 会话 b099a868-5504-421b-a069-061db92963b9 第8-8轮 | 发生时间 未确定] 用户把明天要用的文具准备好，放在书桌左边。\n[事件 646eb1fc-e968-40c9-b7f2-2fc0eb8005f7 | 会话 b099a868-5504-421b-a069-061db92963b9 第3-3轮 | 发生时间 昨天] 昨天，用户整理书包，把旧练习纸放进了资料夹。\n[事件 be6560f3-66f7-4ebc-92b3-e726fe9c76a3 | 会话 b099a868-5504-421b-a069-061db92963b9 第4-4轮 | 发生时间 科学课] 科学课上，用户做了关于水的实验，记下步骤，并觉得实验很有意思。\n[事件 9bfe1c34-9914-4b25-a053-ea822773e7ba | 会话 b099a868-5504-421b-a069-061db92963b9 第1-1轮 | 发生时间 今天午饭] 今天午饭时，用户和同学聊了一会儿学校的新图书角。",
+          "event_ids": [
+            "6837b5b5-502a-49c6-8145-d8b3ec3d19b4",
+            "bd0c918d-1c70-4300-a0d4-d52c7ceb43ed",
+            "646eb1fc-e968-40c9-b7f2-2fc0eb8005f7",
+            "be6560f3-66f7-4ebc-92b3-e726fe9c76a3",
+            "9bfe1c34-9914-4b25-a053-ea822773e7ba"
+          ],
+          "intent_ids": [],
+          "updated_at": "2026-11-04 14:21:38.976976+00:00"
+        }
+      ],
+      "messages": [
+        {
+          "id": "f5f4f4ed-c37f-41af-a916-a3cd82fd065c",
+          "role": "user",
+          "content": "今天午饭我和同学聊了一会儿学校的新图书角。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:00+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "7ef9ea88-b2c7-4616-8e99-4c7cbfd97a24",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:20+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "b418bcd3-a5e3-410e-b7f3-50c555ea1bca",
+          "role": "user",
+          "content": "同桌告诉我，她这周三天写作业到凌晨一点，早读很困；说的是她，不是我的情况。",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:00+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "cf3b4da6-aa08-464a-9b63-67d52ad19bd6",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:20+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "c51bb01c-862b-4e7b-83bc-38e99e09a627",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:00+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "0e33c3a8-28a0-451b-afab-e1abf35b820c",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:20+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "880b63ff-5147-46ac-914b-685f02f9dc10",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:00+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "b119dfd6-9163-448a-b116-f533f61c2aff",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:20+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "1af0897e-3a79-46f9-8843-2482ef43abc1",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:00+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "90b21139-8d7f-46b9-a431-0470b4e660b1",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:20+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "a891bf86-8fd9-474d-b411-5488726a9572",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:00+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "40508a61-e4c1-4a0b-be97-b0d29beb7059",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:20+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "4a61bfec-f0da-41b4-8c5f-c5a5798959eb",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:00+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "1e4ec870-3873-40f6-a6ce-e03a015b3802",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:20+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "5a406e45-df92-423a-97ee-fe733b3e8016",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:00+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "0aede364-5bef-403c-b4c1-8ed49d2698fe",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:20+00:00",
+          "session_id": "b099a868-5504-421b-a069-061db92963b9",
+          "session_number": 1
+        },
+        {
+          "id": "aae3092e-fd5e-487c-934c-66b77fccad37",
+          "role": "user",
+          "content": "她说自己放学后补习，回家已经九点。我自己的作业安排正常，晚上能休息。",
+          "turn_no": 1,
+          "sent_at": "2026-10-08T11:02:00+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "ef53dfc4-222a-46fa-8dc5-fcb4a1d91020",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-08T11:02:20+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "0102111b-937c-4628-96b1-beea5f71fa26",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 2,
+          "sent_at": "2026-10-08T11:04:00+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "27573a4f-3385-4d3b-be0e-9f6fc18f991f",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-08T11:04:20+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "6c24a791-4e17-49ff-9acb-acf98221b31b",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-08T11:06:00+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "36cc6df6-2f8a-48c4-9ebe-ffa0afa0d427",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-08T11:06:20+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "246308c5-fe25-486e-bea0-7f79b0831e38",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-08T11:08:00+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "f96773a2-99ab-422d-9c70-27ced7b9eac2",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-08T11:08:20+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "90c9bbed-ab80-4bc7-82c4-3ee4212666c0",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-08T11:10:00+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "930b0d10-f9fc-402d-918b-2ab981bd567c",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-08T11:10:20+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "5676047e-3c3b-40c3-aba7-46f802787a67",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 6,
+          "sent_at": "2026-10-08T11:12:00+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "a771fe8b-fd7f-4ab9-9df5-b1438a695c2c",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-08T11:12:20+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "245f1112-2a5d-459d-a6fa-55e9565999d3",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-08T11:14:00+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "ca5e6695-9a3f-4dc2-ab4d-5288934923dc",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-08T11:14:20+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "113ec028-f482-4fd0-870d-1b5e143c0447",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-08T11:16:00+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "e6b8992b-3a97-4971-8815-5462a4d4c472",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-08T11:16:20+00:00",
+          "session_id": "0e56c82f-3124-4c92-b8f8-19d2fa64803a",
+          "session_number": 2
+        },
+        {
+          "id": "32e0212e-a504-4a75-b0a7-c6406b0c8f6e",
+          "role": "user",
+          "content": "同桌的妈妈给她周日又排了一门课。她来找我讲了这件事，我只是转述。",
+          "turn_no": 1,
+          "sent_at": "2026-10-15T11:02:00+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "579ccc48-eb97-485e-ad43-b964108b9d97",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-15T11:02:20+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "78d9fc1c-c96c-4e60-8ceb-25c093b344f3",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 2,
+          "sent_at": "2026-10-15T11:04:00+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "2136b38c-913e-4157-9685-a85c6904bfa4",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-15T11:04:20+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "3ea2363d-ac84-44d7-ac5f-b8cee4757536",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-15T11:06:00+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "1a6ae196-d72c-4e1f-9f51-996591f7bdba",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-15T11:06:20+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "58c28a74-3307-4966-8a7b-89d4b4075e48",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-15T11:08:00+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "5bdd06f5-b8e4-494c-97a6-f8502d910b3c",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-15T11:08:20+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "c5d2ebb9-f97f-4b93-af0a-1958d2310653",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-15T11:10:00+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "d6ea5072-2915-4f1c-966e-c987ec6ec463",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-15T11:10:20+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "9d670ff3-a06e-4622-a9f2-33ed2a4073e1",
+          "role": "user",
+          "content": "她家里还想加课，听完我有些感慨；但我目前没有这个困扰，也不需要为自己调整安排。",
+          "turn_no": 6,
+          "sent_at": "2026-10-15T11:12:00+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "eab34ac6-14af-4a3f-bd2b-727f1db52b7f",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-15T11:12:20+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "8c473efa-426f-4e6f-aa76-485f49e9597a",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-15T11:14:00+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "9d099aa1-8098-43a7-950d-e5d5491c56f1",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-15T11:14:20+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "4d5abfca-36f4-46df-a6ea-8fb30941e2a8",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-15T11:16:00+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        },
+        {
+          "id": "e25467d8-edbe-433c-8530-676f0b1da7f3",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-15T11:16:20+00:00",
+          "session_id": "43715e74-92cc-4924-9e26-7d309170c5b9",
+          "session_number": 3
+        }
+      ]
+    },
+    {
+      "id": "normal_routine_long",
+      "scenario_id": "normal_routine",
+      "mode": "long",
+      "gold_has_intent": false,
+      "gold_category": null,
+      "graph_prediction": false,
+      "baseline_prediction": false,
+      "graph_intents": [],
+      "baseline_intents": [],
+      "graph_correct": true,
+      "baseline_correct": true,
+      "event_count": 11,
+      "job_seconds": [
+        51.803,
+        73.034,
+        68.227,
+        73.846
+      ],
+      "user_id": "0ab99f4e-5fff-4888-b34a-c7c1e89a29aa",
+      "sessions": {
+        "1": "69ccc176-18cc-44cf-af59-635b3a2b17a9"
+      },
+      "window_chars": 645,
+      "all_sources_have_turns": true,
+      "baseline_mapped_categories": [],
+      "baseline_category_correct": true,
+      "graph_mapped_categories": [],
+      "graph_category_correct": true,
+      "events": [
+        {
+          "id": "c1b55a2e-6807-4931-81d6-fe6a13cddc6f",
+          "user_id": "0ab99f4e-5fff-4888-b34a-c7c1e89a29aa",
+          "content": "今天午饭时，用户和同学聊了一会儿学校的新图书角。",
+          "subject": "user",
+          "occurred_at": "今天午饭",
+          "source_ids": [
+            "564bcd20-215e-4937-be12-6e9534817dc4"
+          ],
+          "source_session": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 14:20:26.633271+00:00"
+        },
+        {
+          "id": "afc469f5-cd68-460b-b0be-0fbaddd6bf51",
+          "user_id": "0ab99f4e-5fff-4888-b34a-c7c1e89a29aa",
+          "content": "周二，用户去上了自己选的绘画课，回来后做完作业，十点前睡了，感觉挺轻松。",
+          "subject": "user",
+          "occurred_at": "周二",
+          "source_ids": [
+            "dd8fd332-3c06-488c-aa98-bb06a7ac9348"
+          ],
+          "source_session": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "start_turn": 2,
+          "end_turn": 2,
+          "created_at": "2026-11-04 14:20:29.747385+00:00"
+        },
+        {
+          "id": "91e426b3-ddac-465d-b736-739da8fba644",
+          "user_id": "0ab99f4e-5fff-4888-b34a-c7c1e89a29aa",
+          "content": "昨天，用户整理书包，把旧练习纸放进了资料夹。",
+          "subject": "user",
+          "occurred_at": "昨天",
+          "source_ids": [
+            "46bb6f80-feec-4e69-88e0-acf0a811a476"
+          ],
+          "source_session": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "start_turn": 3,
+          "end_turn": 3,
+          "created_at": "2026-11-04 14:20:31.678768+00:00"
+        },
+        {
+          "id": "8de8f60e-b193-49ff-bbfe-841c00a84b62",
+          "user_id": "0ab99f4e-5fff-4888-b34a-c7c1e89a29aa",
+          "content": "科学课上做关于水的实验时，用户记下了步骤，觉得实验很有意思。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "b230887f-6efc-432e-b3a9-bd9890933713"
+          ],
+          "source_session": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "start_turn": 4,
+          "end_turn": 4,
+          "created_at": "2026-11-04 14:20:40.420433+00:00"
+        },
+        {
+          "id": "119aaa06-483c-4cc4-b796-a5cd2c95e8b6",
+          "user_id": "0ab99f4e-5fff-4888-b34a-c7c1e89a29aa",
+          "content": "周末，用户和家人散步时看到了路边的银杏树，并聊了些日常小事。",
+          "subject": "user",
+          "occurred_at": "周末",
+          "source_ids": [
+            "246810bb-3c3a-49c0-80df-513a933a0e38"
+          ],
+          "source_session": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "start_turn": 6,
+          "end_turn": 6,
+          "created_at": "2026-11-04 14:20:42.774985+00:00"
+        },
+        {
+          "id": "ee41647d-3619-4662-aa08-495031d3350a",
+          "user_id": "0ab99f4e-5fff-4888-b34a-c7c1e89a29aa",
+          "content": "今天课间有人分享科普书，用户翻看了几页关于海洋的内容。",
+          "subject": "user",
+          "occurred_at": "今天课间",
+          "source_ids": [
+            "277d9484-b2a9-475c-b3ba-3c3efe6b1529"
+          ],
+          "source_session": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "start_turn": 7,
+          "end_turn": 7,
+          "created_at": "2026-11-04 14:21:22.221441+00:00"
+        },
+        {
+          "id": "3ccd993c-0807-49b1-a681-3a7358a3b580",
+          "user_id": "0ab99f4e-5fff-4888-b34a-c7c1e89a29aa",
+          "content": "用户准备好了明天要用的文具，并放在书桌左边。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "a141087e-172f-47f3-8110-9a1db6ea8a47"
+          ],
+          "source_session": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "start_turn": 8,
+          "end_turn": 8,
+          "created_at": "2026-11-04 14:21:29.688762+00:00"
+        },
+        {
+          "id": "bfa38011-0fa3-4cc7-a579-dce08a817c4b",
+          "user_id": "0ab99f4e-5fff-4888-b34a-c7c1e89a29aa",
+          "content": "周四用户上了绘画课，听老师讲颜色搭配；回家时间和以前一样。",
+          "subject": "user",
+          "occurred_at": "周四",
+          "source_ids": [
+            "a9d15cc6-96ca-453b-9ca4-4367c078aa99"
+          ],
+          "source_session": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "start_turn": 9,
+          "end_turn": 9,
+          "created_at": "2026-11-04 14:21:31.746413+00:00"
+        },
+        {
+          "id": "1e4cb536-119b-4799-b757-3124b59978f4",
+          "user_id": "0ab99f4e-5fff-4888-b34a-c7c1e89a29aa",
+          "content": "体育课上用户练习接力跑，记得自己的成绩比上次快一点。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "b623595e-e055-43f4-9507-8caddfc607d1"
+          ],
+          "source_session": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "start_turn": 10,
+          "end_turn": 10,
+          "created_at": "2026-11-04 14:21:39.086623+00:00"
+        },
+        {
+          "id": "7ac887ba-5181-4714-907b-43ec8c505a82",
+          "user_id": "0ab99f4e-5fff-4888-b34a-c7c1e89a29aa",
+          "content": "周末家里询问是否增加一次课，用户觉得当前安排正好，家里尊重了用户的决定。",
+          "subject": "user",
+          "occurred_at": "周末",
+          "source_ids": [
+            "859ee71b-d3c3-443f-acfd-b82ad4e677d9"
+          ],
+          "source_session": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "start_turn": 17,
+          "end_turn": 17,
+          "created_at": "2026-11-04 14:22:56.113796+00:00"
+        },
+        {
+          "id": "476024ec-dc3e-4fd7-977f-71cb3753d6d8",
+          "user_id": "0ab99f4e-5fff-4888-b34a-c7c1e89a29aa",
+          "content": "这周按照原来的安排，给作业和休息都留出了时间，不需要改变或继续讨论。",
+          "subject": "user",
+          "occurred_at": "这周",
+          "source_ids": [
+            "098a141b-0028-4230-b5a7-55fc70793f04"
+          ],
+          "source_session": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "start_turn": 22,
+          "end_turn": 22,
+          "created_at": "2026-11-04 14:24:11.185096+00:00"
+        }
+      ],
+      "snapshot": [
+        {
+          "user_id": "0ab99f4e-5fff-4888-b34a-c7c1e89a29aa",
+          "version": 4,
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "processed_turn": 24,
+          "content": "[事件 91e426b3-ddac-465d-b736-739da8fba644 | 会话 69ccc176-18cc-44cf-af59-635b3a2b17a9 第3-3轮 | 发生时间 昨天] 昨天，用户整理书包，把旧练习纸放进了资料夹。\n[事件 3ccd993c-0807-49b1-a681-3a7358a3b580 | 会话 69ccc176-18cc-44cf-af59-635b3a2b17a9 第8-8轮 | 发生时间 未确定] 用户准备好了明天要用的文具，并放在书桌左边。\n[事件 ee41647d-3619-4662-aa08-495031d3350a | 会话 69ccc176-18cc-44cf-af59-635b3a2b17a9 第7-7轮 | 发生时间 今天课间] 今天课间有人分享科普书，用户翻看了几页关于海洋的内容。\n[事件 476024ec-dc3e-4fd7-977f-71cb3753d6d8 | 会话 69ccc176-18cc-44cf-af59-635b3a2b17a9 第22-22轮 | 发生时间 这周] 这周按照原来的安排，给作业和休息都留出了时间，不需要改变或继续讨论。\n[事件 8de8f60e-b193-49ff-bbfe-841c00a84b62 | 会话 69ccc176-18cc-44cf-af59-635b3a2b17a9 第4-4轮 | 发生时间 未确定] 科学课上做关于水的实验时，用户记下了步骤，觉得实验很有意思。",
+          "event_ids": [
+            "91e426b3-ddac-465d-b736-739da8fba644",
+            "3ccd993c-0807-49b1-a681-3a7358a3b580",
+            "ee41647d-3619-4662-aa08-495031d3350a",
+            "476024ec-dc3e-4fd7-977f-71cb3753d6d8",
+            "8de8f60e-b193-49ff-bbfe-841c00a84b62"
+          ],
+          "intent_ids": [],
+          "updated_at": "2026-11-04 14:24:31.964147+00:00"
+        }
+      ],
+      "messages": [
+        {
+          "id": "564bcd20-215e-4937-be12-6e9534817dc4",
+          "role": "user",
+          "content": "今天午饭我和同学聊了一会儿学校的新图书角。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "7b1695fe-59f0-43d3-a84a-92555d2b25bb",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "dd8fd332-3c06-488c-aa98-bb06a7ac9348",
+          "role": "user",
+          "content": "我周二去上了自己选的绘画课，回来把作业做完，十点前就睡了，感觉挺轻松。",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "b2005823-2675-448f-a808-16be3f4fddc8",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "46bb6f80-feec-4e69-88e0-acf0a811a476",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "237f1610-a4a1-4911-83fd-cab87b4821f3",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "b230887f-6efc-432e-b3a9-bd9890933713",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "666904ed-403a-4cec-b570-bf2184c2a04f",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "af2563ef-a845-44a0-84b9-b6088b3b9785",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "6afae64d-0dbb-4910-8f45-601094341a22",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "246810bb-3c3a-49c0-80df-513a933a0e38",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "94de2a36-1f0b-41ac-b3ef-a2e18e498bc7",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "277d9484-b2a9-475c-b3ba-3c3efe6b1529",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "809d2f06-e4c1-431d-b32d-c7117448b488",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "a141087e-172f-47f3-8110-9a1db6ea8a47",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "a0eca3d5-87b8-4daa-89d2-4ec40139396d",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "a9d15cc6-96ca-453b-9ca4-4367c078aa99",
+          "role": "user",
+          "content": "周四又上了一次绘画课，老师讲了颜色搭配，我很喜欢，回家时间和以前一样。",
+          "turn_no": 9,
+          "sent_at": "2026-10-01T11:18:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "861004c9-1446-494c-9184-973021bbfe3f",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 9,
+          "sent_at": "2026-10-01T11:18:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "b623595e-e055-43f4-9507-8caddfc607d1",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 10,
+          "sent_at": "2026-10-01T11:20:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "64c9c889-6770-4f29-8720-face47a8ea04",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 10,
+          "sent_at": "2026-10-01T11:20:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "66a3cba5-2e48-4b3b-83a1-95708356e5f5",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 11,
+          "sent_at": "2026-10-01T11:22:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "ff0bcdad-7cd5-44d3-9384-e6a995644b6e",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 11,
+          "sent_at": "2026-10-01T11:22:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "9e9290b1-e25f-4f19-a9aa-c6cec99a35cd",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 12,
+          "sent_at": "2026-10-01T11:24:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "7b4b608f-db55-4130-803e-363c2b9ad868",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 12,
+          "sent_at": "2026-10-01T11:24:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "2c460094-828a-4e47-92f7-a8404bfae86f",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 13,
+          "sent_at": "2026-10-01T11:26:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "a7c460fa-2ecf-475a-9357-c431f037bd97",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 13,
+          "sent_at": "2026-10-01T11:26:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "f66c053c-ac71-4dcb-bb3f-a49e671cd35f",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 14,
+          "sent_at": "2026-10-01T11:28:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "8364fc35-ed01-4086-ac46-a23bd7656916",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 14,
+          "sent_at": "2026-10-01T11:28:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "e1c4622b-f677-440c-8d16-44d5aa163263",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 15,
+          "sent_at": "2026-10-01T11:30:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "1e8d158b-1c54-4ad2-87ac-3aecd98d5755",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 15,
+          "sent_at": "2026-10-01T11:30:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "805168b7-5b5c-4ba8-8b64-205d4d19bf6d",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 16,
+          "sent_at": "2026-10-01T11:32:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "fce2ba94-d90c-420a-9c70-a5f23890ba86",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 16,
+          "sent_at": "2026-10-01T11:32:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "859ee71b-d3c3-443f-acfd-b82ad4e677d9",
+          "role": "user",
+          "content": "周末家里问我要不要增加一次课，我觉得当前安排正好，家里也尊重我的决定。",
+          "turn_no": 17,
+          "sent_at": "2026-10-01T11:34:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "4fe0eedb-a5da-4b0d-b869-0b6b4fb8917c",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 17,
+          "sent_at": "2026-10-01T11:34:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "00fe3fe9-6b0f-45dc-9391-2b0f51296b63",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 18,
+          "sent_at": "2026-10-01T11:36:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "293a7e8a-e528-4ee2-abb4-0efa5eea2129",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 18,
+          "sent_at": "2026-10-01T11:36:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "c8be1b95-987f-40ef-b03d-a72837895f08",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 19,
+          "sent_at": "2026-10-01T11:38:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "13958245-61e5-48b2-8113-b59776733b1e",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 19,
+          "sent_at": "2026-10-01T11:38:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "7745002f-3799-42e9-9d96-d10e7de8cfe3",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 20,
+          "sent_at": "2026-10-01T11:40:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "aaf6624c-7ad3-41a6-aa02-0927b80c9c55",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 20,
+          "sent_at": "2026-10-01T11:40:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "30bf8cff-2ea6-440b-88ee-d34caa4726f0",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 21,
+          "sent_at": "2026-10-01T11:42:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "69d0185d-390f-4b5e-99ac-98f7131aecb4",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 21,
+          "sent_at": "2026-10-01T11:42:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "098a141b-0028-4230-b5a7-55fc70793f04",
+          "role": "user",
+          "content": "这周还是照原来的安排，作业和休息都有时间，没有需要改变或者继续讨论的问题。",
+          "turn_no": 22,
+          "sent_at": "2026-10-01T11:44:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "a38edb36-2c2a-461e-bb16-7474d654b0d5",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 22,
+          "sent_at": "2026-10-01T11:44:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "a67d44ff-f59e-41e1-8564-192225d225ce",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 23,
+          "sent_at": "2026-10-01T11:46:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "49010da6-d073-4e9d-8dee-2e1ce6d258a3",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 23,
+          "sent_at": "2026-10-01T11:46:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "f020ffbe-2a00-488f-b801-7cc6321ea947",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 24,
+          "sent_at": "2026-10-01T11:48:00+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        },
+        {
+          "id": "ac7486f5-3518-4ac9-869f-0c6c7ebd5c31",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 24,
+          "sent_at": "2026-10-01T11:48:20+00:00",
+          "session_id": "69ccc176-18cc-44cf-af59-635b3a2b17a9",
+          "session_number": 1
+        }
+      ]
+    },
+    {
+      "id": "normal_routine_cross",
+      "scenario_id": "normal_routine",
+      "mode": "cross",
+      "gold_has_intent": false,
+      "gold_category": null,
+      "graph_prediction": false,
+      "baseline_prediction": false,
+      "graph_intents": [],
+      "baseline_intents": [],
+      "graph_correct": true,
+      "baseline_correct": true,
+      "event_count": 12,
+      "job_seconds": [
+        57.532,
+        33.341,
+        74.391,
+        36.961,
+        91.956,
+        35.904
+      ],
+      "user_id": "b0a880d2-2c86-4d52-8039-54e2be0c3d0f",
+      "sessions": {
+        "1": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+        "2": "364bfa31-0698-4968-88b7-d1384db45a0b",
+        "3": "84a10655-1e1e-4db1-baee-a7af36bd20d6"
+      },
+      "window_chars": 618,
+      "all_sources_have_turns": true,
+      "graph_mapped_categories": [],
+      "graph_category_correct": true,
+      "baseline_mapped_categories": [],
+      "baseline_category_correct": true,
+      "events": [
+        {
+          "id": "c52c3f3a-0096-4b6a-a86b-a9619deca010",
+          "user_id": "b0a880d2-2c86-4d52-8039-54e2be0c3d0f",
+          "content": "午饭时和同学聊了一会儿学校的新图书角。",
+          "subject": "user",
+          "occurred_at": "今天午饭",
+          "source_ids": [
+            "2c96047f-9aaa-4230-81dc-4b64ad1b9b5d"
+          ],
+          "source_session": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 14:22:15.945740+00:00"
+        },
+        {
+          "id": "1951e8df-2794-4e0d-a165-8f775510a2c7",
+          "user_id": "b0a880d2-2c86-4d52-8039-54e2be0c3d0f",
+          "content": "去上了自己选的绘画课，回来后做完作业、十点前睡觉，感觉挺轻松。",
+          "subject": "user",
+          "occurred_at": "周二",
+          "source_ids": [
+            "3448624f-658f-4e9c-a604-b554d1e4f295"
+          ],
+          "source_session": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "start_turn": 2,
+          "end_turn": 2,
+          "created_at": "2026-11-04 14:22:18.076612+00:00"
+        },
+        {
+          "id": "315a70bd-4e89-4e98-94f6-f2b35f40561c",
+          "user_id": "b0a880d2-2c86-4d52-8039-54e2be0c3d0f",
+          "content": "整理书包时，把旧练习纸放进了资料夹。",
+          "subject": "user",
+          "occurred_at": "昨天",
+          "source_ids": [
+            "3c963268-a5a4-48fb-bb0e-d89e079429fe"
+          ],
+          "source_session": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "start_turn": 3,
+          "end_turn": 3,
+          "created_at": "2026-11-04 14:22:32.075745+00:00"
+        },
+        {
+          "id": "c3eb0172-4ebd-4bc2-a19b-63f6fd819a2d",
+          "user_id": "b0a880d2-2c86-4d52-8039-54e2be0c3d0f",
+          "content": "在科学课上做关于水的实验，记下了步骤，觉得很有意思。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "5838b071-4bdd-49f4-a02b-94b2ca3c1482"
+          ],
+          "source_session": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "start_turn": 4,
+          "end_turn": 4,
+          "created_at": "2026-11-04 14:22:34.026798+00:00"
+        },
+        {
+          "id": "e290531c-e4b4-4163-921d-e0180cfbaaff",
+          "user_id": "b0a880d2-2c86-4d52-8039-54e2be0c3d0f",
+          "content": "和家人散步时看到了路边的银杏树，还聊了些日常小事。",
+          "subject": "user",
+          "occurred_at": "周末",
+          "source_ids": [
+            "feb25f6b-d79a-46c3-b3ce-e5d2c5f87a33"
+          ],
+          "source_session": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "start_turn": 6,
+          "end_turn": 6,
+          "created_at": "2026-11-04 14:22:36.041169+00:00"
+        },
+        {
+          "id": "afb47834-8bf4-4970-aa6c-accf158ceeda",
+          "user_id": "b0a880d2-2c86-4d52-8039-54e2be0c3d0f",
+          "content": "课间有人分享科普书，用户翻看了几页关于海洋的内容。",
+          "subject": "user",
+          "occurred_at": "今天",
+          "source_ids": [
+            "c92b1ff7-3632-49b4-a969-c0a2d20ed4cf"
+          ],
+          "source_session": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "start_turn": 7,
+          "end_turn": 7,
+          "created_at": "2026-11-04 14:23:07.226537+00:00"
+        },
+        {
+          "id": "c49c0c11-a403-4fdb-847b-1dbc9bdc1207",
+          "user_id": "b0a880d2-2c86-4d52-8039-54e2be0c3d0f",
+          "content": "用户准备好了明天要用的文具，并放在书桌左边。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "a6904969-7dd2-4de0-bdbe-7d59d98c28f3"
+          ],
+          "source_session": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "start_turn": 8,
+          "end_turn": 8,
+          "created_at": "2026-11-04 14:23:15.764639+00:00"
+        },
+        {
+          "id": "d420bd9c-ae0a-4f17-8a69-42d313e565bd",
+          "user_id": "b0a880d2-2c86-4d52-8039-54e2be0c3d0f",
+          "content": "上绘画课时听老师讲颜色搭配，觉得很喜欢；回家时间和以前一样。",
+          "subject": "user",
+          "occurred_at": "周四",
+          "source_ids": [
+            "9df25f63-a84d-4d52-8d1c-0a4521bd6d27"
+          ],
+          "source_session": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 14:23:51.608803+00:00"
+        },
+        {
+          "id": "90ea2e85-63ef-404b-be44-fb6bf52b240d",
+          "user_id": "b0a880d2-2c86-4d52-8039-54e2be0c3d0f",
+          "content": "体育课练接力跑并轮流计时，记得自己的成绩比上次快一点。",
+          "subject": "user",
+          "occurred_at": "",
+          "source_ids": [
+            "6c22de03-5668-49ce-b8d8-b771aa2a8a8a"
+          ],
+          "source_session": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "start_turn": 2,
+          "end_turn": 2,
+          "created_at": "2026-11-04 14:23:53.685514+00:00"
+        },
+        {
+          "id": "8b25ea2e-326b-4ff7-beae-5c75e9754683",
+          "user_id": "b0a880d2-2c86-4d52-8039-54e2be0c3d0f",
+          "content": "周末家里询问是否要增加一次课；我认为当前安排正合适，家里尊重了我的决定。",
+          "subject": "user",
+          "occurred_at": "周末",
+          "source_ids": [
+            "d8deee44-ebd0-40cb-bf3f-e0f5bdc7eadc"
+          ],
+          "source_session": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "start_turn": 1,
+          "end_turn": 1,
+          "created_at": "2026-11-04 14:25:55.104347+00:00"
+        },
+        {
+          "id": "09ed1425-042c-4055-8fe1-79dbf4b93186",
+          "user_id": "b0a880d2-2c86-4d52-8039-54e2be0c3d0f",
+          "content": "最近班级更换了黑板报，主题是秋天的校园。",
+          "subject": "user",
+          "occurred_at": "最近",
+          "source_ids": [
+            "e5d0155b-12d2-4012-b1aa-d14714322eba"
+          ],
+          "source_session": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "start_turn": 5,
+          "end_turn": 5,
+          "created_at": "2026-11-04 14:26:22.622657+00:00"
+        },
+        {
+          "id": "30b48c7b-aea5-4484-8259-670595cf350b",
+          "user_id": "b0a880d2-2c86-4d52-8039-54e2be0c3d0f",
+          "content": "这周继续按照原来的安排，作业和休息都有时间；没有需要改变或继续讨论的问题。",
+          "subject": "user",
+          "occurred_at": "这周",
+          "source_ids": [
+            "ddf79802-1be8-4115-9450-6d72a6ce4297"
+          ],
+          "source_session": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "start_turn": 6,
+          "end_turn": 6,
+          "created_at": "2026-11-04 14:26:35.995086+00:00"
+        }
+      ],
+      "snapshot": [
+        {
+          "user_id": "b0a880d2-2c86-4d52-8039-54e2be0c3d0f",
+          "version": 6,
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "processed_turn": 8,
+          "content": "[事件 c49c0c11-a403-4fdb-847b-1dbc9bdc1207 | 会话 eefd386f-5456-4b28-933e-98f7ccf9f1ed 第8-8轮 | 发生时间 未确定] 用户准备好了明天要用的文具，并放在书桌左边。\n[事件 afb47834-8bf4-4970-aa6c-accf158ceeda | 会话 eefd386f-5456-4b28-933e-98f7ccf9f1ed 第7-7轮 | 发生时间 今天] 课间有人分享科普书，用户翻看了几页关于海洋的内容。\n[事件 c3eb0172-4ebd-4bc2-a19b-63f6fd819a2d | 会话 eefd386f-5456-4b28-933e-98f7ccf9f1ed 第4-4轮 | 发生时间 未确定] 在科学课上做关于水的实验，记下了步骤，觉得很有意思。\n[事件 315a70bd-4e89-4e98-94f6-f2b35f40561c | 会话 eefd386f-5456-4b28-933e-98f7ccf9f1ed 第3-3轮 | 发生时间 昨天] 整理书包时，把旧练习纸放进了资料夹。\n[事件 c52c3f3a-0096-4b6a-a86b-a9619deca010 | 会话 eefd386f-5456-4b28-933e-98f7ccf9f1ed 第1-1轮 | 发生时间 今天午饭] 午饭时和同学聊了一会儿学校的新图书角。",
+          "event_ids": [
+            "c49c0c11-a403-4fdb-847b-1dbc9bdc1207",
+            "afb47834-8bf4-4970-aa6c-accf158ceeda",
+            "c3eb0172-4ebd-4bc2-a19b-63f6fd819a2d",
+            "315a70bd-4e89-4e98-94f6-f2b35f40561c",
+            "c52c3f3a-0096-4b6a-a86b-a9619deca010"
+          ],
+          "intent_ids": [],
+          "updated_at": "2026-11-04 14:27:19.457874+00:00"
+        }
+      ],
+      "messages": [
+        {
+          "id": "2c96047f-9aaa-4230-81dc-4b64ad1b9b5d",
+          "role": "user",
+          "content": "今天午饭我和同学聊了一会儿学校的新图书角。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:00+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "d88bf406-3913-4b47-b161-072b71ef2530",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-01T11:02:20+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "3448624f-658f-4e9c-a604-b554d1e4f295",
+          "role": "user",
+          "content": "我周二去上了自己选的绘画课，回来把作业做完，十点前就睡了，感觉挺轻松。",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:00+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "d63c9859-a4ce-487c-b479-dcbd27f765d5",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-01T11:04:20+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "3c963268-a5a4-48fb-bb0e-d89e079429fe",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:00+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "77e01dd1-7330-4986-9521-40a55ad84efd",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-01T11:06:20+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "5838b071-4bdd-49f4-a02b-94b2ca3c1482",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:00+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "e131ddb2-7cc5-456b-824e-39d54d71eadf",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-01T11:08:20+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "91fb2aa6-91fb-4598-800f-41a19bbd48c2",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:00+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "9ed7bbe6-6d56-42bc-9a3e-b0c4d5eccbf6",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-01T11:10:20+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "feb25f6b-d79a-46c3-b3ce-e5d2c5f87a33",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:00+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "7d09f612-b15a-419e-b95a-f340713f5738",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-01T11:12:20+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "c92b1ff7-3632-49b4-a969-c0a2d20ed4cf",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:00+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "19f428a5-1cb3-4afb-9da8-d321ea96085a",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-01T11:14:20+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "a6904969-7dd2-4de0-bdbe-7d59d98c28f3",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:00+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "bc772530-2976-4166-b11d-6459eb779b09",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-01T11:16:20+00:00",
+          "session_id": "eefd386f-5456-4b28-933e-98f7ccf9f1ed",
+          "session_number": 1
+        },
+        {
+          "id": "9df25f63-a84d-4d52-8d1c-0a4521bd6d27",
+          "role": "user",
+          "content": "周四又上了一次绘画课，老师讲了颜色搭配，我很喜欢，回家时间和以前一样。",
+          "turn_no": 1,
+          "sent_at": "2026-10-08T11:02:00+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "c4acfae0-4933-4a02-aed0-d9c3b003ddbd",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-08T11:02:20+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "6c22de03-5668-49ce-b8d8-b771aa2a8a8a",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 2,
+          "sent_at": "2026-10-08T11:04:00+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "386eeb93-57f5-4ca6-a428-c00c45ac7fe1",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-08T11:04:20+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "ca7c72da-74af-4a02-b934-563216658212",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-08T11:06:00+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "33a012f4-ddeb-4060-b3da-efd2c9224666",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-08T11:06:20+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "178daff6-3612-4a13-9f38-cb928a1773a4",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-08T11:08:00+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "c4afcece-6f2e-4126-a744-5ccdf66d8679",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-08T11:08:20+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "8150e536-310a-4ecb-aa50-de95d7d30540",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-08T11:10:00+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "2d5a1f28-33e1-4640-9db8-2ff3103fa000",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-08T11:10:20+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "d50d55cc-1c94-4816-96b9-27119fbcd196",
+          "role": "user",
+          "content": "我周末和家人散步，看到了路边的银杏树，聊了些日常小事。",
+          "turn_no": 6,
+          "sent_at": "2026-10-08T11:12:00+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "d5b1a176-a83c-44e6-9c12-644ed57cb94a",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-08T11:12:20+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "82943b7f-6db6-4f0e-8a0f-47e1cc47997a",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-08T11:14:00+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "389059f5-9bd8-4955-a181-6eb5f633285a",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-08T11:14:20+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "27c4444d-7f34-4885-bb00-523abe534279",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-08T11:16:00+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "c7770be2-f3e8-49b2-bb7b-d1eac40526d3",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-08T11:16:20+00:00",
+          "session_id": "364bfa31-0698-4968-88b7-d1384db45a0b",
+          "session_number": 2
+        },
+        {
+          "id": "d8deee44-ebd0-40cb-bf3f-e0f5bdc7eadc",
+          "role": "user",
+          "content": "周末家里问我要不要增加一次课，我觉得当前安排正好，家里也尊重我的决定。",
+          "turn_no": 1,
+          "sent_at": "2026-10-15T11:02:00+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "c2501255-4366-4954-b927-090fb9381fa3",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 1,
+          "sent_at": "2026-10-15T11:02:20+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "f884ea2a-47e1-4c30-8816-43a73548917e",
+          "role": "user",
+          "content": "体育课练了接力跑，大家轮流计时，我记得自己的成绩比上次快一点。",
+          "turn_no": 2,
+          "sent_at": "2026-10-15T11:04:00+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "e69ea88a-0e2e-4891-9c85-b073771dbf6d",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 2,
+          "sent_at": "2026-10-15T11:04:20+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "dea318a5-bbf3-4273-b685-c43321d38953",
+          "role": "user",
+          "content": "昨天我整理了书包，把旧练习纸放进了资料夹。",
+          "turn_no": 3,
+          "sent_at": "2026-10-15T11:06:00+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "c2bde1a7-b39e-4859-9a4b-fac6def7d223",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 3,
+          "sent_at": "2026-10-15T11:06:20+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "8e786bf7-7e01-4180-9b8d-8d8db4469ab1",
+          "role": "user",
+          "content": "科学课做了一个关于水的实验，我记下了步骤，觉得很有意思。",
+          "turn_no": 4,
+          "sent_at": "2026-10-15T11:08:00+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "bc00b3ef-6d02-4900-8102-3bf2f351abfb",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 4,
+          "sent_at": "2026-10-15T11:08:20+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "e5d0155b-12d2-4012-b1aa-d14714322eba",
+          "role": "user",
+          "content": "最近班级换了黑板报，画的是秋天的校园。",
+          "turn_no": 5,
+          "sent_at": "2026-10-15T11:10:00+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "e8fe38e2-bd7e-4b3e-a8a8-58b6de1a7999",
+          "role": "assistant",
+          "content": "我听到了。你可以按自己的节奏继续说。",
+          "turn_no": 5,
+          "sent_at": "2026-10-15T11:10:20+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "ddf79802-1be8-4115-9450-6d72a6ce4297",
+          "role": "user",
+          "content": "这周还是照原来的安排，作业和休息都有时间，没有需要改变或者继续讨论的问题。",
+          "turn_no": 6,
+          "sent_at": "2026-10-15T11:12:00+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "fab4adbe-eed2-4660-9990-8d1c87255dbf",
+          "role": "assistant",
+          "content": "这件事发生在怎样的情境里？",
+          "turn_no": 6,
+          "sent_at": "2026-10-15T11:12:20+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "03a0edef-6f59-4a87-a964-56febac06d31",
+          "role": "user",
+          "content": "今天课间有人分享了一本科普书，我翻了几页关于海洋的内容。",
+          "turn_no": 7,
+          "sent_at": "2026-10-15T11:14:00+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "d9af896a-b307-4030-a57d-db99dc9f4b65",
+          "role": "assistant",
+          "content": "谢谢你讲这些。还有哪些细节是你想补充的？",
+          "turn_no": 7,
+          "sent_at": "2026-10-15T11:14:20+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "39cedc98-5809-4559-85d2-bcb6890b5d51",
+          "role": "user",
+          "content": "我把明天要用的文具都准备好了，放在书桌左边。",
+          "turn_no": 8,
+          "sent_at": "2026-10-15T11:16:00+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        },
+        {
+          "id": "998a22f8-dec2-491c-9a52-d075c52ce622",
+          "role": "assistant",
+          "content": "我会先听你把经历说完。",
+          "turn_no": 8,
+          "sent_at": "2026-10-15T11:16:20+00:00",
+          "session_id": "84a10655-1e1e-4db1-baee-a7af36bd20d6",
+          "session_number": 3
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "summary": {
+    "all": {
+      "graph": {
+        "n": 8,
+        "accuracy": 1.0,
+        "tp": 4,
+        "tn": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "full_history": {
+        "n": 8,
+        "accuracy": 1.0,
+        "tp": 4,
+        "tn": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "long": {
+      "graph": {
+        "n": 4,
+        "accuracy": 1.0,
+        "tp": 2,
+        "tn": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "full_history": {
+        "n": 4,
+        "accuracy": 1.0,
+        "tp": 2,
+        "tn": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "cross": {
+      "graph": {
+        "n": 4,
+        "accuracy": 1.0,
+        "tp": 2,
+        "tn": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "full_history": {
+        "n": 4,
+        "accuracy": 1.0,
+        "tp": 2,
+        "tn": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    }
+  },
+  "category_mapping_note": "same-model blind description mapping; fixed taxonomy; no independent human validation",
+  "category_summary": {
+    "all": {
+      "graph": {
+        "n": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "baseline": {
+        "n": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      }
+    },
+    "long": {
+      "graph": {
+        "n": 4,
+        "correct": 4,
+        "accuracy": 1.0
+      },
+      "baseline": {
+        "n": 4,
+        "correct": 4,
+        "accuracy": 1.0
+      }
+    },
+    "cross": {
+      "graph": {
+        "n": 4,
+        "correct": 4,
+        "accuracy": 1.0
+      },
+      "baseline": {
+        "n": 4,
+        "correct": 4,
+        "accuracy": 1.0
+      }
+    }
+  }
+}

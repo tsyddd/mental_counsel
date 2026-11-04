@@ -8,6 +8,7 @@ services:
     volumes:
       - ${PGDATA_HOST_PATH:-/home/dashan/interview-platform-pgdata}:/var/lib/postgresql/data
       - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+      - ./migrations/002_two_layer_memory.sql:/docker-entrypoint-initdb.d/zz-memory-v2.sql:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U interview -d interview"]
       interval: 5s
@@ -28,9 +29,12 @@ services:
       REDIS_URL: redis://redis:6379/0
       MEDIA_ROOT: /media
       CHECKPOINT_ROOT: /checkpoints
+      USER_DATA_ROOT: /data/users
     volumes:
       - ./media:/media:ro
       - ./checkpoints:/checkpoints
+      - ${USER_DATA_HOST_PATH:-/home/dashan/interview-platform-userdata}:/data/users
+      - modelcache:/root/.cache
     depends_on:
       postgres:
         condition: service_healthy
@@ -47,6 +51,7 @@ services:
       - ./media:/media:ro
       - ./checkpoints:/checkpoints
       - modelcache:/root/.cache
+      - ${USER_DATA_HOST_PATH:-/home/dashan/interview-platform-userdata}:/data/users
     depends_on:
       postgres:
         condition: service_healthy

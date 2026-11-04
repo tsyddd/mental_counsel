@@ -14,6 +14,8 @@ from .explicit_preferences import store_explicit_preferences
 from .demo_case import load_demo
 
 app = FastAPI(title="Interview Media and Memory API")
+from .mindtrace import router as mindtrace_router
+app.include_router(mindtrace_router)
 
 
 class VideoRequest(BaseModel):

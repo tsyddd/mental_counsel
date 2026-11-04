@@ -463,13 +463,16 @@ def main():
     client = queue()
     last_consolidation = 0.0
     while True:
-        if time.time() - last_consolidation > 60:
+        from .mindtrace import process_next
+        if process_next():
+            continue
+        if os.getenv('LEGACY_MEMORY_WORKER','0') == '1' and time.time() - last_consolidation > 60:
             try:
                 consolidate_idle_episodes()
             except Exception:
                 traceback.print_exc()
             last_consolidation = time.time()
-        item = client.brpop("interview:jobs", timeout=10)
+        item = client.brpop("interview:jobs", timeout=1)
         if item is None:
             continue
         job = None

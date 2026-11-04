@@ -15,12 +15,11 @@
     const concepts = (data.concepts || []).filter(item =>
       (item.memory_ids || []).some(id => eventIds.has(id))).slice(0, 9);
     const conceptIds = new Set(concepts.map(item => item.id));
-    const intents = (data.intents || []).filter(item => item.status !== 'superseded' &&
-      (item.concept_ids || []).some(id => conceptIds.has(id))).slice(0, 6);
+    const intents = (data.intents || []).filter(item => !['superseded','rejected'].includes(item.status)).slice(0, 8);
     if (!events.length && !concepts.length && !intents.length) {
       const empty = document.createElement('p');
       empty.className = 'muted';
-      empty.textContent = '还没有情景事件。继续交流后，事件、主题和意图会显示在这里。';
+      empty.textContent = '还没有情景事件。继续交流后，事件和意图会显示在这里。';
       target.append(empty);
       return;
     }
@@ -31,9 +30,9 @@
     concepts.forEach((item, index) => positions.set(item.id, { x: 465, y: 100 + index * 112 }));
     intents.forEach((item, index) => positions.set(item.id, { x: 795, y: 112 + index * 132 }));
     const svg = svgEl('svg', { viewBox: `0 0 950 ${height}`, width: 950, height,
-      role: 'img', 'aria-label': '情景事件、主题和意图的关系图' });
+      role: 'img', 'aria-label': '情景事件和意图的关系图' });
     const header = svgEl('g', { class: 'graph-headers' });
-    [['情景事件 · 时间顺序', 38], ['重复主题', 380], ['待确认意图', 700]].forEach(([label, x]) => {
+    [['情景事件 · 时间顺序', 38], ['待确认意图', 700]].forEach(([label, x]) => {
       const title = svgEl('text', { x, y: 35 }); title.textContent = label; header.append(title);
     });
     svg.append(header);
@@ -51,8 +50,8 @@
     for (let i = 1; i < events.length; i++) drawEdge(events[i - 1].id, events[i].id, 'time');
     for (const concept of concepts) for (const eventId of concept.memory_ids || [])
       drawEdge(eventId, concept.id, 'relation');
-    for (const intent of intents) for (const conceptId of intent.concept_ids || [])
-      drawEdge(conceptId, intent.id, 'relation');
+    for (const intent of intents) for (const eventId of intent.support_event_ids || [])
+      drawEdge(eventId, intent.id, 'relation');
     svg.append(edges);
     const nodes = svgEl('g', { class: 'graph-nodes' });
     const addNode = (item, kind, label, sub) => {
@@ -73,11 +72,11 @@
       group.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); select(); } });
       nodes.append(group);
     };
-    events.forEach(item => addNode(item, 'event', '事件', new Date(item.created_at).toLocaleString('zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })));
+    events.forEach(item => addNode(item, 'event', '事件', `会话 ${String(item.source_session).slice(0,8)} · 第${item.start_turn}-${item.end_turn}轮` ));
     concepts.forEach(item => addNode(item, 'concept', '主题', `${item.support_count} 条证据`));
-    intents.forEach(item => addNode(item, 'intent', '意图', item.status === 'confirmed' ? '已确认' : '待确认'));
+    intents.forEach(item => addNode(item, 'intent', '意图', `${item.status} · 第${item.extracted_turn}轮形成` ));
     svg.append(nodes);
     target.append(svg);
-    detail.textContent = '点击节点查看完整内容与相连证据。虚线表示事件发生顺序，实线表示主题或意图的支持关系。';
+    detail.textContent = '点击节点查看完整内容与相连证据。虚线表示事件发生顺序，实线表示事件对意图的支持关系。';
   };
 })();

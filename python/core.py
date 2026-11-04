@@ -39,7 +39,8 @@ def embed(texts):
             model="intfloat/multilingual-e5-small", pooling=PoolingType.MEAN,
             normalization=True, sources=ModelSource(hf="intfloat/multilingual-e5-small"),
             dim=384, model_file="onnx/model.onnx")
-        _encoder = TextEmbedding(model_name=os.getenv("EMBEDDING_MODEL", "intfloat/multilingual-e5-small"))
+        _encoder = TextEmbedding(model_name=os.getenv("EMBEDDING_MODEL", "intfloat/multilingual-e5-small"),
+                                 cache_dir=os.getenv("FASTEMBED_CACHE_PATH", "/root/.cache/fastembed"))
     return [value.tolist() for value in _encoder.embed(texts)]
 
 
