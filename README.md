@@ -12,6 +12,8 @@
 
 实现细节见[两层记忆设计](docs/two-layer-memory.md)，测试见[验证记录](MINDTRACE_V2_REPORT.md)。实际数据库仍是 PostgreSQL/pgvector，没有迁移到 MySQL。
 
+新增[60 例长/跨会话对比实验](MINDTRACE_V3_REPORT.md)：每种模式 30 例；长会话每例 60 轮，跨会话每例两次、每次 30 轮。[冻结数据与评测协议](docs/intent-evaluation-v3.md)独立保存，不沿用此前 8 例成绩。
+
 > 以下原 30 轮案例、旧 50 例消融和架构图属于旧三层版本。它们不代表本次两层实现的成绩；新完整历史对照不沿用旧 92% 对 50%。
 
 ![产品功能概览](docs/images/overview.svg)
