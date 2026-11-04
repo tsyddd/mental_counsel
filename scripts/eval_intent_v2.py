@@ -48,9 +48,10 @@ def run_case(case):
       job=mt.all_rows('SELECT status,error FROM mt_jobs WHERE id=%s',(jid,))[0]
       if job['status']=='completed':break
       if job['status']=='failed':raise RuntimeError(job['error'])
-      if time.monotonic()-started>300:raise TimeoutError('memory batch did not finish')
+      if time.monotonic()-started>900:raise TimeoutError('memory batch did not finish')
       time.sleep(.5)
      durations.append(round(time.monotonic()-started,3))
+     print(mt.dumps({'progress':case['id'],'session':number,'through_turn':turn['turn'],'job_seconds':durations[-1]}),flush=True)
   with mt.conn() as db:db.execute('UPDATE mt_session_state SET closed=true WHERE session_id=%s',(session,))
  intents=[i for i in mt.load_intents(user) if i['status'] in ('tentative','confirmed')]
  baseline=predict_baseline(all_messages)
@@ -78,14 +79,19 @@ def metrics(rows,key):
 
 
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--dataset',required=True);p.add_argument('--output',required=True);p.add_argument('--start',type=int,default=0);p.add_argument('--limit',type=int,default=8);p.add_argument('--workers',type=int,default=1);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--dataset',required=True);p.add_argument('--output',required=True);p.add_argument('--start',type=int,default=0);p.add_argument('--limit',type=int,default=8);p.add_argument('--workers',type=int,default=1);p.add_argument('--resume',action='store_true');a=p.parse_args()
  raw=Path(a.dataset).read_bytes();dataset=json.loads(raw);out=Path(a.output)
  result={'dataset_sha256':hashlib.sha256(raw).hexdigest(),'model':mt.APIClient().model,
   'synthetic':True,'paired_variants_not_independent':True,'metric':'binary existence only; raw labels retained for review',
   'results':[],'failures':[]}
+ if a.resume and out.exists():
+  old=json.loads(out.read_text('utf-8'))
+  assert old['dataset_sha256']==result['dataset_sha256'] and old['model']==result['model'],'resume identity mismatch'
+  result=old
+ completed={r['id'] for r in result['results']}|{r['case'] for r in result['failures']}
  from concurrent.futures import ThreadPoolExecutor,as_completed
- executor=ThreadPoolExecutor(max_workers=max(1,min(2,a.workers)))
- futures={executor.submit(run_case,case):case for case in dataset['cases'][a.start:a.start+a.limit]}
+ executor=ThreadPoolExecutor(max_workers=max(1,min(8,a.workers)))
+ futures={executor.submit(run_case,case):case for case in dataset['cases'][a.start:a.start+a.limit] if case['id'] not in completed}
  for future in as_completed(futures):
   case=futures[future]
   try:
