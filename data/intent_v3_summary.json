@@ -1,0 +1,293 @@
+{
+  "dataset_sha256": "61d1d8a98cb2e23c44bc8bb69b5d547657c48ea28686dc8526a2cb73365ca8b5",
+  "model": "gpt-6-sol",
+  "independent_trajectories": 30,
+  "summary": {
+    "long": {
+      "expected": 30,
+      "completed": 30,
+      "failed": 0,
+      "pending": 0,
+      "graph": {
+        "tp": 18,
+        "tn": 12,
+        "fp": 0,
+        "fn": 0,
+        "correct": 30,
+        "accuracy_all_expected": 1.0,
+        "precision_completed": 1.0,
+        "recall_completed": 1.0,
+        "f1_completed": 1.0,
+        "category_correct": 26,
+        "category_accuracy_all_expected": 0.8666666666666667
+      },
+      "baseline": {
+        "tp": 18,
+        "tn": 12,
+        "fp": 0,
+        "fn": 0,
+        "correct": 30,
+        "accuracy_all_expected": 1.0,
+        "precision_completed": 1.0,
+        "recall_completed": 1.0,
+        "f1_completed": 1.0,
+        "category_correct": 28,
+        "category_accuracy_all_expected": 0.9333333333333333
+      },
+      "discordant_binary": {
+        "graph_only_correct": 0,
+        "baseline_only_correct": 0
+      }
+    },
+    "cross": {
+      "expected": 30,
+      "completed": 30,
+      "failed": 0,
+      "pending": 0,
+      "graph": {
+        "tp": 18,
+        "tn": 12,
+        "fp": 0,
+        "fn": 0,
+        "correct": 30,
+        "accuracy_all_expected": 1.0,
+        "precision_completed": 1.0,
+        "recall_completed": 1.0,
+        "f1_completed": 1.0,
+        "category_correct": 27,
+        "category_accuracy_all_expected": 0.9
+      },
+      "baseline": {
+        "tp": 18,
+        "tn": 12,
+        "fp": 0,
+        "fn": 0,
+        "correct": 30,
+        "accuracy_all_expected": 1.0,
+        "precision_completed": 1.0,
+        "recall_completed": 1.0,
+        "f1_completed": 1.0,
+        "category_correct": 26,
+        "category_accuracy_all_expected": 0.8666666666666667
+      },
+      "discordant_binary": {
+        "graph_only_correct": 0,
+        "baseline_only_correct": 0
+      }
+    },
+    "all": {
+      "expected": 60,
+      "completed": 60,
+      "failed": 0,
+      "pending": 0,
+      "graph": {
+        "tp": 36,
+        "tn": 24,
+        "fp": 0,
+        "fn": 0,
+        "correct": 60,
+        "accuracy_all_expected": 1.0,
+        "precision_completed": 1.0,
+        "recall_completed": 1.0,
+        "f1_completed": 1.0,
+        "category_correct": 53,
+        "category_accuracy_all_expected": 0.8833333333333333
+      },
+      "baseline": {
+        "tp": 36,
+        "tn": 24,
+        "fp": 0,
+        "fn": 0,
+        "correct": 60,
+        "accuracy_all_expected": 1.0,
+        "precision_completed": 1.0,
+        "recall_completed": 1.0,
+        "f1_completed": 1.0,
+        "category_correct": 54,
+        "category_accuracy_all_expected": 0.9
+      },
+      "discordant_binary": {
+        "graph_only_correct": 0,
+        "baseline_only_correct": 0
+      }
+    }
+  },
+  "source_events_checked": 1473,
+  "invalid_baseline_source_ids": [],
+  "max_window_chars": 1308,
+  "failures": [],
+  "errors": [
+    {
+      "id": "study_extra_classes_long",
+      "wrong_methods": [
+        "graph"
+      ],
+      "gold": "study_rest_balance",
+      "graph_intents": [
+        "周末能留出休息时间",
+        "改善写作业到深夜、早上听课打瞌睡的情况"
+      ],
+      "baseline_intents": [
+        "改善作业拖到深夜并减少早上听课时打瞌睡",
+        "减轻补习和周末课程安排，恢复休息时间"
+      ],
+      "graph_categories": [
+        "other",
+        "study_rest_balance"
+      ],
+      "baseline_categories": [
+        "study_rest_balance"
+      ]
+    },
+    {
+      "id": "study_committee_cross",
+      "wrong_methods": [
+        "baseline"
+      ],
+      "gold": "study_rest_balance",
+      "graph_intents": [
+        "决定是否接下下一次活动，并协调班干部和活动任务，留出作业与复习时间"
+      ],
+      "baseline_intents": [
+        "决定是否接受下一次活动并回复老师"
+      ],
+      "graph_categories": [
+        "study_rest_balance"
+      ],
+      "baseline_categories": [
+        "other"
+      ]
+    },
+    {
+      "id": "parent_career_cross",
+      "wrong_methods": [
+        "graph",
+        "baseline"
+      ],
+      "gold": "parent_communication",
+      "graph_intents": [
+        "梳理外地求职与家人期待自己留在本地之间的想法，以及如何与父母沟通毕业去向"
+      ],
+      "baseline_intents": [
+        "推进外地求职并处理与父母本地就业安排的分歧"
+      ],
+      "graph_categories": [
+        "other",
+        "parent_communication"
+      ],
+      "baseline_categories": [
+        "other",
+        "parent_communication"
+      ]
+    },
+    {
+      "id": "parent_career_long",
+      "wrong_methods": [
+        "graph",
+        "baseline"
+      ],
+      "gold": "parent_communication",
+      "graph_intents": [
+        "梳理毕业去向的想法，以及如何向父母表达自己的选择"
+      ],
+      "baseline_intents": [
+        "继续推进外地求职及面试",
+        "向父母表达毕业后就业地点由自己决定，而非默认回老家"
+      ],
+      "graph_categories": [
+        "other",
+        "parent_communication"
+      ],
+      "baseline_categories": [
+        "other",
+        "parent_communication"
+      ]
+    },
+    {
+      "id": "parent_privacy_cross",
+      "wrong_methods": [
+        "graph",
+        "baseline"
+      ],
+      "gold": "parent_communication",
+      "graph_intents": [
+        "梳理妈妈翻看或整理个人物品后的感受，以及是否想与她谈谈隐私边界"
+      ],
+      "baseline_intents": [
+        "与母亲沟通日记和私人物品的隐私界限"
+      ],
+      "graph_categories": [
+        "relationship_boundaries"
+      ],
+      "baseline_categories": [
+        "relationship_boundaries"
+      ]
+    },
+    {
+      "id": "parent_privacy_long",
+      "wrong_methods": [
+        "graph",
+        "baseline"
+      ],
+      "gold": "parent_communication",
+      "graph_intents": [
+        "希望日记和信件不被擅自翻看，并厘清与妈妈的隐私边界"
+      ],
+      "baseline_intents": [
+        "处理母亲查看日记和信件引发的隐私与沟通问题"
+      ],
+      "graph_categories": [
+        "relationship_boundaries"
+      ],
+      "baseline_categories": [
+        "parent_communication",
+        "relationship_boundaries"
+      ]
+    },
+    {
+      "id": "parent_emotion_long",
+      "wrong_methods": [
+        "graph"
+      ],
+      "gold": "parent_communication",
+      "graph_intents": [
+        "有机会在感到难过或受挫时安全地说出自己的感受"
+      ],
+      "baseline_intents": [
+        "向家人表达实习受挫和真实感受"
+      ],
+      "graph_categories": [
+        "other"
+      ],
+      "baseline_categories": [
+        "parent_communication"
+      ]
+    },
+    {
+      "id": "parent_emotion_cross",
+      "wrong_methods": [
+        "graph",
+        "baseline"
+      ],
+      "gold": "parent_communication",
+      "graph_intents": [
+        "有机会表达难过和实习受挫经历并获得倾听"
+      ],
+      "baseline_intents": [
+        "继续表达并处理因实习受挫而压抑的难过情绪"
+      ],
+      "graph_categories": [
+        "other"
+      ],
+      "baseline_categories": [
+        "other"
+      ]
+    }
+  ],
+  "limitations": [
+    "authored synthetic labels, no independent human review",
+    "long/cross modes paired by trajectory",
+    "category mapping is model assisted",
+    "only final checkpoints; no claim of multi-event necessity"
+  ]
+}
