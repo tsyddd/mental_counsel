@@ -20,12 +20,12 @@ try:
             assert total < expected, 'unexpected extra cases'
         except (FileNotFoundError, json.JSONDecodeError):
             pass
-        if time.monotonic() - started > 6 * 3600:
-            raise TimeoutError('not all frozen cases completed within six hours')
+        if time.monotonic() - started > 48 * 3600:
+            raise TimeoutError('not all frozen cases completed within 48 hours')
         time.sleep(5)
     commands = [
         ['/tmp/score_intent_categories_v3.py', '--dataset', str(dataset), '--input', str(raw),
-         '--output', str(root / 'intent-v3-scored.json'), '--workers', '8'],
+         '--output', str(root / 'intent-v3-scored.json'), '--workers', '1'],
         ['/tmp/export_intent_v3.py', '--dataset', str(dataset), '--input', str(root / 'intent-v3-scored.json'),
          '--output', str(root / 'intent-v3-audited.json')],
         ['/tmp/summarize_intent_v3.py', '--dataset', str(dataset), '--input', str(root / 'intent-v3-audited.json'),
