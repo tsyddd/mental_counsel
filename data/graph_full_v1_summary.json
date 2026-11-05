@@ -1,0 +1,712 @@
+{
+  "dataset_sha256": "1966e790e47233654a84b743761408701fb0b4b7d37f12242dd9105c3c01fb60",
+  "model": "gpt-6-sol",
+  "phase": "completed",
+  "source_events_checked": 1660,
+  "scope": "actual persisted event-to-intent graph vs all timestamped bilateral history; not a TopK reader",
+  "graph_implementation": "current deployed two-layer memory; scene/activity retrieval changes not yet integrated into production",
+  "summary": {
+    "all": {
+      "expected_nodes": 120,
+      "exported_nodes": 66,
+      "scored_nodes": 22,
+      "arms": {
+        "graph": {
+          "tp": 30,
+          "fp": 8,
+          "fn": 9,
+          "expected_gold": 240,
+          "micro_recall_scored": 0.7692307692307693,
+          "micro_precision_scored": 0.7894736842105263,
+          "micro_f1_scored": 0.7792207792207793,
+          "recall_all_expected_lower_bound": 0.125
+        },
+        "full_history": {
+          "tp": 38,
+          "fp": 1,
+          "fn": 1,
+          "expected_gold": 240,
+          "micro_recall_scored": 0.9743589743589743,
+          "micro_precision_scored": 0.9743589743589743,
+          "micro_f1_scored": 0.9743589743589743,
+          "recall_all_expected_lower_bound": 0.15833333333333333
+        }
+      }
+    },
+    "all_t30": {
+      "expected_nodes": 60,
+      "exported_nodes": 52,
+      "scored_nodes": 16,
+      "arms": {
+        "graph": {
+          "tp": 24,
+          "fp": 7,
+          "fn": 8,
+          "expected_gold": 120,
+          "micro_recall_scored": 0.75,
+          "micro_precision_scored": 0.7741935483870968,
+          "micro_f1_scored": 0.7619047619047619,
+          "recall_all_expected_lower_bound": 0.2
+        },
+        "full_history": {
+          "tp": 31,
+          "fp": 1,
+          "fn": 1,
+          "expected_gold": 120,
+          "micro_recall_scored": 0.96875,
+          "micro_precision_scored": 0.96875,
+          "micro_f1_scored": 0.96875,
+          "recall_all_expected_lower_bound": 0.25833333333333336
+        }
+      }
+    },
+    "all_t60": {
+      "expected_nodes": 60,
+      "exported_nodes": 14,
+      "scored_nodes": 6,
+      "arms": {
+        "graph": {
+          "tp": 6,
+          "fp": 1,
+          "fn": 1,
+          "expected_gold": 120,
+          "micro_recall_scored": 0.8571428571428571,
+          "micro_precision_scored": 0.8571428571428571,
+          "micro_f1_scored": 0.8571428571428571,
+          "recall_all_expected_lower_bound": 0.05
+        },
+        "full_history": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "expected_gold": 120,
+          "micro_recall_scored": 1.0,
+          "micro_precision_scored": 1.0,
+          "micro_f1_scored": 1.0,
+          "recall_all_expected_lower_bound": 0.058333333333333334
+        }
+      }
+    },
+    "long": {
+      "expected_nodes": 60,
+      "exported_nodes": 36,
+      "scored_nodes": 15,
+      "arms": {
+        "graph": {
+          "tp": 24,
+          "fp": 6,
+          "fn": 6,
+          "expected_gold": 120,
+          "micro_recall_scored": 0.8,
+          "micro_precision_scored": 0.8,
+          "micro_f1_scored": 0.8,
+          "recall_all_expected_lower_bound": 0.2
+        },
+        "full_history": {
+          "tp": 29,
+          "fp": 1,
+          "fn": 1,
+          "expected_gold": 120,
+          "micro_recall_scored": 0.9666666666666667,
+          "micro_precision_scored": 0.9666666666666667,
+          "micro_f1_scored": 0.9666666666666667,
+          "recall_all_expected_lower_bound": 0.24166666666666667
+        }
+      }
+    },
+    "long_t30": {
+      "expected_nodes": 30,
+      "exported_nodes": 26,
+      "scored_nodes": 12,
+      "arms": {
+        "graph": {
+          "tp": 20,
+          "fp": 6,
+          "fn": 6,
+          "expected_gold": 60,
+          "micro_recall_scored": 0.7692307692307693,
+          "micro_precision_scored": 0.7692307692307693,
+          "micro_f1_scored": 0.7692307692307693,
+          "recall_all_expected_lower_bound": 0.3333333333333333
+        },
+        "full_history": {
+          "tp": 25,
+          "fp": 1,
+          "fn": 1,
+          "expected_gold": 60,
+          "micro_recall_scored": 0.9615384615384616,
+          "micro_precision_scored": 0.9615384615384616,
+          "micro_f1_scored": 0.9615384615384616,
+          "recall_all_expected_lower_bound": 0.4166666666666667
+        }
+      }
+    },
+    "long_t60": {
+      "expected_nodes": 30,
+      "exported_nodes": 10,
+      "scored_nodes": 3,
+      "arms": {
+        "graph": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "expected_gold": 60,
+          "micro_recall_scored": 1.0,
+          "micro_precision_scored": 1.0,
+          "micro_f1_scored": 1.0,
+          "recall_all_expected_lower_bound": 0.06666666666666667
+        },
+        "full_history": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "expected_gold": 60,
+          "micro_recall_scored": 1.0,
+          "micro_precision_scored": 1.0,
+          "micro_f1_scored": 1.0,
+          "recall_all_expected_lower_bound": 0.06666666666666667
+        }
+      }
+    },
+    "cross": {
+      "expected_nodes": 60,
+      "exported_nodes": 30,
+      "scored_nodes": 7,
+      "arms": {
+        "graph": {
+          "tp": 6,
+          "fp": 2,
+          "fn": 3,
+          "expected_gold": 120,
+          "micro_recall_scored": 0.6666666666666666,
+          "micro_precision_scored": 0.75,
+          "micro_f1_scored": 0.7058823529411765,
+          "recall_all_expected_lower_bound": 0.05
+        },
+        "full_history": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 0,
+          "expected_gold": 120,
+          "micro_recall_scored": 1.0,
+          "micro_precision_scored": 1.0,
+          "micro_f1_scored": 1.0,
+          "recall_all_expected_lower_bound": 0.075
+        }
+      }
+    },
+    "cross_t30": {
+      "expected_nodes": 30,
+      "exported_nodes": 26,
+      "scored_nodes": 4,
+      "arms": {
+        "graph": {
+          "tp": 4,
+          "fp": 1,
+          "fn": 2,
+          "expected_gold": 60,
+          "micro_recall_scored": 0.6666666666666666,
+          "micro_precision_scored": 0.8,
+          "micro_f1_scored": 0.7272727272727273,
+          "recall_all_expected_lower_bound": 0.06666666666666667
+        },
+        "full_history": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "expected_gold": 60,
+          "micro_recall_scored": 1.0,
+          "micro_precision_scored": 1.0,
+          "micro_f1_scored": 1.0,
+          "recall_all_expected_lower_bound": 0.1
+        }
+      }
+    },
+    "cross_t60": {
+      "expected_nodes": 30,
+      "exported_nodes": 4,
+      "scored_nodes": 3,
+      "arms": {
+        "graph": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 1,
+          "expected_gold": 60,
+          "micro_recall_scored": 0.6666666666666666,
+          "micro_precision_scored": 0.6666666666666666,
+          "micro_f1_scored": 0.6666666666666666,
+          "recall_all_expected_lower_bound": 0.03333333333333333
+        },
+        "full_history": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "expected_gold": 60,
+          "micro_recall_scored": 1.0,
+          "micro_precision_scored": 1.0,
+          "micro_f1_scored": 1.0,
+          "recall_all_expected_lower_bound": 0.05
+        }
+      }
+    }
+  },
+  "failures": [
+    {
+      "case": "multi_01_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_01_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_02_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_03_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_03_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_04_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_04_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_05_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_06_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_06_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_07_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_07_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_08_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_08_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_09_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_09_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_10_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_10_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_11_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_11_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_12_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_12_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_13_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_13_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_14_long",
+      "stage": "replay_or_prediction",
+      "error": "RuntimeError: production memory job failed: RuntimeError: API call failed after 2 attempts: HTTPSConnectionPool(host='api2.mcben.top', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)')))"
+    },
+    {
+      "case": "multi_14_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_15_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_15_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_16_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_16_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_17_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_17_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_18_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_18_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_19_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_19_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_20_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_21_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_21_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_22_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_22_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_23_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_23_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_24_long",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_24_cross",
+      "stage": "replay_or_prediction",
+      "error": "AssertionError: invalid baseline evidence"
+    },
+    {
+      "case": "multi_25_long",
+      "stage": "replay_or_prediction",
+      "error": "RuntimeError: production memory job failed: RuntimeError: API call failed after 2 attempts: HTTPSConnectionPool(host='api2.mcben.top', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)')))"
+    },
+    {
+      "case": "multi_25_cross",
+      "stage": "replay_or_prediction",
+      "error": "RuntimeError: production memory job failed: RuntimeError: API call failed after 2 attempts: HTTPSConnectionPool(host='api2.mcben.top', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)')))"
+    },
+    {
+      "case": "multi_26_long",
+      "stage": "replay_or_prediction",
+      "error": "RuntimeError: production memory job failed: RuntimeError: API call failed after 2 attempts: HTTPSConnectionPool(host='api2.mcben.top', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)')))"
+    },
+    {
+      "case": "multi_26_cross",
+      "stage": "replay_or_prediction",
+      "error": "RuntimeError: production memory job failed: RuntimeError: API call failed after 2 attempts: HTTPSConnectionPool(host='api2.mcben.top', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)')))"
+    },
+    {
+      "case": "multi_27_long",
+      "stage": "replay_or_prediction",
+      "error": "RuntimeError: production memory job failed: RuntimeError: API call failed after 2 attempts: HTTPSConnectionPool(host='api2.mcben.top', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)')))"
+    },
+    {
+      "case": "multi_27_cross",
+      "stage": "replay_or_prediction",
+      "error": "RuntimeError: production memory job failed: RuntimeError: API call failed after 2 attempts: HTTPSConnectionPool(host='api2.mcben.top', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)')))"
+    },
+    {
+      "case": "multi_28_long",
+      "stage": "replay_or_prediction",
+      "error": "RuntimeError: production memory job failed: RuntimeError: API call failed after 2 attempts: HTTPSConnectionPool(host='api2.mcben.top', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)')))"
+    },
+    {
+      "case": "multi_28_cross",
+      "stage": "replay_or_prediction",
+      "error": "RuntimeError: production memory job failed: RuntimeError: API call failed after 2 attempts: HTTPSConnectionPool(host='api2.mcben.top', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)')))"
+    },
+    {
+      "case": "multi_29_long",
+      "stage": "replay_or_prediction",
+      "error": "RuntimeError: production memory job failed: RuntimeError: API call failed after 2 attempts: HTTPSConnectionPool(host='api2.mcben.top', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)')))"
+    }
+  ],
+  "judge_errors": [
+    {
+      "id": "multi_01_long_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_01_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_02_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_03_long_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_03_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_04_long_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_04_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_05_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_06_long_t60",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_06_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_07_long_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_07_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_08_long_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_08_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_09_long_t60",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_09_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_10_long_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_10_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_11_long_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_11_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_12_long_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_12_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_13_long_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_13_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_14_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_15_long_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_15_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_16_long_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_16_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_17_long_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_17_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_18_long_t60",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_18_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_19_long_t60",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_19_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_20_long_t60",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_21_long_t60",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_21_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_22_long_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_22_cross_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_23_long_t60",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_23_cross_t60",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_24_long_t30",
+      "error": "baseline prediction unavailable"
+    },
+    {
+      "id": "multi_24_cross_t30",
+      "error": "baseline prediction unavailable"
+    }
+  ],
+  "limitations": [
+    "reuses development v4 events",
+    "targeted contextual-recall diagnostic, not random natural conversations",
+    "queries authored with scenario knowledge; no independent human relevance review",
+    "paired modes and two checkpoints are dependent",
+    "no claim of clinical efficacy",
+    "same-model assisted semantic judging, not independent human review",
+    "same model, different total processing budgets; no clinical efficacy claim"
+  ]
+}
