@@ -64,6 +64,10 @@ def summarize(dataset,result,cache):
         output['rejudge_note']=result['rejudge_note']
         output['original_result_sha256']=result['original_result_sha256']
         output['frozen_predictions_sha256']=result['frozen_predictions_sha256']
+    if 'brace_repair_note' in result:
+        output['brace_repair_note']=result['brace_repair_note']
+        output['judge_brace_repairs']=result['judge_brace_repairs']
+        output['before_brace_repair_sha256']=result['before_brace_repair_sha256']
     for mode in ['all','long','cross']:
         for cutoff in [None,30,60]:
             name=mode+('' if cutoff is None else '_t'+str(cutoff))
@@ -137,6 +141,8 @@ def report(summary):
       '[实验协议](docs/recall-ablation-v1.md) · [冻结数据](data/recall_dataset_v1.json) · [完整结果](data/recall_v1_results.json) · [指标与错误](data/recall_v1_summary.json) · [标签及向量](data/recall_v1_cache.json) · [调用记录](data/recall_v1_model_calls.jsonl)','']
     if summary.get('rejudge_note'):
         lines+=['初次评分有 38 个 JSON 解析错误，本次仅对这些节点按原提示词重试并接受首个有效输出；原始预测、检索结果及初次成功评分均未改变。全部重试记录保留。[初次结果](data/recall_v1_initial_results.json)。','']
+    if summary.get('brace_repair_note'):
+        lines += [f"重试后剩余 {len(summary['judge_brace_repairs'])} 个解析错误均仅缺少最终根对象闭合符。现对对应的首条原始输出补上一个 `}}` 后解析，未改任何匹配内容或已成功评分，未追加模型调用；已逐条核对消息载荷、匹配 ID 与一对一约束。[修复前结果](data/recall_v1_before_brace_repair.json)及修复哈希均保留。",'']
     return '\n'.join(lines)
 
 

@@ -6,52 +6,7 @@
   "expected_nodes": 120,
   "retrieved_nodes": 120,
   "prediction_failures": [],
-  "judge_errors": [
-    {
-      "id": "multi_06_long_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 538 (char 537)"
-    },
-    {
-      "id": "multi_06_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 536 (char 535)"
-    },
-    {
-      "id": "multi_07_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 494 (char 493)"
-    },
-    {
-      "id": "multi_07_cross_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 507 (char 506)"
-    },
-    {
-      "id": "multi_07_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 488 (char 487)"
-    },
-    {
-      "id": "multi_08_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 489 (char 488)"
-    },
-    {
-      "id": "multi_08_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 596 (char 595)"
-    },
-    {
-      "id": "multi_09_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 480 (char 479)"
-    },
-    {
-      "id": "multi_10_long_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 472 (char 471)"
-    },
-    {
-      "id": "multi_12_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 531 (char 530)"
-    },
-    {
-      "id": "multi_19_long_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 754 (char 753)"
-    }
-  ],
+  "judge_errors": [],
   "unique_tagged_texts": 165,
   "summary": {
     "all": {
@@ -77,16 +32,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 109,
-            "tp": 209,
-            "fp": 19,
+            "scored_nodes": 120,
+            "tp": 232,
+            "fp": 23,
             "fn": 8,
             "expected_gold": 240,
-            "micro_recall_scored": 0.9631336405529954,
-            "micro_precision_scored": 0.9166666666666666,
-            "micro_f1_scored": 0.9393258426966292,
-            "recall_all_expected_lower_bound": 0.8708333333333333,
-            "exact_nodes": 89,
+            "micro_recall_scored": 0.9666666666666667,
+            "micro_precision_scored": 0.9098039215686274,
+            "micro_f1_scored": 0.9373737373737374,
+            "recall_all_expected_lower_bound": 0.9666666666666667,
+            "exact_nodes": 97,
             "negative_predicted_nodes": 24,
             "negative_false_alarm_nodes": 1
           }
@@ -110,16 +65,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 109,
-            "tp": 207,
-            "fp": 18,
+            "scored_nodes": 120,
+            "tp": 230,
+            "fp": 21,
             "fn": 10,
             "expected_gold": 240,
-            "micro_recall_scored": 0.9539170506912442,
-            "micro_precision_scored": 0.92,
-            "micro_f1_scored": 0.9366515837104072,
-            "recall_all_expected_lower_bound": 0.8625,
-            "exact_nodes": 90,
+            "micro_recall_scored": 0.9583333333333334,
+            "micro_precision_scored": 0.9163346613545816,
+            "micro_f1_scored": 0.9368635437881874,
+            "recall_all_expected_lower_bound": 0.9583333333333334,
+            "exact_nodes": 98,
             "negative_predicted_nodes": 24,
             "negative_false_alarm_nodes": 1
           }
@@ -136,10 +91,10 @@
       },
       "paired_intent_recall_delta": {
         "scenario_groups": 24,
-        "mean_difference": -0.007523148148148147,
+        "mean_difference": -0.008680555555555554,
         "percentile_95ci": [
-          -0.03703703703703704,
-          0.019675925925925927
+          -0.03819444444444444,
+          0.017361111111111115
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
@@ -172,16 +127,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 56,
-            "tp": 108,
+            "scored_nodes": 60,
+            "tp": 117,
             "fp": 9,
             "fn": 3,
             "expected_gold": 120,
-            "micro_recall_scored": 0.972972972972973,
-            "micro_precision_scored": 0.9230769230769231,
-            "micro_f1_scored": 0.9473684210526315,
-            "recall_all_expected_lower_bound": 0.9,
-            "exact_nodes": 46,
+            "micro_recall_scored": 0.975,
+            "micro_precision_scored": 0.9285714285714286,
+            "micro_f1_scored": 0.9512195121951219,
+            "recall_all_expected_lower_bound": 0.975,
+            "exact_nodes": 50,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 1
           }
@@ -205,16 +160,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 56,
-            "tp": 107,
+            "scored_nodes": 60,
+            "tp": 116,
             "fp": 4,
             "fn": 4,
             "expected_gold": 120,
-            "micro_recall_scored": 0.963963963963964,
-            "micro_precision_scored": 0.963963963963964,
-            "micro_f1_scored": 0.963963963963964,
-            "recall_all_expected_lower_bound": 0.8916666666666667,
-            "exact_nodes": 50,
+            "micro_recall_scored": 0.9666666666666667,
+            "micro_precision_scored": 0.9666666666666667,
+            "micro_f1_scored": 0.9666666666666667,
+            "recall_all_expected_lower_bound": 0.9666666666666667,
+            "exact_nodes": 54,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 1
           }
@@ -267,16 +222,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 53,
-            "tp": 101,
-            "fp": 10,
+            "scored_nodes": 60,
+            "tp": 115,
+            "fp": 14,
             "fn": 5,
             "expected_gold": 120,
-            "micro_recall_scored": 0.9528301886792453,
-            "micro_precision_scored": 0.9099099099099099,
-            "micro_f1_scored": 0.9308755760368663,
-            "recall_all_expected_lower_bound": 0.8416666666666667,
-            "exact_nodes": 43,
+            "micro_recall_scored": 0.9583333333333334,
+            "micro_precision_scored": 0.8914728682170543,
+            "micro_f1_scored": 0.9236947791164659,
+            "recall_all_expected_lower_bound": 0.9583333333333334,
+            "exact_nodes": 47,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 0
           }
@@ -300,16 +255,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 53,
-            "tp": 100,
-            "fp": 14,
+            "scored_nodes": 60,
+            "tp": 114,
+            "fp": 17,
             "fn": 6,
             "expected_gold": 120,
-            "micro_recall_scored": 0.9433962264150944,
-            "micro_precision_scored": 0.8771929824561403,
-            "micro_f1_scored": 0.9090909090909091,
-            "recall_all_expected_lower_bound": 0.8333333333333334,
-            "exact_nodes": 40,
+            "micro_recall_scored": 0.95,
+            "micro_precision_scored": 0.8702290076335878,
+            "micro_f1_scored": 0.9083665338645418,
+            "recall_all_expected_lower_bound": 0.95,
+            "exact_nodes": 44,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 0
           }
@@ -325,11 +280,11 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 22,
-        "mean_difference": -0.015151515151515154,
+        "scenario_groups": 24,
+        "mean_difference": -0.01388888888888889,
         "percentile_95ci": [
-          -0.07575757575757577,
-          0.03787878787878789
+          -0.06944444444444446,
+          0.03472222222222223
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
@@ -362,16 +317,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 54,
-            "tp": 103,
+            "scored_nodes": 60,
+            "tp": 116,
             "fp": 13,
             "fn": 4,
             "expected_gold": 120,
-            "micro_recall_scored": 0.9626168224299065,
-            "micro_precision_scored": 0.8879310344827587,
-            "micro_f1_scored": 0.9237668161434978,
-            "recall_all_expected_lower_bound": 0.8583333333333333,
-            "exact_nodes": 41,
+            "micro_recall_scored": 0.9666666666666667,
+            "micro_precision_scored": 0.8992248062015504,
+            "micro_f1_scored": 0.9317269076305221,
+            "recall_all_expected_lower_bound": 0.9666666666666667,
+            "exact_nodes": 47,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 1
           }
@@ -395,16 +350,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 54,
-            "tp": 102,
-            "fp": 9,
+            "scored_nodes": 60,
+            "tp": 115,
+            "fp": 10,
             "fn": 5,
             "expected_gold": 120,
-            "micro_recall_scored": 0.9532710280373832,
-            "micro_precision_scored": 0.918918918918919,
-            "micro_f1_scored": 0.9357798165137615,
-            "recall_all_expected_lower_bound": 0.85,
-            "exact_nodes": 44,
+            "micro_recall_scored": 0.9583333333333334,
+            "micro_precision_scored": 0.92,
+            "micro_f1_scored": 0.9387755102040817,
+            "recall_all_expected_lower_bound": 0.9583333333333334,
+            "exact_nodes": 49,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 0
           }
@@ -457,16 +412,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 27,
-            "tp": 52,
+            "scored_nodes": 30,
+            "tp": 59,
             "fp": 6,
             "fn": 1,
             "expected_gold": 60,
-            "micro_recall_scored": 0.9811320754716981,
-            "micro_precision_scored": 0.896551724137931,
-            "micro_f1_scored": 0.9369369369369369,
-            "recall_all_expected_lower_bound": 0.8666666666666667,
-            "exact_nodes": 21,
+            "micro_recall_scored": 0.9833333333333333,
+            "micro_precision_scored": 0.9076923076923077,
+            "micro_f1_scored": 0.944,
+            "recall_all_expected_lower_bound": 0.9833333333333333,
+            "exact_nodes": 24,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 1
           }
@@ -490,16 +445,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 27,
-            "tp": 51,
+            "scored_nodes": 30,
+            "tp": 58,
             "fp": 0,
             "fn": 2,
             "expected_gold": 60,
-            "micro_recall_scored": 0.9622641509433962,
+            "micro_recall_scored": 0.9666666666666667,
             "micro_precision_scored": 1.0,
-            "micro_f1_scored": 0.9807692307692307,
-            "recall_all_expected_lower_bound": 0.85,
-            "exact_nodes": 25,
+            "micro_f1_scored": 0.9830508474576272,
+            "recall_all_expected_lower_bound": 0.9666666666666667,
+            "exact_nodes": 28,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 0
           }
@@ -515,10 +470,10 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 21,
-        "mean_difference": -0.015873015873015876,
+        "scenario_groups": 24,
+        "mean_difference": -0.01388888888888889,
         "percentile_95ci": [
-          -0.047619047619047616,
+          -0.041666666666666664,
           0.0
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
@@ -552,16 +507,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 27,
-            "tp": 51,
+            "scored_nodes": 30,
+            "tp": 57,
             "fp": 7,
             "fn": 3,
             "expected_gold": 60,
-            "micro_recall_scored": 0.9444444444444444,
-            "micro_precision_scored": 0.8793103448275862,
-            "micro_f1_scored": 0.9107142857142857,
-            "recall_all_expected_lower_bound": 0.85,
-            "exact_nodes": 20,
+            "micro_recall_scored": 0.95,
+            "micro_precision_scored": 0.890625,
+            "micro_f1_scored": 0.9193548387096774,
+            "recall_all_expected_lower_bound": 0.95,
+            "exact_nodes": 23,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 0
           }
@@ -585,16 +540,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 27,
-            "tp": 51,
-            "fp": 9,
+            "scored_nodes": 30,
+            "tp": 57,
+            "fp": 10,
             "fn": 3,
             "expected_gold": 60,
-            "micro_recall_scored": 0.9444444444444444,
-            "micro_precision_scored": 0.85,
-            "micro_f1_scored": 0.8947368421052632,
-            "recall_all_expected_lower_bound": 0.85,
-            "exact_nodes": 19,
+            "micro_recall_scored": 0.95,
+            "micro_precision_scored": 0.8507462686567164,
+            "micro_f1_scored": 0.8976377952755905,
+            "recall_all_expected_lower_bound": 0.95,
+            "exact_nodes": 21,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 0
           }
@@ -610,11 +565,11 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 21,
+        "scenario_groups": 24,
         "mean_difference": 0.0,
         "percentile_95ci": [
-          -0.047619047619047616,
-          0.047619047619047616
+          -0.041666666666666664,
+          0.041666666666666664
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
@@ -647,16 +602,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 55,
-            "tp": 106,
-            "fp": 6,
+            "scored_nodes": 60,
+            "tp": 116,
+            "fp": 10,
             "fn": 4,
             "expected_gold": 120,
-            "micro_recall_scored": 0.9636363636363636,
-            "micro_precision_scored": 0.9464285714285714,
-            "micro_f1_scored": 0.954954954954955,
-            "recall_all_expected_lower_bound": 0.8833333333333333,
-            "exact_nodes": 48,
+            "micro_recall_scored": 0.9666666666666667,
+            "micro_precision_scored": 0.9206349206349206,
+            "micro_f1_scored": 0.943089430894309,
+            "recall_all_expected_lower_bound": 0.9666666666666667,
+            "exact_nodes": 50,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 0
           }
@@ -680,16 +635,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 55,
-            "tp": 105,
-            "fp": 9,
+            "scored_nodes": 60,
+            "tp": 115,
+            "fp": 11,
             "fn": 5,
             "expected_gold": 120,
-            "micro_recall_scored": 0.9545454545454546,
-            "micro_precision_scored": 0.9210526315789473,
-            "micro_f1_scored": 0.9375,
-            "recall_all_expected_lower_bound": 0.875,
-            "exact_nodes": 46,
+            "micro_recall_scored": 0.9583333333333334,
+            "micro_precision_scored": 0.9126984126984127,
+            "micro_f1_scored": 0.9349593495934959,
+            "recall_all_expected_lower_bound": 0.9583333333333334,
+            "exact_nodes": 49,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 1
           }
@@ -705,11 +660,11 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 23,
-        "mean_difference": -0.010869565217391304,
+        "scenario_groups": 24,
+        "mean_difference": -0.010416666666666666,
         "percentile_95ci": [
-          -0.05797101449275362,
-          0.025362318840579715
+          -0.052083333333333336,
+          0.024305555555555563
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
@@ -742,16 +697,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 29,
-            "tp": 56,
+            "scored_nodes": 30,
+            "tp": 58,
             "fp": 3,
             "fn": 2,
             "expected_gold": 60,
-            "micro_recall_scored": 0.9655172413793104,
-            "micro_precision_scored": 0.9491525423728814,
-            "micro_f1_scored": 0.9572649572649573,
-            "recall_all_expected_lower_bound": 0.9333333333333333,
-            "exact_nodes": 25,
+            "micro_recall_scored": 0.9666666666666667,
+            "micro_precision_scored": 0.9508196721311475,
+            "micro_f1_scored": 0.9586776859504132,
+            "recall_all_expected_lower_bound": 0.9666666666666667,
+            "exact_nodes": 26,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 0
           }
@@ -775,16 +730,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 29,
-            "tp": 56,
+            "scored_nodes": 30,
+            "tp": 58,
             "fp": 4,
             "fn": 2,
             "expected_gold": 60,
-            "micro_recall_scored": 0.9655172413793104,
-            "micro_precision_scored": 0.9333333333333333,
-            "micro_f1_scored": 0.9491525423728814,
-            "recall_all_expected_lower_bound": 0.9333333333333333,
-            "exact_nodes": 25,
+            "micro_recall_scored": 0.9666666666666667,
+            "micro_precision_scored": 0.9354838709677419,
+            "micro_f1_scored": 0.9508196721311475,
+            "recall_all_expected_lower_bound": 0.9666666666666667,
+            "exact_nodes": 26,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 1
           }
@@ -800,11 +755,11 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 23,
-        "mean_difference": 0.007246376811594201,
+        "scenario_groups": 24,
+        "mean_difference": 0.006944444444444443,
         "percentile_95ci": [
-          -0.043478260869565216,
-          0.06521739130434782
+          -0.041666666666666664,
+          0.0625
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
@@ -837,16 +792,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 26,
-            "tp": 50,
-            "fp": 3,
+            "scored_nodes": 30,
+            "tp": 58,
+            "fp": 7,
             "fn": 2,
             "expected_gold": 60,
-            "micro_recall_scored": 0.9615384615384616,
-            "micro_precision_scored": 0.9433962264150944,
-            "micro_f1_scored": 0.9523809523809523,
-            "recall_all_expected_lower_bound": 0.8333333333333334,
-            "exact_nodes": 23,
+            "micro_recall_scored": 0.9666666666666667,
+            "micro_precision_scored": 0.8923076923076924,
+            "micro_f1_scored": 0.928,
+            "recall_all_expected_lower_bound": 0.9666666666666667,
+            "exact_nodes": 24,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 0
           }
@@ -870,16 +825,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 26,
-            "tp": 49,
-            "fp": 5,
+            "scored_nodes": 30,
+            "tp": 57,
+            "fp": 7,
             "fn": 3,
             "expected_gold": 60,
-            "micro_recall_scored": 0.9423076923076923,
-            "micro_precision_scored": 0.9074074074074074,
-            "micro_f1_scored": 0.9245283018867925,
-            "recall_all_expected_lower_bound": 0.8166666666666667,
-            "exact_nodes": 21,
+            "micro_recall_scored": 0.95,
+            "micro_precision_scored": 0.890625,
+            "micro_f1_scored": 0.9193548387096774,
+            "recall_all_expected_lower_bound": 0.95,
+            "exact_nodes": 23,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 0
           }
@@ -895,11 +850,11 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 20,
-        "mean_difference": -0.03333333333333333,
+        "scenario_groups": 24,
+        "mean_difference": -0.027777777777777776,
         "percentile_95ci": [
-          -0.16666666666666669,
-          0.06666666666666668
+          -0.13888888888888887,
+          0.05555555555555556
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
@@ -3626,5 +3581,97 @@
   ],
   "rejudge_note": "Only prior JSON parsing failures retried; identical predictions, evidence, prompt and model; successful initial judgments retained; all attempts logged.",
   "original_result_sha256": "e628652cf9787c025f8b1cadfebce5e863867b74d3f6ae872a5392fcd7689a61",
-  "frozen_predictions_sha256": "a829a8e1bcf2b5dd8c78eac6972bfa567fdb1f0fea4d2ce9232567696f4fee04"
+  "frozen_predictions_sha256": "a829a8e1bcf2b5dd8c78eac6972bfa567fdb1f0fea4d2ce9232567696f4fee04",
+  "brace_repair_note": "Remaining JSON parse failures recovered by appending exactly one missing final root brace to the first recorded exact-payload raw response. No new model calls or semantic edits. All previously successful judgments retained.",
+  "judge_brace_repairs": [
+    {
+      "node": "multi_06_long_t30",
+      "call_record_index_zero_based": 398,
+      "raw_sha256": "6fc612b90bddbd4601ea81093d92b810596c84c514cd50336b9e645d2c8351cc",
+      "repaired_sha256": "6c2c9d733614178dd65cebcbd99d48a03f1d9d0d02a1be2bb2cbe383c18deb8a",
+      "appended_suffix": "}",
+      "method": "append exactly one missing final root brace; first exact-payload raw response"
+    },
+    {
+      "node": "multi_06_cross_t60",
+      "call_record_index_zero_based": 402,
+      "raw_sha256": "b9e18800c381bae5ffa3b70d62999793e23e657398441ea8fa686a28310683fe",
+      "repaired_sha256": "6f7a08a57af00578c538575bba2ceda896842465d101ad13bcf34580f0ea39a3",
+      "appended_suffix": "}",
+      "method": "append exactly one missing final root brace; first exact-payload raw response"
+    },
+    {
+      "node": "multi_07_long_t60",
+      "call_record_index_zero_based": 406,
+      "raw_sha256": "66f445d9aa5d27089c68ce4f725a4b21cb7d59c50434cba02e17015f1a934985",
+      "repaired_sha256": "58bd2b344ab36f3ed0e15dc912bdd0aeb7fea91192d5ac116a89230f73746093",
+      "appended_suffix": "}",
+      "method": "append exactly one missing final root brace; first exact-payload raw response"
+    },
+    {
+      "node": "multi_07_cross_t30",
+      "call_record_index_zero_based": 409,
+      "raw_sha256": "f9708ab70b8cfd7e612fd470067f0e7c0dafe7218163f900f1b411179b707e5d",
+      "repaired_sha256": "7cf42e0dc845c8726409cc310949f857a937b3b6a1c6a3b59ea9fada009ad1a4",
+      "appended_suffix": "}",
+      "method": "append exactly one missing final root brace; first exact-payload raw response"
+    },
+    {
+      "node": "multi_07_cross_t60",
+      "call_record_index_zero_based": 412,
+      "raw_sha256": "59ec697b14c2a70372664168ae38d6019394493ed2d5a8c2d5b5c871e7c41d0e",
+      "repaired_sha256": "30b882f0e58e5871efca5a5de078108f1a163ed42ebea28a690abd69ff7d0c51",
+      "appended_suffix": "}",
+      "method": "append exactly one missing final root brace; first exact-payload raw response"
+    },
+    {
+      "node": "multi_08_long_t60",
+      "call_record_index_zero_based": 415,
+      "raw_sha256": "8f1964f2c4b911f61ee7e40f9048a6f2e589a7a8547628a55705a0a901023769",
+      "repaired_sha256": "00b64d346be6a18156d2d705eb795631a5f5f9d752575a6dea21fbe59d5b45f7",
+      "appended_suffix": "}",
+      "method": "append exactly one missing final root brace; first exact-payload raw response"
+    },
+    {
+      "node": "multi_08_cross_t60",
+      "call_record_index_zero_based": 419,
+      "raw_sha256": "fdab717fb27ebc6f28d6c73d8ecb1938b60d18b91c5dfdbb8ec59ca5c5e76ade",
+      "repaired_sha256": "27d730d77baf2fb0bf5f3345d362c005cbda38ca8f9308dd72b9e4e798efd343",
+      "appended_suffix": "}",
+      "method": "append exactly one missing final root brace; first exact-payload raw response"
+    },
+    {
+      "node": "multi_09_long_t60",
+      "call_record_index_zero_based": 422,
+      "raw_sha256": "9668630d3fd8bd49bc3aec51f33c8fe6480127ed97701f3139b8ead954d82c6a",
+      "repaired_sha256": "4d0cb37eb88ff96fe9375e0e7a62c6a7813ebbe78183888d5adc4ddcfa0ec56a",
+      "appended_suffix": "}",
+      "method": "append exactly one missing final root brace; first exact-payload raw response"
+    },
+    {
+      "node": "multi_10_long_t30",
+      "call_record_index_zero_based": 428,
+      "raw_sha256": "83fc80790e70979f9554d979d699a552b21c87efb258532af6cfefc514a7d44b",
+      "repaired_sha256": "e9a7de48b74f625b24533681dd93128ac249a7d8d8c46b1b0942a73009a816ed",
+      "appended_suffix": "}",
+      "method": "append exactly one missing final root brace; first exact-payload raw response"
+    },
+    {
+      "node": "multi_12_cross_t60",
+      "call_record_index_zero_based": 443,
+      "raw_sha256": "7353580716a918b0f76bb5aa1a14fab722c2cb7f5127f720223328a3302abdaf",
+      "repaired_sha256": "4b1d4e6dbc619aabd30e82c4fcfacfc4a06dced0c27f9a84b58d50ac7e247ad9",
+      "appended_suffix": "}",
+      "method": "append exactly one missing final root brace; first exact-payload raw response"
+    },
+    {
+      "node": "multi_19_long_t30",
+      "call_record_index_zero_based": 458,
+      "raw_sha256": "5a0d9e5ff7f8b96de800dc5074baabea2448c1b15199907965026c8877e68854",
+      "repaired_sha256": "26b9d4d90716046b7ee3606a72b02acdcfa1c3c0810867ddcbb7e1acdf3b370c",
+      "appended_suffix": "}",
+      "method": "append exactly one missing final root brace; first exact-payload raw response"
+    }
+  ],
+  "before_brace_repair_sha256": "d0c6f4ad0a45a2cf92e1509625fa9e3636e71e306bd58a6531f39f1d7492e69b"
 }
