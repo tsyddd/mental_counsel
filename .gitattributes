@@ -1,6 +1,7 @@
 # Preserve the frozen evaluation dataset byte-for-byte across platforms.
 data/intent_dataset_v2.json -text whitespace=cr-at-eol
 data/intent_dataset_v3.json -text
+data/intent_dataset_v4.json -text
 data/intent_v3_results.json -text
 data/intent_v3_raw.json -text
 data/intent_v3_summary.json -text
