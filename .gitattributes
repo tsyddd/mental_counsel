@@ -2,6 +2,11 @@
 data/intent_dataset_v2.json -text whitespace=cr-at-eol
 data/intent_dataset_v3.json -text
 data/intent_dataset_v4.json -text
+data/recall_dataset_v1.json -text
+data/recall_v1_results.json -text
+data/recall_v1_summary.json -text
+data/recall_v1_cache.json -text
+data/recall_v1_model_calls.jsonl -text
 data/intent_v3_results.json -text
 data/intent_v3_raw.json -text
 data/intent_v3_summary.json -text
