@@ -1,0 +1,3735 @@
+{
+  "phase": "completed",
+  "dataset_sha256": "1966e790e47233654a84b743761408701fb0b4b7d37f12242dd9105c3c01fb60",
+  "model": "gpt-6-sol",
+  "expected_cases": 60,
+  "expected_nodes": 120,
+  "retrieved_nodes": 120,
+  "prediction_failures": [],
+  "judge_errors": [
+    {
+      "id": "multi_02_long_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 559 (char 558)"
+    },
+    {
+      "id": "multi_03_long_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 494 (char 493)"
+    },
+    {
+      "id": "multi_04_cross_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 504 (char 503)"
+    },
+    {
+      "id": "multi_05_long_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 487 (char 486)"
+    },
+    {
+      "id": "multi_06_long_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 602 (char 601)"
+    },
+    {
+      "id": "multi_06_cross_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 495 (char 494)"
+    },
+    {
+      "id": "multi_06_cross_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 486 (char 485)"
+    },
+    {
+      "id": "multi_07_long_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 481 (char 480)"
+    },
+    {
+      "id": "multi_07_long_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 477 (char 476)"
+    },
+    {
+      "id": "multi_07_cross_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 472 (char 471)"
+    },
+    {
+      "id": "multi_07_cross_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 496 (char 495)"
+    },
+    {
+      "id": "multi_08_long_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 476 (char 475)"
+    },
+    {
+      "id": "multi_08_cross_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 483 (char 482)"
+    },
+    {
+      "id": "multi_08_cross_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 459 (char 458)"
+    },
+    {
+      "id": "multi_09_long_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 460 (char 459)"
+    },
+    {
+      "id": "multi_09_cross_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 469 (char 468)"
+    },
+    {
+      "id": "multi_09_cross_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 472 (char 471)"
+    },
+    {
+      "id": "multi_10_long_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 490 (char 489)"
+    },
+    {
+      "id": "multi_10_long_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 500 (char 499)"
+    },
+    {
+      "id": "multi_10_cross_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 491 (char 490)"
+    },
+    {
+      "id": "multi_10_cross_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 607 (char 606)"
+    },
+    {
+      "id": "multi_12_long_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 513 (char 512)"
+    },
+    {
+      "id": "multi_12_long_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 565 (char 564)"
+    },
+    {
+      "id": "multi_12_cross_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 543 (char 542)"
+    },
+    {
+      "id": "multi_12_cross_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 470 (char 469)"
+    },
+    {
+      "id": "multi_13_cross_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 645 (char 644)"
+    },
+    {
+      "id": "multi_14_cross_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 597 (char 596)"
+    },
+    {
+      "id": "multi_15_long_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 686 (char 685)"
+    },
+    {
+      "id": "multi_15_cross_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 751 (char 750)"
+    },
+    {
+      "id": "multi_16_cross_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 694 (char 693)"
+    },
+    {
+      "id": "multi_16_cross_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 805 (char 804)"
+    },
+    {
+      "id": "multi_17_long_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 801 (char 800)"
+    },
+    {
+      "id": "multi_17_cross_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 863 (char 862)"
+    },
+    {
+      "id": "multi_19_long_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 779 (char 778)"
+    },
+    {
+      "id": "multi_21_long_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 826 (char 825)"
+    },
+    {
+      "id": "multi_22_long_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 846 (char 845)"
+    },
+    {
+      "id": "multi_22_cross_t30",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 797 (char 796)"
+    },
+    {
+      "id": "multi_24_cross_t60",
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 718 (char 717)"
+    }
+  ],
+  "unique_tagged_texts": 165,
+  "summary": {
+    "all": {
+      "expected_nodes": 120,
+      "retrieved_nodes": 120,
+      "arms": {
+        "two_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.38958333333333334,
+              "precision": 0.8222222222222225,
+              "ndcg": 0.824673492580488
+            },
+            "5": {
+              "recall": 0.5687499999999998,
+              "precision": 0.7300000000000002,
+              "ndcg": 0.7905228961130591
+            },
+            "10": {
+              "recall": 0.7979166666666665,
+              "precision": 0.5450000000000005,
+              "ndcg": 0.808246606261887
+            }
+          },
+          "intent": {
+            "scored_nodes": 82,
+            "tp": 143,
+            "fp": 14,
+            "fn": 8,
+            "expected_gold": 240,
+            "micro_recall_scored": 0.9470198675496688,
+            "micro_precision_scored": 0.910828025477707,
+            "micro_f1_scored": 0.9285714285714286,
+            "recall_all_expected_lower_bound": 0.5958333333333333,
+            "exact_nodes": 67,
+            "negative_predicted_nodes": 24,
+            "negative_false_alarm_nodes": 1
+          }
+        },
+        "three_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.38819444444444445,
+              "precision": 0.8333333333333331,
+              "ndcg": 0.8530721273977239
+            },
+            "5": {
+              "recall": 0.5770833333333332,
+              "precision": 0.7566666666666672,
+              "ndcg": 0.8236822175868869
+            },
+            "10": {
+              "recall": 0.8097222222222219,
+              "precision": 0.5616666666666669,
+              "ndcg": 0.8337635089149357
+            }
+          },
+          "intent": {
+            "scored_nodes": 82,
+            "tp": 142,
+            "fp": 13,
+            "fn": 9,
+            "expected_gold": 240,
+            "micro_recall_scored": 0.9403973509933775,
+            "micro_precision_scored": 0.9161290322580645,
+            "micro_f1_scored": 0.9281045751633987,
+            "recall_all_expected_lower_bound": 0.5916666666666667,
+            "exact_nodes": 68,
+            "negative_predicted_nodes": 24,
+            "negative_false_alarm_nodes": 1
+          }
+        }
+      },
+      "paired_r10_delta": {
+        "scenario_groups": 30,
+        "mean_difference": 0.011805555555555552,
+        "percentile_95ci": [
+          -0.02013888888888889,
+          0.04027777777777777
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "paired_intent_recall_delta": {
+        "scenario_groups": 21,
+        "mean_difference": -0.007275132275132273,
+        "percentile_95ci": [
+          -0.03902116402116402,
+          0.02248677248677249
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "wins_ties_losses_r10": {
+        "wins": 28,
+        "ties": 76,
+        "losses": 16
+      }
+    },
+    "all_t30": {
+      "expected_nodes": 60,
+      "retrieved_nodes": 60,
+      "arms": {
+        "two_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.5027777777777777,
+              "precision": 0.7888888888888889,
+              "ndcg": 0.8040961698636326
+            },
+            "5": {
+              "recall": 0.7222222222222221,
+              "precision": 0.6866666666666668,
+              "ndcg": 0.78968511847463
+            },
+            "10": {
+              "recall": 0.9055555555555557,
+              "precision": 0.4400000000000001,
+              "ndcg": 0.8569477437218881
+            }
+          },
+          "intent": {
+            "scored_nodes": 45,
+            "tp": 83,
+            "fp": 8,
+            "fn": 3,
+            "expected_gold": 120,
+            "micro_recall_scored": 0.9651162790697675,
+            "micro_precision_scored": 0.9120879120879121,
+            "micro_f1_scored": 0.9378531073446328,
+            "recall_all_expected_lower_bound": 0.6916666666666667,
+            "exact_nodes": 36,
+            "negative_predicted_nodes": 12,
+            "negative_false_alarm_nodes": 1
+          }
+        },
+        "three_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.48333333333333334,
+              "precision": 0.7666666666666669,
+              "ndcg": 0.7942267728314371
+            },
+            "5": {
+              "recall": 0.7166666666666667,
+              "precision": 0.6933333333333334,
+              "ndcg": 0.7927197125173386
+            },
+            "10": {
+              "recall": 0.9111111111111112,
+              "precision": 0.44333333333333347,
+              "ndcg": 0.8617527484534271
+            }
+          },
+          "intent": {
+            "scored_nodes": 45,
+            "tp": 82,
+            "fp": 3,
+            "fn": 4,
+            "expected_gold": 120,
+            "micro_recall_scored": 0.9534883720930233,
+            "micro_precision_scored": 0.9647058823529412,
+            "micro_f1_scored": 0.9590643274853801,
+            "recall_all_expected_lower_bound": 0.6833333333333333,
+            "exact_nodes": 40,
+            "negative_predicted_nodes": 12,
+            "negative_false_alarm_nodes": 1
+          }
+        }
+      },
+      "paired_r10_delta": {
+        "scenario_groups": 30,
+        "mean_difference": 0.005555555555555554,
+        "percentile_95ci": [
+          -0.019444444444444445,
+          0.030555555555555555
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "paired_intent_recall_delta": {
+        "scenario_groups": 20,
+        "mean_difference": -0.004166666666666668,
+        "percentile_95ci": [
+          -0.05,
+          0.0375
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "wins_ties_losses_r10": {
+        "wins": 4,
+        "ties": 54,
+        "losses": 2
+      }
+    },
+    "all_t60": {
+      "expected_nodes": 60,
+      "retrieved_nodes": 60,
+      "arms": {
+        "two_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.27638888888888885,
+              "precision": 0.8555555555555553,
+              "ndcg": 0.8452508152973454
+            },
+            "5": {
+              "recall": 0.41527777777777786,
+              "precision": 0.7733333333333332,
+              "ndcg": 0.7913606737514888
+            },
+            "10": {
+              "recall": 0.6902777777777778,
+              "precision": 0.6499999999999998,
+              "ndcg": 0.7595454688018871
+            }
+          },
+          "intent": {
+            "scored_nodes": 37,
+            "tp": 60,
+            "fp": 6,
+            "fn": 5,
+            "expected_gold": 120,
+            "micro_recall_scored": 0.9230769230769231,
+            "micro_precision_scored": 0.9090909090909091,
+            "micro_f1_scored": 0.916030534351145,
+            "recall_all_expected_lower_bound": 0.5,
+            "exact_nodes": 31,
+            "negative_predicted_nodes": 12,
+            "negative_false_alarm_nodes": 0
+          }
+        },
+        "three_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.29305555555555546,
+              "precision": 0.8999999999999999,
+              "ndcg": 0.911917481964012
+            },
+            "5": {
+              "recall": 0.4375000000000002,
+              "precision": 0.82,
+              "ndcg": 0.8546447226564351
+            },
+            "10": {
+              "recall": 0.7083333333333334,
+              "precision": 0.6799999999999996,
+              "ndcg": 0.805774269376444
+            }
+          },
+          "intent": {
+            "scored_nodes": 37,
+            "tp": 60,
+            "fp": 10,
+            "fn": 5,
+            "expected_gold": 120,
+            "micro_recall_scored": 0.9230769230769231,
+            "micro_precision_scored": 0.8571428571428571,
+            "micro_f1_scored": 0.8888888888888888,
+            "recall_all_expected_lower_bound": 0.5,
+            "exact_nodes": 28,
+            "negative_predicted_nodes": 12,
+            "negative_false_alarm_nodes": 0
+          }
+        }
+      },
+      "paired_r10_delta": {
+        "scenario_groups": 30,
+        "mean_difference": 0.01805555555555555,
+        "percentile_95ci": [
+          -0.03194444444444445,
+          0.0638888888888889
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "paired_intent_recall_delta": {
+        "scenario_groups": 18,
+        "mean_difference": -0.009259259259259257,
+        "percentile_95ci": [
+          -0.08333333333333333,
+          0.05555555555555555
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "wins_ties_losses_r10": {
+        "wins": 24,
+        "ties": 22,
+        "losses": 14
+      }
+    },
+    "long": {
+      "expected_nodes": 60,
+      "retrieved_nodes": 60,
+      "arms": {
+        "two_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.38958333333333334,
+              "precision": 0.8222222222222222,
+              "ndcg": 0.8246734925804889
+            },
+            "5": {
+              "recall": 0.5687500000000001,
+              "precision": 0.73,
+              "ndcg": 0.7905228961130593
+            },
+            "10": {
+              "recall": 0.7979166666666667,
+              "precision": 0.5449999999999999,
+              "ndcg": 0.8082466062618876
+            }
+          },
+          "intent": {
+            "scored_nodes": 43,
+            "tp": 77,
+            "fp": 9,
+            "fn": 4,
+            "expected_gold": 120,
+            "micro_recall_scored": 0.9506172839506173,
+            "micro_precision_scored": 0.8953488372093024,
+            "micro_f1_scored": 0.9221556886227545,
+            "recall_all_expected_lower_bound": 0.6416666666666667,
+            "exact_nodes": 34,
+            "negative_predicted_nodes": 12,
+            "negative_false_alarm_nodes": 1
+          }
+        },
+        "three_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.3881944444444444,
+              "precision": 0.8333333333333335,
+              "ndcg": 0.8530721273977245
+            },
+            "5": {
+              "recall": 0.5770833333333333,
+              "precision": 0.7566666666666666,
+              "ndcg": 0.8236822175868869
+            },
+            "10": {
+              "recall": 0.8097222222222223,
+              "precision": 0.5616666666666668,
+              "ndcg": 0.8337635089149358
+            }
+          },
+          "intent": {
+            "scored_nodes": 43,
+            "tp": 76,
+            "fp": 5,
+            "fn": 5,
+            "expected_gold": 120,
+            "micro_recall_scored": 0.9382716049382716,
+            "micro_precision_scored": 0.9382716049382716,
+            "micro_f1_scored": 0.9382716049382716,
+            "recall_all_expected_lower_bound": 0.6333333333333333,
+            "exact_nodes": 36,
+            "negative_predicted_nodes": 12,
+            "negative_false_alarm_nodes": 0
+          }
+        }
+      },
+      "paired_r10_delta": {
+        "scenario_groups": 30,
+        "mean_difference": 0.011805555555555552,
+        "percentile_95ci": [
+          -0.02013888888888889,
+          0.04027777777777777
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "paired_intent_recall_delta": {
+        "scenario_groups": 21,
+        "mean_difference": -0.007936507936507938,
+        "percentile_95ci": [
+          -0.03174603174603175,
+          0.015873015873015876
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "wins_ties_losses_r10": {
+        "wins": 14,
+        "ties": 38,
+        "losses": 8
+      }
+    },
+    "long_t30": {
+      "expected_nodes": 30,
+      "retrieved_nodes": 30,
+      "arms": {
+        "two_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.5027777777777779,
+              "precision": 0.788888888888889,
+              "ndcg": 0.8040961698636325
+            },
+            "5": {
+              "recall": 0.7222222222222222,
+              "precision": 0.6866666666666666,
+              "ndcg": 0.7896851184746297
+            },
+            "10": {
+              "recall": 0.9055555555555554,
+              "precision": 0.43999999999999984,
+              "ndcg": 0.8569477437218878
+            }
+          },
+          "intent": {
+            "scored_nodes": 25,
+            "tp": 48,
+            "fp": 5,
+            "fn": 1,
+            "expected_gold": 60,
+            "micro_recall_scored": 0.9795918367346939,
+            "micro_precision_scored": 0.9056603773584906,
+            "micro_f1_scored": 0.9411764705882353,
+            "recall_all_expected_lower_bound": 0.8,
+            "exact_nodes": 20,
+            "negative_predicted_nodes": 6,
+            "negative_false_alarm_nodes": 1
+          }
+        },
+        "three_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.48333333333333334,
+              "precision": 0.7666666666666665,
+              "ndcg": 0.794226772831437
+            },
+            "5": {
+              "recall": 0.7166666666666667,
+              "precision": 0.6933333333333332,
+              "ndcg": 0.7927197125173382
+            },
+            "10": {
+              "recall": 0.9111111111111111,
+              "precision": 0.4433333333333332,
+              "ndcg": 0.8617527484534272
+            }
+          },
+          "intent": {
+            "scored_nodes": 25,
+            "tp": 47,
+            "fp": 0,
+            "fn": 2,
+            "expected_gold": 60,
+            "micro_recall_scored": 0.9591836734693877,
+            "micro_precision_scored": 1.0,
+            "micro_f1_scored": 0.9791666666666666,
+            "recall_all_expected_lower_bound": 0.7833333333333333,
+            "exact_nodes": 23,
+            "negative_predicted_nodes": 6,
+            "negative_false_alarm_nodes": 0
+          }
+        }
+      },
+      "paired_r10_delta": {
+        "scenario_groups": 30,
+        "mean_difference": 0.005555555555555554,
+        "percentile_95ci": [
+          -0.019444444444444445,
+          0.030555555555555555
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "paired_intent_recall_delta": {
+        "scenario_groups": 19,
+        "mean_difference": -0.01754385964912281,
+        "percentile_95ci": [
+          -0.05263157894736842,
+          0.0
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "wins_ties_losses_r10": {
+        "wins": 2,
+        "ties": 27,
+        "losses": 1
+      }
+    },
+    "long_t60": {
+      "expected_nodes": 30,
+      "retrieved_nodes": 30,
+      "arms": {
+        "two_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.2763888888888889,
+              "precision": 0.8555555555555557,
+              "ndcg": 0.845250815297345
+            },
+            "5": {
+              "recall": 0.41527777777777775,
+              "precision": 0.7733333333333332,
+              "ndcg": 0.791360673751489
+            },
+            "10": {
+              "recall": 0.6902777777777778,
+              "precision": 0.6499999999999999,
+              "ndcg": 0.7595454688018868
+            }
+          },
+          "intent": {
+            "scored_nodes": 18,
+            "tp": 29,
+            "fp": 4,
+            "fn": 3,
+            "expected_gold": 60,
+            "micro_recall_scored": 0.90625,
+            "micro_precision_scored": 0.8787878787878788,
+            "micro_f1_scored": 0.8923076923076924,
+            "recall_all_expected_lower_bound": 0.48333333333333334,
+            "exact_nodes": 14,
+            "negative_predicted_nodes": 6,
+            "negative_false_alarm_nodes": 0
+          }
+        },
+        "three_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.29305555555555557,
+              "precision": 0.9,
+              "ndcg": 0.9119174819640118
+            },
+            "5": {
+              "recall": 0.4374999999999999,
+              "precision": 0.82,
+              "ndcg": 0.8546447226564351
+            },
+            "10": {
+              "recall": 0.7083333333333334,
+              "precision": 0.6799999999999998,
+              "ndcg": 0.805774269376444
+            }
+          },
+          "intent": {
+            "scored_nodes": 18,
+            "tp": 29,
+            "fp": 5,
+            "fn": 3,
+            "expected_gold": 60,
+            "micro_recall_scored": 0.90625,
+            "micro_precision_scored": 0.8529411764705882,
+            "micro_f1_scored": 0.8787878787878788,
+            "recall_all_expected_lower_bound": 0.48333333333333334,
+            "exact_nodes": 13,
+            "negative_predicted_nodes": 6,
+            "negative_false_alarm_nodes": 0
+          }
+        }
+      },
+      "paired_r10_delta": {
+        "scenario_groups": 30,
+        "mean_difference": 0.01805555555555555,
+        "percentile_95ci": [
+          -0.03194444444444445,
+          0.0638888888888889
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "paired_intent_recall_delta": {
+        "scenario_groups": 12,
+        "mean_difference": 0.0,
+        "percentile_95ci": [
+          -0.08333333333333333,
+          0.08333333333333333
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "wins_ties_losses_r10": {
+        "wins": 12,
+        "ties": 11,
+        "losses": 7
+      }
+    },
+    "cross": {
+      "expected_nodes": 60,
+      "retrieved_nodes": 60,
+      "arms": {
+        "two_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.38958333333333334,
+              "precision": 0.8222222222222222,
+              "ndcg": 0.8246734925804889
+            },
+            "5": {
+              "recall": 0.5687500000000001,
+              "precision": 0.73,
+              "ndcg": 0.7905228961130593
+            },
+            "10": {
+              "recall": 0.7979166666666667,
+              "precision": 0.5449999999999999,
+              "ndcg": 0.8082466062618876
+            }
+          },
+          "intent": {
+            "scored_nodes": 39,
+            "tp": 66,
+            "fp": 5,
+            "fn": 4,
+            "expected_gold": 120,
+            "micro_recall_scored": 0.9428571428571428,
+            "micro_precision_scored": 0.9295774647887324,
+            "micro_f1_scored": 0.9361702127659575,
+            "recall_all_expected_lower_bound": 0.55,
+            "exact_nodes": 33,
+            "negative_predicted_nodes": 12,
+            "negative_false_alarm_nodes": 0
+          }
+        },
+        "three_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.3881944444444444,
+              "precision": 0.8333333333333335,
+              "ndcg": 0.8530721273977245
+            },
+            "5": {
+              "recall": 0.5770833333333333,
+              "precision": 0.7566666666666666,
+              "ndcg": 0.8236822175868869
+            },
+            "10": {
+              "recall": 0.8097222222222223,
+              "precision": 0.5616666666666668,
+              "ndcg": 0.8337635089149358
+            }
+          },
+          "intent": {
+            "scored_nodes": 39,
+            "tp": 66,
+            "fp": 8,
+            "fn": 4,
+            "expected_gold": 120,
+            "micro_recall_scored": 0.9428571428571428,
+            "micro_precision_scored": 0.8918918918918919,
+            "micro_f1_scored": 0.9166666666666666,
+            "recall_all_expected_lower_bound": 0.55,
+            "exact_nodes": 32,
+            "negative_predicted_nodes": 12,
+            "negative_false_alarm_nodes": 1
+          }
+        }
+      },
+      "paired_r10_delta": {
+        "scenario_groups": 30,
+        "mean_difference": 0.011805555555555552,
+        "percentile_95ci": [
+          -0.02013888888888889,
+          0.04027777777777777
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "paired_intent_recall_delta": {
+        "scenario_groups": 17,
+        "mean_difference": -0.014705882352941176,
+        "percentile_95ci": [
+          -0.07352941176470588,
+          0.03431372549019609
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "wins_ties_losses_r10": {
+        "wins": 14,
+        "ties": 38,
+        "losses": 8
+      }
+    },
+    "cross_t30": {
+      "expected_nodes": 30,
+      "retrieved_nodes": 30,
+      "arms": {
+        "two_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.5027777777777779,
+              "precision": 0.788888888888889,
+              "ndcg": 0.8040961698636325
+            },
+            "5": {
+              "recall": 0.7222222222222222,
+              "precision": 0.6866666666666666,
+              "ndcg": 0.7896851184746297
+            },
+            "10": {
+              "recall": 0.9055555555555554,
+              "precision": 0.43999999999999984,
+              "ndcg": 0.8569477437218878
+            }
+          },
+          "intent": {
+            "scored_nodes": 20,
+            "tp": 35,
+            "fp": 3,
+            "fn": 2,
+            "expected_gold": 60,
+            "micro_recall_scored": 0.9459459459459459,
+            "micro_precision_scored": 0.9210526315789473,
+            "micro_f1_scored": 0.9333333333333333,
+            "recall_all_expected_lower_bound": 0.5833333333333334,
+            "exact_nodes": 16,
+            "negative_predicted_nodes": 6,
+            "negative_false_alarm_nodes": 0
+          }
+        },
+        "three_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.48333333333333334,
+              "precision": 0.7666666666666665,
+              "ndcg": 0.794226772831437
+            },
+            "5": {
+              "recall": 0.7166666666666667,
+              "precision": 0.6933333333333332,
+              "ndcg": 0.7927197125173382
+            },
+            "10": {
+              "recall": 0.9111111111111111,
+              "precision": 0.4433333333333332,
+              "ndcg": 0.8617527484534272
+            }
+          },
+          "intent": {
+            "scored_nodes": 20,
+            "tp": 35,
+            "fp": 3,
+            "fn": 2,
+            "expected_gold": 60,
+            "micro_recall_scored": 0.9459459459459459,
+            "micro_precision_scored": 0.9210526315789473,
+            "micro_f1_scored": 0.9333333333333333,
+            "recall_all_expected_lower_bound": 0.5833333333333334,
+            "exact_nodes": 17,
+            "negative_predicted_nodes": 6,
+            "negative_false_alarm_nodes": 1
+          }
+        }
+      },
+      "paired_r10_delta": {
+        "scenario_groups": 30,
+        "mean_difference": 0.005555555555555554,
+        "percentile_95ci": [
+          -0.019444444444444445,
+          0.030555555555555555
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "paired_intent_recall_delta": {
+        "scenario_groups": 14,
+        "mean_difference": 0.011904761904761902,
+        "percentile_95ci": [
+          -0.07142857142857142,
+          0.10714285714285714
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "wins_ties_losses_r10": {
+        "wins": 2,
+        "ties": 27,
+        "losses": 1
+      }
+    },
+    "cross_t60": {
+      "expected_nodes": 30,
+      "retrieved_nodes": 30,
+      "arms": {
+        "two_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.2763888888888889,
+              "precision": 0.8555555555555557,
+              "ndcg": 0.845250815297345
+            },
+            "5": {
+              "recall": 0.41527777777777775,
+              "precision": 0.7733333333333332,
+              "ndcg": 0.791360673751489
+            },
+            "10": {
+              "recall": 0.6902777777777778,
+              "precision": 0.6499999999999999,
+              "ndcg": 0.7595454688018868
+            }
+          },
+          "intent": {
+            "scored_nodes": 19,
+            "tp": 31,
+            "fp": 2,
+            "fn": 2,
+            "expected_gold": 60,
+            "micro_recall_scored": 0.9393939393939394,
+            "micro_precision_scored": 0.9393939393939394,
+            "micro_f1_scored": 0.9393939393939394,
+            "recall_all_expected_lower_bound": 0.5166666666666667,
+            "exact_nodes": 17,
+            "negative_predicted_nodes": 6,
+            "negative_false_alarm_nodes": 0
+          }
+        },
+        "three_route": {
+          "retrieval": {
+            "3": {
+              "recall": 0.29305555555555557,
+              "precision": 0.9,
+              "ndcg": 0.9119174819640118
+            },
+            "5": {
+              "recall": 0.4374999999999999,
+              "precision": 0.82,
+              "ndcg": 0.8546447226564351
+            },
+            "10": {
+              "recall": 0.7083333333333334,
+              "precision": 0.6799999999999998,
+              "ndcg": 0.805774269376444
+            }
+          },
+          "intent": {
+            "scored_nodes": 19,
+            "tp": 31,
+            "fp": 5,
+            "fn": 2,
+            "expected_gold": 60,
+            "micro_recall_scored": 0.9393939393939394,
+            "micro_precision_scored": 0.8611111111111112,
+            "micro_f1_scored": 0.8985507246376812,
+            "recall_all_expected_lower_bound": 0.5166666666666667,
+            "exact_nodes": 15,
+            "negative_predicted_nodes": 6,
+            "negative_false_alarm_nodes": 0
+          }
+        }
+      },
+      "paired_r10_delta": {
+        "scenario_groups": 30,
+        "mean_difference": 0.01805555555555555,
+        "percentile_95ci": [
+          -0.03194444444444445,
+          0.0638888888888889
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "paired_intent_recall_delta": {
+        "scenario_groups": 13,
+        "mean_difference": -0.025641025641025637,
+        "percentile_95ci": [
+          -0.20512820512820512,
+          0.10256410256410257
+        ],
+        "note": "three minus two; paired synthetic development scenarios, not population inference"
+      },
+      "wins_ties_losses_r10": {
+        "wins": 12,
+        "ties": 11,
+        "losses": 7
+      }
+    }
+  },
+  "r10_regressions": [
+    {
+      "node": "multi_01_long_t60",
+      "query": "最近学习总是占满我的一天，越忙越没有精神，想到后面的安排就发愁；另外，宿舍里一起出门吃饭那件事，我还是会犹豫，之后又有点失落。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e008",
+        "e013",
+        "e024",
+        "e026",
+        "e034",
+        "e041",
+        "e049",
+        "e052"
+      ],
+      "delta_r10": -0.375,
+      "three_only_relevant": [
+        "e008"
+      ],
+      "two_only_relevant": [
+        "e026",
+        "e041",
+        "e049",
+        "e052"
+      ]
+    },
+    {
+      "node": "multi_01_cross_t60",
+      "query": "最近学习总是占满我的一天，越忙越没有精神，想到后面的安排就发愁；另外，宿舍里一起出门吃饭那件事，我还是会犹豫，之后又有点失落。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e008",
+        "e013",
+        "e024",
+        "e026",
+        "e034",
+        "e041",
+        "e049",
+        "e052"
+      ],
+      "delta_r10": -0.375,
+      "three_only_relevant": [
+        "e008"
+      ],
+      "two_only_relevant": [
+        "e026",
+        "e041",
+        "e049",
+        "e052"
+      ]
+    },
+    {
+      "node": "multi_06_long_t60",
+      "query": "班里交给我的事和自己的学习挤在一起，我又有点接不住了；另外，在家里个人东西被碰到的事，我还是介意，也不知道怎么跟妈妈说。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e003",
+        "e008",
+        "e023",
+        "e024",
+        "e037",
+        "e040",
+        "e049",
+        "e054"
+      ],
+      "delta_r10": -0.125,
+      "three_only_relevant": [
+        "e023"
+      ],
+      "two_only_relevant": [
+        "e024",
+        "e054"
+      ]
+    },
+    {
+      "node": "multi_06_cross_t60",
+      "query": "班里交给我的事和自己的学习挤在一起，我又有点接不住了；另外，在家里个人东西被碰到的事，我还是介意，也不知道怎么跟妈妈说。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e003",
+        "e008",
+        "e023",
+        "e024",
+        "e037",
+        "e040",
+        "e049",
+        "e054"
+      ],
+      "delta_r10": -0.125,
+      "three_only_relevant": [
+        "e023"
+      ],
+      "two_only_relevant": [
+        "e024",
+        "e054"
+      ]
+    },
+    {
+      "node": "multi_09_long_t60",
+      "query": "晚上明明想休息却又停不下手机，第二天的状态还是不好；另外，休息日又像随时待命，自己的安排总被同事的消息打断。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e007",
+        "e010",
+        "e017",
+        "e020",
+        "e035",
+        "e039",
+        "e049",
+        "e052"
+      ],
+      "delta_r10": -0.125,
+      "three_only_relevant": [],
+      "two_only_relevant": [
+        "e052"
+      ]
+    },
+    {
+      "node": "multi_09_cross_t60",
+      "query": "晚上明明想休息却又停不下手机，第二天的状态还是不好；另外，休息日又像随时待命，自己的安排总被同事的消息打断。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e007",
+        "e010",
+        "e017",
+        "e020",
+        "e035",
+        "e039",
+        "e049",
+        "e052"
+      ],
+      "delta_r10": -0.125,
+      "three_only_relevant": [],
+      "two_only_relevant": [
+        "e052"
+      ]
+    },
+    {
+      "node": "multi_10_long_t30",
+      "query": "一到周末我的作息就往后跑，接下来要早起的时候又很难受；另外，别人拜托的工作又堆到我这里，自己的事情总是被拖到后面。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e004",
+        "e011",
+        "e022",
+        "e023"
+      ],
+      "delta_r10": -0.25,
+      "three_only_relevant": [],
+      "two_only_relevant": [
+        "e023"
+      ]
+    },
+    {
+      "node": "multi_10_long_t60",
+      "query": "一到周末我的作息就往后跑，接下来要早起的时候又很难受；另外，别人拜托的工作又堆到我这里，自己的事情总是被拖到后面。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e004",
+        "e011",
+        "e022",
+        "e023",
+        "e034",
+        "e038",
+        "e047",
+        "e050"
+      ],
+      "delta_r10": -0.25,
+      "three_only_relevant": [],
+      "two_only_relevant": [
+        "e023",
+        "e038"
+      ]
+    },
+    {
+      "node": "multi_10_cross_t30",
+      "query": "一到周末我的作息就往后跑，接下来要早起的时候又很难受；另外，别人拜托的工作又堆到我这里，自己的事情总是被拖到后面。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e004",
+        "e011",
+        "e022",
+        "e023"
+      ],
+      "delta_r10": -0.25,
+      "three_only_relevant": [],
+      "two_only_relevant": [
+        "e023"
+      ]
+    },
+    {
+      "node": "multi_10_cross_t60",
+      "query": "一到周末我的作息就往后跑，接下来要早起的时候又很难受；另外，别人拜托的工作又堆到我这里，自己的事情总是被拖到后面。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e004",
+        "e011",
+        "e022",
+        "e023",
+        "e034",
+        "e038",
+        "e047",
+        "e050"
+      ],
+      "delta_r10": -0.25,
+      "three_only_relevant": [],
+      "two_only_relevant": [
+        "e023",
+        "e038"
+      ]
+    },
+    {
+      "node": "multi_12_long_t60",
+      "query": "朋友一开口我就又挪掉自己的安排，回来才觉得为难；另外，朋友那笔钱和后来的请求还压在心里，我自己的开支也要顾。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e003",
+        "e009",
+        "e017",
+        "e020",
+        "e036",
+        "e038",
+        "e048",
+        "e050"
+      ],
+      "delta_r10": -0.125,
+      "three_only_relevant": [
+        "e036"
+      ],
+      "two_only_relevant": [
+        "e003",
+        "e050"
+      ]
+    },
+    {
+      "node": "multi_12_cross_t60",
+      "query": "朋友一开口我就又挪掉自己的安排，回来才觉得为难；另外，朋友那笔钱和后来的请求还压在心里，我自己的开支也要顾。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e003",
+        "e009",
+        "e017",
+        "e020",
+        "e036",
+        "e038",
+        "e048",
+        "e050"
+      ],
+      "delta_r10": -0.125,
+      "three_only_relevant": [
+        "e036"
+      ],
+      "two_only_relevant": [
+        "e003",
+        "e050"
+      ]
+    },
+    {
+      "node": "multi_13_long_t60",
+      "query": "最近学习总是占满我的一天，越忙越没有精神，想到后面的安排就发愁；另外，宿舍里一起出门吃饭那件事，我还是会犹豫，之后又有点失落；另外，在家里个人东西被碰到的事，我还是介意，也不知道怎么跟妈妈说。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e002",
+        "e004",
+        "e006",
+        "e009",
+        "e011",
+        "e018",
+        "e037",
+        "e038",
+        "e039",
+        "e041",
+        "e044",
+        "e046"
+      ],
+      "delta_r10": -0.08333333333333337,
+      "three_only_relevant": [
+        "e037"
+      ],
+      "two_only_relevant": [
+        "e038",
+        "e046"
+      ]
+    },
+    {
+      "node": "multi_13_cross_t60",
+      "query": "最近学习总是占满我的一天，越忙越没有精神，想到后面的安排就发愁；另外，宿舍里一起出门吃饭那件事，我还是会犹豫，之后又有点失落；另外，在家里个人东西被碰到的事，我还是介意，也不知道怎么跟妈妈说。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e002",
+        "e004",
+        "e006",
+        "e009",
+        "e011",
+        "e018",
+        "e037",
+        "e038",
+        "e039",
+        "e041",
+        "e044",
+        "e046"
+      ],
+      "delta_r10": -0.08333333333333337,
+      "three_only_relevant": [
+        "e037"
+      ],
+      "two_only_relevant": [
+        "e038",
+        "e046"
+      ]
+    },
+    {
+      "node": "multi_16_long_t60",
+      "query": "复习时我一直在往计划里塞东西，结果状态越来越差；另外，和同组同学合作的时候，我明明有想法却总没说出来；另外，实习不顺的时候，面对爸妈我还是说不出真实的难过。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e005",
+        "e013",
+        "e014",
+        "e020",
+        "e025",
+        "e027",
+        "e032",
+        "e034",
+        "e036",
+        "e039",
+        "e041",
+        "e043"
+      ],
+      "delta_r10": -0.08333333333333337,
+      "three_only_relevant": [
+        "e032"
+      ],
+      "two_only_relevant": [
+        "e027",
+        "e034"
+      ]
+    },
+    {
+      "node": "multi_16_cross_t60",
+      "query": "复习时我一直在往计划里塞东西，结果状态越来越差；另外，和同组同学合作的时候，我明明有想法却总没说出来；另外，实习不顺的时候，面对爸妈我还是说不出真实的难过。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e005",
+        "e013",
+        "e014",
+        "e020",
+        "e025",
+        "e027",
+        "e032",
+        "e034",
+        "e036",
+        "e039",
+        "e041",
+        "e043"
+      ],
+      "delta_r10": -0.08333333333333337,
+      "three_only_relevant": [
+        "e032"
+      ],
+      "two_only_relevant": [
+        "e027",
+        "e034"
+      ]
+    }
+  ],
+  "r10_improvements": [
+    {
+      "node": "multi_03_long_t60",
+      "query": "复习时我一直在往计划里塞东西，结果状态越来越差；另外，社团里大家一起做事情的时候，我还是站在旁边，不知道怎么参与。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e003",
+        "e004",
+        "e016",
+        "e017",
+        "e035",
+        "e036",
+        "e045",
+        "e048"
+      ],
+      "delta_r10": 0.125,
+      "three_only_relevant": [
+        "e035"
+      ],
+      "two_only_relevant": []
+    },
+    {
+      "node": "multi_03_cross_t60",
+      "query": "复习时我一直在往计划里塞东西，结果状态越来越差；另外，社团里大家一起做事情的时候，我还是站在旁边，不知道怎么参与。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e003",
+        "e004",
+        "e016",
+        "e017",
+        "e035",
+        "e036",
+        "e045",
+        "e048"
+      ],
+      "delta_r10": 0.125,
+      "three_only_relevant": [
+        "e035"
+      ],
+      "two_only_relevant": []
+    },
+    {
+      "node": "multi_07_long_t60",
+      "query": "毕业去哪里这件事，我自己的打算和家里的期待还是没对上；另外，实习不顺的时候，面对爸妈我还是说不出真实的难过。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e004",
+        "e005",
+        "e016",
+        "e024",
+        "e032",
+        "e035",
+        "e050",
+        "e055"
+      ],
+      "delta_r10": 0.125,
+      "three_only_relevant": [
+        "e055"
+      ],
+      "two_only_relevant": []
+    },
+    {
+      "node": "multi_07_cross_t60",
+      "query": "毕业去哪里这件事，我自己的打算和家里的期待还是没对上；另外，实习不顺的时候，面对爸妈我还是说不出真实的难过。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e004",
+        "e005",
+        "e016",
+        "e024",
+        "e032",
+        "e035",
+        "e050",
+        "e055"
+      ],
+      "delta_r10": 0.125,
+      "three_only_relevant": [
+        "e055"
+      ],
+      "two_only_relevant": []
+    },
+    {
+      "node": "multi_08_long_t30",
+      "query": "毕业去哪里这件事，我自己的打算和家里的期待还是没对上；另外，室友用我东西这件事，我还是有些不舒服，却一直没说清楚。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e005",
+        "e006",
+        "e021",
+        "e022"
+      ],
+      "delta_r10": 0.25,
+      "three_only_relevant": [
+        "e022"
+      ],
+      "two_only_relevant": []
+    },
+    {
+      "node": "multi_08_cross_t30",
+      "query": "毕业去哪里这件事，我自己的打算和家里的期待还是没对上；另外，室友用我东西这件事，我还是有些不舒服，却一直没说清楚。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e005",
+        "e006",
+        "e021",
+        "e022"
+      ],
+      "delta_r10": 0.25,
+      "three_only_relevant": [
+        "e022"
+      ],
+      "two_only_relevant": []
+    },
+    {
+      "node": "multi_11_long_t60",
+      "query": "我发现躺在床上还是会想到那些资料，到了该睡的时候反而清醒；另外，人虽然在放假，心里还是挂着单位那些联系，没能真正歇下来。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e005",
+        "e010",
+        "e013",
+        "e016",
+        "e040",
+        "e043",
+        "e051",
+        "e055"
+      ],
+      "delta_r10": 0.125,
+      "three_only_relevant": [
+        "e051"
+      ],
+      "two_only_relevant": []
+    },
+    {
+      "node": "multi_11_cross_t60",
+      "query": "我发现躺在床上还是会想到那些资料，到了该睡的时候反而清醒；另外，人虽然在放假，心里还是挂着单位那些联系，没能真正歇下来。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e005",
+        "e010",
+        "e013",
+        "e016",
+        "e040",
+        "e043",
+        "e051",
+        "e055"
+      ],
+      "delta_r10": 0.125,
+      "three_only_relevant": [
+        "e051"
+      ],
+      "two_only_relevant": []
+    },
+    {
+      "node": "multi_14_long_t60",
+      "query": "最近学习总是占满我的一天，越忙越没有精神，想到后面的安排就发愁；另外，社团里大家一起做事情的时候，我还是站在旁边，不知道怎么参与；另外，实习不顺的时候，面对爸妈我还是说不出真实的难过。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e002",
+        "e008",
+        "e012",
+        "e018",
+        "e024",
+        "e025",
+        "e033",
+        "e034",
+        "e042",
+        "e045",
+        "e049",
+        "e050"
+      ],
+      "delta_r10": 0.08333333333333337,
+      "three_only_relevant": [
+        "e018",
+        "e033",
+        "e034"
+      ],
+      "two_only_relevant": [
+        "e024",
+        "e025"
+      ]
+    },
+    {
+      "node": "multi_14_cross_t60",
+      "query": "最近学习总是占满我的一天，越忙越没有精神，想到后面的安排就发愁；另外，社团里大家一起做事情的时候，我还是站在旁边，不知道怎么参与；另外，实习不顺的时候，面对爸妈我还是说不出真实的难过。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e002",
+        "e008",
+        "e012",
+        "e018",
+        "e024",
+        "e025",
+        "e033",
+        "e034",
+        "e042",
+        "e045",
+        "e049",
+        "e050"
+      ],
+      "delta_r10": 0.08333333333333337,
+      "three_only_relevant": [
+        "e018",
+        "e033",
+        "e034"
+      ],
+      "two_only_relevant": [
+        "e024",
+        "e025"
+      ]
+    },
+    {
+      "node": "multi_15_long_t60",
+      "query": "复习时我一直在往计划里塞东西，结果状态越来越差；另外，宿舍里一起出门吃饭那件事，我还是会犹豫，之后又有点失落；另外，在家里个人东西被碰到的事，我还是介意，也不知道怎么跟妈妈说。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e002",
+        "e005",
+        "e007",
+        "e013",
+        "e021",
+        "e024",
+        "e037",
+        "e041",
+        "e042",
+        "e048",
+        "e052",
+        "e053"
+      ],
+      "delta_r10": 0.25,
+      "three_only_relevant": [
+        "e002",
+        "e013",
+        "e037",
+        "e053"
+      ],
+      "two_only_relevant": [
+        "e041"
+      ]
+    },
+    {
+      "node": "multi_15_cross_t60",
+      "query": "复习时我一直在往计划里塞东西，结果状态越来越差；另外，宿舍里一起出门吃饭那件事，我还是会犹豫，之后又有点失落；另外，在家里个人东西被碰到的事，我还是介意，也不知道怎么跟妈妈说。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e002",
+        "e005",
+        "e007",
+        "e013",
+        "e021",
+        "e024",
+        "e037",
+        "e041",
+        "e042",
+        "e048",
+        "e052",
+        "e053"
+      ],
+      "delta_r10": 0.25,
+      "three_only_relevant": [
+        "e002",
+        "e013",
+        "e037",
+        "e053"
+      ],
+      "two_only_relevant": [
+        "e041"
+      ]
+    },
+    {
+      "node": "multi_17_long_t60",
+      "query": "班里交给我的事和自己的学习挤在一起，我又有点接不住了；另外，社团里大家一起做事情的时候，我还是站在旁边，不知道怎么参与；另外，在家里个人东西被碰到的事，我还是介意，也不知道怎么跟妈妈说。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e003",
+        "e005",
+        "e006",
+        "e010",
+        "e020",
+        "e025",
+        "e032",
+        "e037",
+        "e038",
+        "e045",
+        "e047",
+        "e049"
+      ],
+      "delta_r10": 0.16666666666666663,
+      "three_only_relevant": [
+        "e003",
+        "e010",
+        "e032"
+      ],
+      "two_only_relevant": [
+        "e020"
+      ]
+    },
+    {
+      "node": "multi_17_cross_t60",
+      "query": "班里交给我的事和自己的学习挤在一起，我又有点接不住了；另外，社团里大家一起做事情的时候，我还是站在旁边，不知道怎么参与；另外，在家里个人东西被碰到的事，我还是介意，也不知道怎么跟妈妈说。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e003",
+        "e005",
+        "e006",
+        "e010",
+        "e020",
+        "e025",
+        "e032",
+        "e037",
+        "e038",
+        "e045",
+        "e047",
+        "e049"
+      ],
+      "delta_r10": 0.16666666666666663,
+      "three_only_relevant": [
+        "e003",
+        "e010",
+        "e032"
+      ],
+      "two_only_relevant": [
+        "e020"
+      ]
+    },
+    {
+      "node": "multi_18_long_t60",
+      "query": "班里交给我的事和自己的学习挤在一起，我又有点接不住了；另外，和同组同学合作的时候，我明明有想法却总没说出来；另外，实习不顺的时候，面对爸妈我还是说不出真实的难过。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e002",
+        "e007",
+        "e010",
+        "e014",
+        "e017",
+        "e020",
+        "e035",
+        "e037",
+        "e041",
+        "e044",
+        "e048",
+        "e050"
+      ],
+      "delta_r10": 0.08333333333333326,
+      "three_only_relevant": [
+        "e002",
+        "e014"
+      ],
+      "two_only_relevant": [
+        "e020"
+      ]
+    },
+    {
+      "node": "multi_18_cross_t60",
+      "query": "班里交给我的事和自己的学习挤在一起，我又有点接不住了；另外，和同组同学合作的时候，我明明有想法却总没说出来；另外，实习不顺的时候，面对爸妈我还是说不出真实的难过。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e002",
+        "e007",
+        "e010",
+        "e014",
+        "e017",
+        "e020",
+        "e035",
+        "e037",
+        "e041",
+        "e044",
+        "e048",
+        "e050"
+      ],
+      "delta_r10": 0.08333333333333326,
+      "three_only_relevant": [
+        "e002",
+        "e014"
+      ],
+      "two_only_relevant": [
+        "e020"
+      ]
+    },
+    {
+      "node": "multi_19_long_t30",
+      "query": "毕业去哪里这件事，我自己的打算和家里的期待还是没对上；另外，晚上明明想休息却又停不下手机，第二天的状态还是不好；另外，室友用我东西这件事，我还是有些不舒服，却一直没说清楚。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e004",
+        "e006",
+        "e016",
+        "e018",
+        "e021",
+        "e023"
+      ],
+      "delta_r10": 0.16666666666666663,
+      "three_only_relevant": [
+        "e023"
+      ],
+      "two_only_relevant": []
+    },
+    {
+      "node": "multi_19_long_t60",
+      "query": "毕业去哪里这件事，我自己的打算和家里的期待还是没对上；另外，晚上明明想休息却又停不下手机，第二天的状态还是不好；另外，室友用我东西这件事，我还是有些不舒服，却一直没说清楚。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e004",
+        "e006",
+        "e016",
+        "e018",
+        "e021",
+        "e023",
+        "e033",
+        "e041",
+        "e044",
+        "e050",
+        "e051",
+        "e053"
+      ],
+      "delta_r10": 0.16666666666666663,
+      "three_only_relevant": [
+        "e006",
+        "e021",
+        "e041",
+        "e053"
+      ],
+      "two_only_relevant": [
+        "e033",
+        "e050"
+      ]
+    },
+    {
+      "node": "multi_19_cross_t30",
+      "query": "毕业去哪里这件事，我自己的打算和家里的期待还是没对上；另外，晚上明明想休息却又停不下手机，第二天的状态还是不好；另外，室友用我东西这件事，我还是有些不舒服，却一直没说清楚。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e004",
+        "e006",
+        "e016",
+        "e018",
+        "e021",
+        "e023"
+      ],
+      "delta_r10": 0.16666666666666663,
+      "three_only_relevant": [
+        "e023"
+      ],
+      "two_only_relevant": []
+    },
+    {
+      "node": "multi_19_cross_t60",
+      "query": "毕业去哪里这件事，我自己的打算和家里的期待还是没对上；另外，晚上明明想休息却又停不下手机，第二天的状态还是不好；另外，室友用我东西这件事，我还是有些不舒服，却一直没说清楚。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e004",
+        "e006",
+        "e016",
+        "e018",
+        "e021",
+        "e023",
+        "e033",
+        "e041",
+        "e044",
+        "e050",
+        "e051",
+        "e053"
+      ],
+      "delta_r10": 0.16666666666666663,
+      "three_only_relevant": [
+        "e006",
+        "e021",
+        "e041",
+        "e053"
+      ],
+      "two_only_relevant": [
+        "e033",
+        "e050"
+      ]
+    },
+    {
+      "node": "multi_20_long_t60",
+      "query": "毕业去哪里这件事，我自己的打算和家里的期待还是没对上；另外，一到周末我的作息就往后跑，接下来要早起的时候又很难受；另外，朋友一开口我就又挪掉自己的安排，回来才觉得为难。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e003",
+        "e007",
+        "e008",
+        "e016",
+        "e022",
+        "e025",
+        "e036",
+        "e037",
+        "e046",
+        "e049",
+        "e051",
+        "e053"
+      ],
+      "delta_r10": 0.08333333333333337,
+      "three_only_relevant": [
+        "e022",
+        "e037"
+      ],
+      "two_only_relevant": [
+        "e008"
+      ]
+    },
+    {
+      "node": "multi_20_cross_t60",
+      "query": "毕业去哪里这件事，我自己的打算和家里的期待还是没对上；另外，一到周末我的作息就往后跑，接下来要早起的时候又很难受；另外，朋友一开口我就又挪掉自己的安排，回来才觉得为难。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e003",
+        "e007",
+        "e008",
+        "e016",
+        "e022",
+        "e025",
+        "e036",
+        "e037",
+        "e046",
+        "e049",
+        "e051",
+        "e053"
+      ],
+      "delta_r10": 0.08333333333333337,
+      "three_only_relevant": [
+        "e022",
+        "e037"
+      ],
+      "two_only_relevant": [
+        "e008"
+      ]
+    },
+    {
+      "node": "multi_21_long_t60",
+      "query": "实习不顺的时候，面对爸妈我还是说不出真实的难过；另外，我发现躺在床上还是会想到那些资料，到了该睡的时候反而清醒；另外，朋友那笔钱和后来的请求还压在心里，我自己的开支也要顾。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e003",
+        "e005",
+        "e010",
+        "e017",
+        "e021",
+        "e025",
+        "e039",
+        "e044",
+        "e046",
+        "e054",
+        "e055",
+        "e057"
+      ],
+      "delta_r10": 0.08333333333333337,
+      "three_only_relevant": [
+        "e021",
+        "e054",
+        "e055"
+      ],
+      "two_only_relevant": [
+        "e017",
+        "e057"
+      ]
+    },
+    {
+      "node": "multi_21_cross_t60",
+      "query": "实习不顺的时候，面对爸妈我还是说不出真实的难过；另外，我发现躺在床上还是会想到那些资料，到了该睡的时候反而清醒；另外，朋友那笔钱和后来的请求还压在心里，我自己的开支也要顾。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e003",
+        "e005",
+        "e010",
+        "e017",
+        "e021",
+        "e025",
+        "e039",
+        "e044",
+        "e046",
+        "e054",
+        "e055",
+        "e057"
+      ],
+      "delta_r10": 0.08333333333333337,
+      "three_only_relevant": [
+        "e021",
+        "e054",
+        "e055"
+      ],
+      "two_only_relevant": [
+        "e017",
+        "e057"
+      ]
+    },
+    {
+      "node": "multi_23_long_t60",
+      "query": "一到周末我的作息就往后跑，接下来要早起的时候又很难受；另外，别人拜托的工作又堆到我这里，自己的事情总是被拖到后面；另外，朋友一开口我就又挪掉自己的安排，回来才觉得为难。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e005",
+        "e008",
+        "e010",
+        "e019",
+        "e022",
+        "e026",
+        "e033",
+        "e034",
+        "e042",
+        "e049",
+        "e050",
+        "e052"
+      ],
+      "delta_r10": 0.25,
+      "three_only_relevant": [
+        "e019",
+        "e033",
+        "e049",
+        "e050"
+      ],
+      "two_only_relevant": [
+        "e010"
+      ]
+    },
+    {
+      "node": "multi_23_cross_t60",
+      "query": "一到周末我的作息就往后跑，接下来要早起的时候又很难受；另外，别人拜托的工作又堆到我这里，自己的事情总是被拖到后面；另外，朋友一开口我就又挪掉自己的安排，回来才觉得为难。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e005",
+        "e008",
+        "e010",
+        "e019",
+        "e022",
+        "e026",
+        "e033",
+        "e034",
+        "e042",
+        "e049",
+        "e050",
+        "e052"
+      ],
+      "delta_r10": 0.25,
+      "three_only_relevant": [
+        "e019",
+        "e033",
+        "e049",
+        "e050"
+      ],
+      "two_only_relevant": [
+        "e010"
+      ]
+    },
+    {
+      "node": "multi_24_long_t60",
+      "query": "我发现躺在床上还是会想到那些资料，到了该睡的时候反而清醒；另外，人虽然在放假，心里还是挂着单位那些联系，没能真正歇下来；另外，朋友那笔钱和后来的请求还压在心里，我自己的开支也要顾。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e006",
+        "e014",
+        "e015",
+        "e021",
+        "e023",
+        "e024",
+        "e036",
+        "e037",
+        "e038",
+        "e040",
+        "e043",
+        "e045"
+      ],
+      "delta_r10": 0.16666666666666663,
+      "three_only_relevant": [
+        "e015",
+        "e023",
+        "e040"
+      ],
+      "two_only_relevant": [
+        "e045"
+      ]
+    },
+    {
+      "node": "multi_24_cross_t60",
+      "query": "我发现躺在床上还是会想到那些资料，到了该睡的时候反而清醒；另外，人虽然在放假，心里还是挂着单位那些联系，没能真正歇下来；另外，朋友那笔钱和后来的请求还压在心里，我自己的开支也要顾。结合我之前说过的经历，你觉得我现在有哪些需要澄清或调整的方向？",
+      "gold": [
+        "e006",
+        "e014",
+        "e015",
+        "e021",
+        "e023",
+        "e024",
+        "e036",
+        "e037",
+        "e038",
+        "e040",
+        "e043",
+        "e045"
+      ],
+      "delta_r10": 0.16666666666666663,
+      "three_only_relevant": [
+        "e015",
+        "e023",
+        "e040"
+      ],
+      "two_only_relevant": [
+        "e045"
+      ]
+    }
+  ],
+  "evidence_coverage": [
+    {
+      "node": "multi_01_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_01_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_01_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_01_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_01_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_01_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_01_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_01_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_02_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_02_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_02_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_02_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_02_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_02_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_02_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_02_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_03_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_03_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_03_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_03_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_03_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_03_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_03_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_03_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_04_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_04_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_04_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_04_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_04_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_04_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_04_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_04_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_05_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_05_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_05_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_05_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_05_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_05_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_05_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_05_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_06_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_06_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_06_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_06_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_06_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_06_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_06_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_06_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_07_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_07_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_07_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_07_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_07_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_07_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_07_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_07_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_08_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_08_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_08_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_08_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_08_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_08_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_08_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_08_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_09_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_09_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_09_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_09_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_09_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_09_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_09_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_09_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_10_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_10_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_10_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_10_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_10_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_10_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_10_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_10_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_11_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_11_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_11_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_11_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_11_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_11_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_11_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_11_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_12_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_12_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_12_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_12_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_12_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_12_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_12_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_12_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 2,
+      "gold_count": 2
+    },
+    {
+      "node": "multi_13_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_13_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_13_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_13_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_13_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_13_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_13_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_13_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_14_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_14_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_14_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_14_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_14_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_14_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_14_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_14_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_15_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_15_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_15_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_15_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_15_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_15_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_15_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_15_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_16_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_16_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_16_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_16_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_16_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_16_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_16_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_16_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_17_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_17_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_17_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_17_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_17_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_17_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_17_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_17_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_18_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_18_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_18_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_18_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_18_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_18_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_18_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_18_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_19_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_19_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_19_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_19_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_19_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_19_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_19_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_19_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_20_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_20_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_20_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_20_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_20_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_20_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_20_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_20_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_21_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_21_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_21_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_21_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_21_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_21_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_21_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_21_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_22_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_22_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_22_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_22_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_22_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_22_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 2,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_22_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_22_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_23_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_23_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_23_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_23_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_23_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_23_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_23_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_23_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_24_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_24_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_24_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_24_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_24_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_24_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 3,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_24_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_24_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 1,
+      "any_evidence_intents": 3,
+      "gold_count": 3
+    },
+    {
+      "node": "multi_25_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_25_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_25_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_25_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_25_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_25_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_25_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_25_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_26_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_26_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_26_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_26_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_26_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_26_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_26_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_26_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_27_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_27_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_27_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_27_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_27_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_27_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_27_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_27_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_28_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_28_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_28_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_28_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_28_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_28_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_28_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_28_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_29_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_29_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_29_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_29_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_29_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_29_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_29_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_29_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_30_long_t30",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_30_long_t30",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_30_long_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_30_long_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_30_cross_t30",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_30_cross_t30",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_30_cross_t60",
+      "method": "two_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    },
+    {
+      "node": "multi_30_cross_t60",
+      "method": "three_route",
+      "all_evidence_intents": 0,
+      "any_evidence_intents": 0,
+      "gold_count": 0
+    }
+  ],
+  "limitations": [
+    "reuses development v4 events",
+    "targeted contextual-recall diagnostic, not random natural conversations",
+    "queries authored with scenario knowledge; no independent human relevance review",
+    "paired modes and two checkpoints are dependent",
+    "no claim of clinical efficacy",
+    "same-model assisted semantic judge; pending independent review"
+  ]
+}
