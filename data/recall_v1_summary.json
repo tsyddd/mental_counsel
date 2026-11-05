@@ -8,156 +8,48 @@
   "prediction_failures": [],
   "judge_errors": [
     {
-      "id": "multi_02_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 559 (char 558)"
-    },
-    {
-      "id": "multi_03_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 494 (char 493)"
-    },
-    {
-      "id": "multi_04_cross_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 504 (char 503)"
-    },
-    {
-      "id": "multi_05_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 487 (char 486)"
-    },
-    {
       "id": "multi_06_long_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 602 (char 601)"
-    },
-    {
-      "id": "multi_06_cross_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 495 (char 494)"
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 538 (char 537)"
     },
     {
       "id": "multi_06_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 486 (char 485)"
-    },
-    {
-      "id": "multi_07_long_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 481 (char 480)"
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 536 (char 535)"
     },
     {
       "id": "multi_07_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 477 (char 476)"
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 494 (char 493)"
     },
     {
       "id": "multi_07_cross_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 472 (char 471)"
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 507 (char 506)"
     },
     {
       "id": "multi_07_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 496 (char 495)"
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 488 (char 487)"
     },
     {
       "id": "multi_08_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 476 (char 475)"
-    },
-    {
-      "id": "multi_08_cross_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 483 (char 482)"
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 489 (char 488)"
     },
     {
       "id": "multi_08_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 459 (char 458)"
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 596 (char 595)"
     },
     {
       "id": "multi_09_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 460 (char 459)"
-    },
-    {
-      "id": "multi_09_cross_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 469 (char 468)"
-    },
-    {
-      "id": "multi_09_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 472 (char 471)"
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 480 (char 479)"
     },
     {
       "id": "multi_10_long_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 490 (char 489)"
-    },
-    {
-      "id": "multi_10_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 500 (char 499)"
-    },
-    {
-      "id": "multi_10_cross_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 491 (char 490)"
-    },
-    {
-      "id": "multi_10_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 607 (char 606)"
-    },
-    {
-      "id": "multi_12_long_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 513 (char 512)"
-    },
-    {
-      "id": "multi_12_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 565 (char 564)"
-    },
-    {
-      "id": "multi_12_cross_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 543 (char 542)"
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 472 (char 471)"
     },
     {
       "id": "multi_12_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 470 (char 469)"
-    },
-    {
-      "id": "multi_13_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 645 (char 644)"
-    },
-    {
-      "id": "multi_14_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 597 (char 596)"
-    },
-    {
-      "id": "multi_15_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 686 (char 685)"
-    },
-    {
-      "id": "multi_15_cross_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 751 (char 750)"
-    },
-    {
-      "id": "multi_16_cross_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 694 (char 693)"
-    },
-    {
-      "id": "multi_16_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 805 (char 804)"
-    },
-    {
-      "id": "multi_17_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 801 (char 800)"
-    },
-    {
-      "id": "multi_17_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 863 (char 862)"
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 531 (char 530)"
     },
     {
       "id": "multi_19_long_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 779 (char 778)"
-    },
-    {
-      "id": "multi_21_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 826 (char 825)"
-    },
-    {
-      "id": "multi_22_long_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 846 (char 845)"
-    },
-    {
-      "id": "multi_22_cross_t30",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 797 (char 796)"
-    },
-    {
-      "id": "multi_24_cross_t60",
-      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 718 (char 717)"
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 754 (char 753)"
     }
   ],
   "unique_tagged_texts": 165,
@@ -185,16 +77,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 82,
-            "tp": 143,
-            "fp": 14,
+            "scored_nodes": 109,
+            "tp": 209,
+            "fp": 19,
             "fn": 8,
             "expected_gold": 240,
-            "micro_recall_scored": 0.9470198675496688,
-            "micro_precision_scored": 0.910828025477707,
-            "micro_f1_scored": 0.9285714285714286,
-            "recall_all_expected_lower_bound": 0.5958333333333333,
-            "exact_nodes": 67,
+            "micro_recall_scored": 0.9631336405529954,
+            "micro_precision_scored": 0.9166666666666666,
+            "micro_f1_scored": 0.9393258426966292,
+            "recall_all_expected_lower_bound": 0.8708333333333333,
+            "exact_nodes": 89,
             "negative_predicted_nodes": 24,
             "negative_false_alarm_nodes": 1
           }
@@ -218,16 +110,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 82,
-            "tp": 142,
-            "fp": 13,
-            "fn": 9,
+            "scored_nodes": 109,
+            "tp": 207,
+            "fp": 18,
+            "fn": 10,
             "expected_gold": 240,
-            "micro_recall_scored": 0.9403973509933775,
-            "micro_precision_scored": 0.9161290322580645,
-            "micro_f1_scored": 0.9281045751633987,
-            "recall_all_expected_lower_bound": 0.5916666666666667,
-            "exact_nodes": 68,
+            "micro_recall_scored": 0.9539170506912442,
+            "micro_precision_scored": 0.92,
+            "micro_f1_scored": 0.9366515837104072,
+            "recall_all_expected_lower_bound": 0.8625,
+            "exact_nodes": 90,
             "negative_predicted_nodes": 24,
             "negative_false_alarm_nodes": 1
           }
@@ -243,11 +135,11 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 21,
-        "mean_difference": -0.007275132275132273,
+        "scenario_groups": 24,
+        "mean_difference": -0.007523148148148147,
         "percentile_95ci": [
-          -0.03902116402116402,
-          0.02248677248677249
+          -0.03703703703703704,
+          0.019675925925925927
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
@@ -280,16 +172,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 45,
-            "tp": 83,
-            "fp": 8,
+            "scored_nodes": 56,
+            "tp": 108,
+            "fp": 9,
             "fn": 3,
             "expected_gold": 120,
-            "micro_recall_scored": 0.9651162790697675,
-            "micro_precision_scored": 0.9120879120879121,
-            "micro_f1_scored": 0.9378531073446328,
-            "recall_all_expected_lower_bound": 0.6916666666666667,
-            "exact_nodes": 36,
+            "micro_recall_scored": 0.972972972972973,
+            "micro_precision_scored": 0.9230769230769231,
+            "micro_f1_scored": 0.9473684210526315,
+            "recall_all_expected_lower_bound": 0.9,
+            "exact_nodes": 46,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 1
           }
@@ -313,16 +205,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 45,
-            "tp": 82,
-            "fp": 3,
+            "scored_nodes": 56,
+            "tp": 107,
+            "fp": 4,
             "fn": 4,
             "expected_gold": 120,
-            "micro_recall_scored": 0.9534883720930233,
-            "micro_precision_scored": 0.9647058823529412,
-            "micro_f1_scored": 0.9590643274853801,
-            "recall_all_expected_lower_bound": 0.6833333333333333,
-            "exact_nodes": 40,
+            "micro_recall_scored": 0.963963963963964,
+            "micro_precision_scored": 0.963963963963964,
+            "micro_f1_scored": 0.963963963963964,
+            "recall_all_expected_lower_bound": 0.8916666666666667,
+            "exact_nodes": 50,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 1
           }
@@ -338,11 +230,11 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 20,
-        "mean_difference": -0.004166666666666668,
+        "scenario_groups": 24,
+        "mean_difference": -0.0034722222222222238,
         "percentile_95ci": [
-          -0.05,
-          0.0375
+          -0.041666666666666664,
+          0.03125
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
@@ -375,16 +267,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 37,
-            "tp": 60,
-            "fp": 6,
+            "scored_nodes": 53,
+            "tp": 101,
+            "fp": 10,
             "fn": 5,
             "expected_gold": 120,
-            "micro_recall_scored": 0.9230769230769231,
-            "micro_precision_scored": 0.9090909090909091,
-            "micro_f1_scored": 0.916030534351145,
-            "recall_all_expected_lower_bound": 0.5,
-            "exact_nodes": 31,
+            "micro_recall_scored": 0.9528301886792453,
+            "micro_precision_scored": 0.9099099099099099,
+            "micro_f1_scored": 0.9308755760368663,
+            "recall_all_expected_lower_bound": 0.8416666666666667,
+            "exact_nodes": 43,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 0
           }
@@ -408,16 +300,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 37,
-            "tp": 60,
-            "fp": 10,
-            "fn": 5,
+            "scored_nodes": 53,
+            "tp": 100,
+            "fp": 14,
+            "fn": 6,
             "expected_gold": 120,
-            "micro_recall_scored": 0.9230769230769231,
-            "micro_precision_scored": 0.8571428571428571,
-            "micro_f1_scored": 0.8888888888888888,
-            "recall_all_expected_lower_bound": 0.5,
-            "exact_nodes": 28,
+            "micro_recall_scored": 0.9433962264150944,
+            "micro_precision_scored": 0.8771929824561403,
+            "micro_f1_scored": 0.9090909090909091,
+            "recall_all_expected_lower_bound": 0.8333333333333334,
+            "exact_nodes": 40,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 0
           }
@@ -433,11 +325,11 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 18,
-        "mean_difference": -0.009259259259259257,
+        "scenario_groups": 22,
+        "mean_difference": -0.015151515151515154,
         "percentile_95ci": [
-          -0.08333333333333333,
-          0.05555555555555555
+          -0.07575757575757577,
+          0.03787878787878789
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
@@ -470,16 +362,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 43,
-            "tp": 77,
-            "fp": 9,
+            "scored_nodes": 54,
+            "tp": 103,
+            "fp": 13,
             "fn": 4,
             "expected_gold": 120,
-            "micro_recall_scored": 0.9506172839506173,
-            "micro_precision_scored": 0.8953488372093024,
-            "micro_f1_scored": 0.9221556886227545,
-            "recall_all_expected_lower_bound": 0.6416666666666667,
-            "exact_nodes": 34,
+            "micro_recall_scored": 0.9626168224299065,
+            "micro_precision_scored": 0.8879310344827587,
+            "micro_f1_scored": 0.9237668161434978,
+            "recall_all_expected_lower_bound": 0.8583333333333333,
+            "exact_nodes": 41,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 1
           }
@@ -503,16 +395,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 43,
-            "tp": 76,
-            "fp": 5,
+            "scored_nodes": 54,
+            "tp": 102,
+            "fp": 9,
             "fn": 5,
             "expected_gold": 120,
-            "micro_recall_scored": 0.9382716049382716,
-            "micro_precision_scored": 0.9382716049382716,
-            "micro_f1_scored": 0.9382716049382716,
-            "recall_all_expected_lower_bound": 0.6333333333333333,
-            "exact_nodes": 36,
+            "micro_recall_scored": 0.9532710280373832,
+            "micro_precision_scored": 0.918918918918919,
+            "micro_f1_scored": 0.9357798165137615,
+            "recall_all_expected_lower_bound": 0.85,
+            "exact_nodes": 44,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 0
           }
@@ -528,11 +420,11 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 21,
-        "mean_difference": -0.007936507936507938,
+        "scenario_groups": 24,
+        "mean_difference": -0.006944444444444445,
         "percentile_95ci": [
-          -0.03174603174603175,
-          0.015873015873015876
+          -0.02777777777777778,
+          0.01388888888888889
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
@@ -565,16 +457,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 25,
-            "tp": 48,
-            "fp": 5,
+            "scored_nodes": 27,
+            "tp": 52,
+            "fp": 6,
             "fn": 1,
             "expected_gold": 60,
-            "micro_recall_scored": 0.9795918367346939,
-            "micro_precision_scored": 0.9056603773584906,
-            "micro_f1_scored": 0.9411764705882353,
-            "recall_all_expected_lower_bound": 0.8,
-            "exact_nodes": 20,
+            "micro_recall_scored": 0.9811320754716981,
+            "micro_precision_scored": 0.896551724137931,
+            "micro_f1_scored": 0.9369369369369369,
+            "recall_all_expected_lower_bound": 0.8666666666666667,
+            "exact_nodes": 21,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 1
           }
@@ -598,16 +490,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 25,
-            "tp": 47,
+            "scored_nodes": 27,
+            "tp": 51,
             "fp": 0,
             "fn": 2,
             "expected_gold": 60,
-            "micro_recall_scored": 0.9591836734693877,
+            "micro_recall_scored": 0.9622641509433962,
             "micro_precision_scored": 1.0,
-            "micro_f1_scored": 0.9791666666666666,
-            "recall_all_expected_lower_bound": 0.7833333333333333,
-            "exact_nodes": 23,
+            "micro_f1_scored": 0.9807692307692307,
+            "recall_all_expected_lower_bound": 0.85,
+            "exact_nodes": 25,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 0
           }
@@ -623,10 +515,10 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 19,
-        "mean_difference": -0.01754385964912281,
+        "scenario_groups": 21,
+        "mean_difference": -0.015873015873015876,
         "percentile_95ci": [
-          -0.05263157894736842,
+          -0.047619047619047616,
           0.0
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
@@ -660,16 +552,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 18,
-            "tp": 29,
-            "fp": 4,
+            "scored_nodes": 27,
+            "tp": 51,
+            "fp": 7,
             "fn": 3,
             "expected_gold": 60,
-            "micro_recall_scored": 0.90625,
-            "micro_precision_scored": 0.8787878787878788,
-            "micro_f1_scored": 0.8923076923076924,
-            "recall_all_expected_lower_bound": 0.48333333333333334,
-            "exact_nodes": 14,
+            "micro_recall_scored": 0.9444444444444444,
+            "micro_precision_scored": 0.8793103448275862,
+            "micro_f1_scored": 0.9107142857142857,
+            "recall_all_expected_lower_bound": 0.85,
+            "exact_nodes": 20,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 0
           }
@@ -693,16 +585,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 18,
-            "tp": 29,
-            "fp": 5,
+            "scored_nodes": 27,
+            "tp": 51,
+            "fp": 9,
             "fn": 3,
             "expected_gold": 60,
-            "micro_recall_scored": 0.90625,
-            "micro_precision_scored": 0.8529411764705882,
-            "micro_f1_scored": 0.8787878787878788,
-            "recall_all_expected_lower_bound": 0.48333333333333334,
-            "exact_nodes": 13,
+            "micro_recall_scored": 0.9444444444444444,
+            "micro_precision_scored": 0.85,
+            "micro_f1_scored": 0.8947368421052632,
+            "recall_all_expected_lower_bound": 0.85,
+            "exact_nodes": 19,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 0
           }
@@ -718,11 +610,11 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 12,
+        "scenario_groups": 21,
         "mean_difference": 0.0,
         "percentile_95ci": [
-          -0.08333333333333333,
-          0.08333333333333333
+          -0.047619047619047616,
+          0.047619047619047616
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
@@ -755,16 +647,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 39,
-            "tp": 66,
-            "fp": 5,
+            "scored_nodes": 55,
+            "tp": 106,
+            "fp": 6,
             "fn": 4,
             "expected_gold": 120,
-            "micro_recall_scored": 0.9428571428571428,
-            "micro_precision_scored": 0.9295774647887324,
-            "micro_f1_scored": 0.9361702127659575,
-            "recall_all_expected_lower_bound": 0.55,
-            "exact_nodes": 33,
+            "micro_recall_scored": 0.9636363636363636,
+            "micro_precision_scored": 0.9464285714285714,
+            "micro_f1_scored": 0.954954954954955,
+            "recall_all_expected_lower_bound": 0.8833333333333333,
+            "exact_nodes": 48,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 0
           }
@@ -788,16 +680,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 39,
-            "tp": 66,
-            "fp": 8,
-            "fn": 4,
+            "scored_nodes": 55,
+            "tp": 105,
+            "fp": 9,
+            "fn": 5,
             "expected_gold": 120,
-            "micro_recall_scored": 0.9428571428571428,
-            "micro_precision_scored": 0.8918918918918919,
-            "micro_f1_scored": 0.9166666666666666,
-            "recall_all_expected_lower_bound": 0.55,
-            "exact_nodes": 32,
+            "micro_recall_scored": 0.9545454545454546,
+            "micro_precision_scored": 0.9210526315789473,
+            "micro_f1_scored": 0.9375,
+            "recall_all_expected_lower_bound": 0.875,
+            "exact_nodes": 46,
             "negative_predicted_nodes": 12,
             "negative_false_alarm_nodes": 1
           }
@@ -813,11 +705,11 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 17,
-        "mean_difference": -0.014705882352941176,
+        "scenario_groups": 23,
+        "mean_difference": -0.010869565217391304,
         "percentile_95ci": [
-          -0.07352941176470588,
-          0.03431372549019609
+          -0.05797101449275362,
+          0.025362318840579715
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
@@ -850,16 +742,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 20,
-            "tp": 35,
+            "scored_nodes": 29,
+            "tp": 56,
             "fp": 3,
             "fn": 2,
             "expected_gold": 60,
-            "micro_recall_scored": 0.9459459459459459,
-            "micro_precision_scored": 0.9210526315789473,
-            "micro_f1_scored": 0.9333333333333333,
-            "recall_all_expected_lower_bound": 0.5833333333333334,
-            "exact_nodes": 16,
+            "micro_recall_scored": 0.9655172413793104,
+            "micro_precision_scored": 0.9491525423728814,
+            "micro_f1_scored": 0.9572649572649573,
+            "recall_all_expected_lower_bound": 0.9333333333333333,
+            "exact_nodes": 25,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 0
           }
@@ -883,16 +775,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 20,
-            "tp": 35,
-            "fp": 3,
+            "scored_nodes": 29,
+            "tp": 56,
+            "fp": 4,
             "fn": 2,
             "expected_gold": 60,
-            "micro_recall_scored": 0.9459459459459459,
-            "micro_precision_scored": 0.9210526315789473,
-            "micro_f1_scored": 0.9333333333333333,
-            "recall_all_expected_lower_bound": 0.5833333333333334,
-            "exact_nodes": 17,
+            "micro_recall_scored": 0.9655172413793104,
+            "micro_precision_scored": 0.9333333333333333,
+            "micro_f1_scored": 0.9491525423728814,
+            "recall_all_expected_lower_bound": 0.9333333333333333,
+            "exact_nodes": 25,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 1
           }
@@ -908,11 +800,11 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 14,
-        "mean_difference": 0.011904761904761902,
+        "scenario_groups": 23,
+        "mean_difference": 0.007246376811594201,
         "percentile_95ci": [
-          -0.07142857142857142,
-          0.10714285714285714
+          -0.043478260869565216,
+          0.06521739130434782
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
@@ -945,16 +837,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 19,
-            "tp": 31,
-            "fp": 2,
+            "scored_nodes": 26,
+            "tp": 50,
+            "fp": 3,
             "fn": 2,
             "expected_gold": 60,
-            "micro_recall_scored": 0.9393939393939394,
-            "micro_precision_scored": 0.9393939393939394,
-            "micro_f1_scored": 0.9393939393939394,
-            "recall_all_expected_lower_bound": 0.5166666666666667,
-            "exact_nodes": 17,
+            "micro_recall_scored": 0.9615384615384616,
+            "micro_precision_scored": 0.9433962264150944,
+            "micro_f1_scored": 0.9523809523809523,
+            "recall_all_expected_lower_bound": 0.8333333333333334,
+            "exact_nodes": 23,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 0
           }
@@ -978,16 +870,16 @@
             }
           },
           "intent": {
-            "scored_nodes": 19,
-            "tp": 31,
+            "scored_nodes": 26,
+            "tp": 49,
             "fp": 5,
-            "fn": 2,
+            "fn": 3,
             "expected_gold": 60,
-            "micro_recall_scored": 0.9393939393939394,
-            "micro_precision_scored": 0.8611111111111112,
-            "micro_f1_scored": 0.8985507246376812,
-            "recall_all_expected_lower_bound": 0.5166666666666667,
-            "exact_nodes": 15,
+            "micro_recall_scored": 0.9423076923076923,
+            "micro_precision_scored": 0.9074074074074074,
+            "micro_f1_scored": 0.9245283018867925,
+            "recall_all_expected_lower_bound": 0.8166666666666667,
+            "exact_nodes": 21,
             "negative_predicted_nodes": 6,
             "negative_false_alarm_nodes": 0
           }
@@ -1003,11 +895,11 @@
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
       "paired_intent_recall_delta": {
-        "scenario_groups": 13,
-        "mean_difference": -0.025641025641025637,
+        "scenario_groups": 20,
+        "mean_difference": -0.03333333333333333,
         "percentile_95ci": [
-          -0.20512820512820512,
-          0.10256410256410257
+          -0.16666666666666669,
+          0.06666666666666668
         ],
         "note": "three minus two; paired synthetic development scenarios, not population inference"
       },
@@ -3731,5 +3623,8 @@
     "paired modes and two checkpoints are dependent",
     "no claim of clinical efficacy",
     "same-model assisted semantic judge; pending independent review"
-  ]
+  ],
+  "rejudge_note": "Only prior JSON parsing failures retried; identical predictions, evidence, prompt and model; successful initial judgments retained; all attempts logged.",
+  "original_result_sha256": "e628652cf9787c025f8b1cadfebce5e863867b74d3f6ae872a5392fcd7689a61",
+  "frozen_predictions_sha256": "a829a8e1bcf2b5dd8c78eac6972bfa567fdb1f0fea4d2ce9232567696f4fee04"
 }

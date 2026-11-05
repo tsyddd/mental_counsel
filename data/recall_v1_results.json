@@ -6894,7 +6894,67 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 559 (char 558)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 559 (char 558)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 480 (char 479)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 532 (char 531)"
+        },
+        {
+          "retry": 3,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "two_route": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_extra_classes",
+              "reason": "均指向用户与家长协商过满的辅导和学习安排，保留休息时间；历史中有辅导课占用时间及拟增加物理课的依据。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_privacy",
+              "reason": "均指向用户向母亲表达日记被翻看的感受，并协商私人物品的隐私边界。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "f1": 0.8,
+          "exact": false
+        },
+        "three_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_extra_classes",
+              "reason": "均指向调整用户的辅导与学习负担，保障休息；历史中的晚间作业、困倦和周末课程提供支持。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_parent_privacy",
+              "reason": "均指向用户与母亲沟通日记等个人物品不应被查看的边界，历史中有母亲翻看日记的依据。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_02_cross_t30",
@@ -11487,7 +11547,63 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 494 (char 493)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 494 (char 493)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 450 (char 449)"
+        },
+        {
+          "retry": 2,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "three_route": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_study_exam_schedule",
+              "reason": "有历史事件支持：调整挤占睡眠和用餐的复习方式，符合减少过密安排并恢复休息饮食的目标。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_peer_club",
+              "reason": "有历史事件支持：减少对社团同学的回避，寻找参与搭档和共同任务的方式。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "f1": 0.8,
+          "exact": false
+        },
+        "two_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_exam_schedule",
+              "reason": "有历史事件支持：删减过满的复习任务，避免继续挤占睡眠和用餐。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_club",
+              "reason": "有历史事件支持：克服担心打断同伴的顾虑，加入社团合作与互动。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_03_cross_t30",
@@ -16954,7 +17070,63 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 504 (char 503)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 504 (char 503)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 499 (char 498)"
+        },
+        {
+          "retry": 2,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "two_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_exam_schedule",
+              "reason": "历史事件显示复习安排挤占睡眠和吃饭；预测提出减少加码并恢复这些时间。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_parent_emotion",
+              "reason": "历史事件显示用户因父亲的回应压下实习受挫的难过；预测聚焦向父母表达感受并寻求倾听与理解。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "three_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_exam_schedule",
+              "reason": "预测针对过满的复习计划，提出调整安排以保障睡眠和吃饭，与历史事件一致。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_parent_emotion",
+              "reason": "预测针对实习受挫后难以向父母说出真实难过，提出调整沟通方式；父亲的回应及用户收回话语的经历提供支持。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_04_cross_t60",
@@ -20631,7 +20803,63 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 487 (char 486)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 487 (char 486)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 484 (char 483)"
+        },
+        {
+          "retry": 2,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "two_route": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_committee",
+              "reason": "历史中班级事务挤占了作业和复习时间，预测的调整方向与协调任务和学习负担一致。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_peer_group_project",
+              "reason": "历史中用户有建议却未向同组同学说出，预测对应在小组讨论中表达想法。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "f1": 0.8,
+          "exact": false
+        },
+        "three_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_committee",
+              "reason": "历史支持用户澄清班级任务的承担边界，减少其对学习和休息的挤占。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_group_project",
+              "reason": "历史支持用户在课程项目合作中表达已有想法、参与讨论与分工。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_05_cross_t30",
@@ -23815,7 +24043,24 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 602 (char 601)"
+      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 538 (char 537)",
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 602 (char 601)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 580 (char 579)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 466 (char 465)"
+        },
+        {
+          "retry": 3,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 538 (char 537)"
+        }
+      ]
     },
     {
       "id": "multi_06_long_t60",
@@ -26077,7 +26322,59 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 495 (char 494)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 495 (char 494)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "three_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_committee",
+              "reason": "均指向班级事务与学习时间冲突，目标是协调或减少任务占用，为作业、复习和休息留出时间；历史事件e003、e023支持。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_parent_privacy",
+              "reason": "均指向母亲翻看日记及询问内容引发的介意，目标是表达感受并协商个人物品和隐私边界；历史事件e008、e024支持。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "two_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_committee",
+              "reason": "均指向班级事务安排影响个人学习，目标是明确分工、控制事务占用并保留稳定的作业和复习时间；历史事件e003、e023支持。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_parent_privacy",
+              "reason": "均指向与母亲沟通日记和个人物品的隐私问题，目标是表达介意并建立未经允许不翻看、不碰的边界；历史事件e008、e024支持。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_06_cross_t60",
@@ -27459,7 +27756,24 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 486 (char 485)"
+      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 536 (char 535)",
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 486 (char 485)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 505 (char 504)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 483 (char 482)"
+        },
+        {
+          "retry": 3,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 536 (char 535)"
+        }
+      ]
     },
     {
       "id": "multi_07_long_t30",
@@ -28315,7 +28629,59 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 481 (char 480)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 481 (char 480)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "three_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_parent_career",
+              "reason": "历史事件显示父亲期待毕业后回老家，而用户投递外地岗位却未向家人说明；预测对应厘清去向并表达不同打算。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_parent_emotion",
+              "reason": "用户因父亲淡化实习受挫的感受而停止倾诉，后来又删掉想发的消息；预测对应向父母表达真实难过并寻求理解。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "two_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_parent_career",
+              "reason": "父亲提出回老家的期待，用户则投递外地岗位并对母亲隐瞒；预测对应澄清毕业去向并与家人沟通。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_parent_emotion",
+              "reason": "用户曾在讲述实习受挫时咽回后半段话，也曾删掉表达难过的消息；预测对应向父母说出感受及所需支持。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_07_long_t60",
@@ -29668,7 +30034,24 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 477 (char 476)"
+      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 494 (char 493)",
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 477 (char 476)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 480 (char 479)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 484 (char 483)"
+        },
+        {
+          "retry": 3,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 494 (char 493)"
+        }
+      ]
     },
     {
       "id": "multi_07_cross_t30",
@@ -30524,7 +30907,24 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 472 (char 471)"
+      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 507 (char 506)",
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 472 (char 471)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 485 (char 484)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 487 (char 486)"
+        },
+        {
+          "retry": 3,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 507 (char 506)"
+        }
+      ]
     },
     {
       "id": "multi_07_cross_t60",
@@ -31878,7 +32278,24 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 496 (char 495)"
+      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 488 (char 487)",
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 496 (char 495)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 491 (char 490)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 577 (char 576)"
+        },
+        {
+          "retry": 3,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 488 (char 487)"
+        }
+      ]
     },
     {
       "id": "multi_08_long_t30",
@@ -34149,7 +34566,24 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 476 (char 475)"
+      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 489 (char 488)",
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 476 (char 475)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 468 (char 467)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 473 (char 472)"
+        },
+        {
+          "retry": 3,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 489 (char 488)"
+        }
+      ]
     },
     {
       "id": "multi_08_cross_t30",
@@ -35011,7 +35445,59 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 483 (char 482)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 483 (char 482)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "three_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_parent_career",
+              "reason": "都指向用户与父母/家人澄清毕业后的就业地点选择，并表达与家庭期待不同的真实想法；历史事件e005和e021支持该目标。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_boundary_roommate",
+              "reason": "都指向用户与室友协商个人物品的借用、归还及事先同意边界，且历史事件e006和e022支持用户对此感到不适并尚未说清。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "two_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_parent_career",
+              "reason": "都指向用户与父母澄清毕业后的去向/就业地点和职业选择，并明确表达而非继续隐瞒或由家人决定；历史事件e005和e021提供支持。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_boundary_roommate",
+              "reason": "都指向用户向室友说明未经明确约定使用个人物品带来的不适，并建立借用、归还和事先沟通规则；历史事件e006支持该目标。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_08_cross_t60",
@@ -36382,7 +36868,24 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 459 (char 458)"
+      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 596 (char 595)",
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 459 (char 458)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 567 (char 566)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 482 (char 481)"
+        },
+        {
+          "retry": 3,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 596 (char 595)"
+        }
+      ]
     },
     {
       "id": "multi_09_long_t30",
@@ -38671,7 +39174,24 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 460 (char 459)"
+      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 480 (char 479)",
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 460 (char 459)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 457 (char 456)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 457 (char 456)"
+        },
+        {
+          "retry": 3,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 480 (char 479)"
+        }
+      ]
     },
     {
       "id": "multi_09_cross_t30",
@@ -39537,7 +40057,63 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 469 (char 468)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 469 (char 468)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 441 (char 440)"
+        },
+        {
+          "retry": 2,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "two_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_phone",
+              "reason": "预测聚焦用户夜间使用手机和短视频，目标是减少睡前刷手机导致的熬夜并改善次日状态；历史事件e007和e017直接支持该目标。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_weekend",
+              "reason": "预测聚焦休息日同事发送的临时工作消息，目标是明确是否即时回应并减少对个人安排的打断；历史事件e010直接支持该目标。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "three_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_phone",
+              "reason": "预测聚焦睡前手机使用失控及其造成的晚睡、次日状态不佳，和参考目标语义一致；历史事件e007和e017提供了直接依据。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_weekend",
+              "reason": "预测聚焦休息日同事工作消息带来的回应边界问题及个人安排被打断，和参考目标一致；历史事件e010直接支持。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_09_cross_t60",
@@ -40907,7 +41483,59 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 472 (char 471)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 472 (char 471)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "three_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_phone",
+              "reason": "主体均为用户，交互对象均为睡前手机/短视频使用，目标都是减少睡前刷手机导致的晚睡、起床困难和次日状态不佳；有e007、e035、e049、e017支持。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_weekend",
+              "reason": "主体均为用户，交互对象均为同事及工作群在休息日的消息，目标都是明确非工作时间的回复边界、减少工作打断并保留私人时间；有e039、e010支持。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "two_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_phone",
+              "reason": "预测聚焦用户睡前手机使用及其导致的熬夜和次日精神状态问题，与参考意图语义一致；有e007、e017、e035、e049支持。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_weekend",
+              "reason": "预测聚焦用户对休息日消息的及时回复压力及回应边界，目标是减少同事消息打断个人和家庭安排，与参考意图一致；有e010、e039、e052支持。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_10_long_t30",
@@ -41764,7 +42392,24 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 490 (char 489)"
+      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 472 (char 471)",
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 490 (char 489)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 485 (char 484)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 485 (char 484)"
+        },
+        {
+          "retry": 3,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 472 (char 471)"
+        }
+      ]
     },
     {
       "id": "multi_10_long_t60",
@@ -43119,7 +43764,59 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 500 (char 499)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 500 (char 499)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "three_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_weekend_shift",
+              "reason": "历史记录显示用户周末晚睡晚起、周日难入睡并在周一早起时不适；预测的调整方向与之相符。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_extra_tasks",
+              "reason": "历史记录显示用户接下同事的额外任务后，自己的工作被推迟；预测的回应请求和调整接活边界与之相符。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "two_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_weekend_shift",
+              "reason": "历史记录支持周五至周末作息后移、周日入睡困难及周一状态受影响，预测的调整目标与之相符。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_extra_tasks",
+              "reason": "历史记录显示同事多次请求帮忙，用户因此推迟自己的任务并留下来补做；预测的分工与接活边界目标与之相符。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_10_cross_t30",
@@ -43976,7 +44673,67 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 491 (char 490)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 491 (char 490)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 498 (char 497)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 501 (char 500)"
+        },
+        {
+          "retry": 3,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "two_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_weekend_shift",
+              "reason": "都聚焦用户周末晚睡晚起与工作日早起之间的作息落差，目标是减少周一早起不适；历史事件e004和e022直接支持该目标。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_extra_tasks",
+              "reason": "都聚焦同事反复转交额外工作及其对用户自身任务的影响，目标是明确边界、协调分工并减少积压；历史事件e011和e023支持该目标。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "three_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_weekend_shift",
+              "reason": "都涉及周末作息与工作日早起安排，期望减少作息漂移造成的周一不适；历史事件e004和e022提供直接支持。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_extra_tasks",
+              "reason": "都涉及同事额外工作请求与用户自身工作的冲突，期望通过安排或婉拒减少自身任务被推迟；历史事件e011支持该目标。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_10_cross_t60",
@@ -45331,7 +46088,63 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 607 (char 606)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 607 (char 606)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 483 (char 482)"
+        },
+        {
+          "retry": 2,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "three_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_weekend_shift",
+              "reason": "历史记录支持周末晚睡晚起、周日难入睡及周一早起困难，调整目标一致。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_extra_tasks",
+              "reason": "同事委托使自己的工作延后；调整接活边界与协调额外任务分工的目标相符。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "two_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_weekend_shift",
+              "reason": "历史记录支持周五及周末作息后移、周一早起和工作受影响，调整目标一致。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_extra_tasks",
+              "reason": "历史记录支持反复接受同事请求后自己的任务积压、加班；设定帮忙边界与目标相符。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_11_long_t30",
@@ -50822,7 +51635,59 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 513 (char 512)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 513 (char 512)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "two_route": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_boundary_favors",
+              "reason": "历史中朋友临时求助导致用户取消运动安排、答应后又后悔；预测对应协调帮忙与既有安排的边界。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_boundary_money",
+              "reason": "历史中借款逾期影响房租，用户也曾回避询问还款安排；预测对应与借钱的朋友沟通欠款。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "f1": 0.8,
+          "exact": false
+        },
+        "three_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_boundary_favors",
+              "reason": "历史中用户因朋友的请求取消安排并感到后悔；预测对应调整帮忙时的时间边界。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_boundary_money",
+              "reason": "历史中借款逾期影响房租，用户未能开口询问还款；预测对应沟通欠款并顾及必要开支。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_12_long_t60",
@@ -52205,7 +53070,63 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 565 (char 564)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 565 (char 564)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 534 (char 533)"
+        },
+        {
+          "retry": 2,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "three_route": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_boundary_favors",
+              "reason": "e017、e036支持用户因答应帮忙而挪动自己的安排；预测提出先确认时间、必要时拒绝或改期。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_boundary_money",
+              "reason": "e009、e038支持旧借款未解决、朋友再次借款且用户有账单压力；预测聚焦是否继续借款及其条件。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 0.5,
+          "f1": 0.6666666666666666,
+          "exact": false
+        },
+        "two_route": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_boundary_favors",
+              "reason": "e003、e017支持用户为朋友的请求取消或挪动既定安排；预测聚焦何时保留安排、何时帮忙。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_boundary_money",
+              "reason": "e009、e038、e050支持旧款未还、再次提出资金请求及用户自身开支压力；预测聚焦是否继续提供资金。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "f1": 0.8,
+          "exact": false
+        }
+      }
     },
     {
       "id": "multi_12_cross_t30",
@@ -53074,7 +53995,67 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 543 (char 542)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 543 (char 542)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 498 (char 497)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 551 (char 550)"
+        },
+        {
+          "retry": 3,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "two_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_boundary_favors",
+              "reason": "历史中用户因朋友临时请求取消安排、答应后后悔；预测对应协调帮忙与个人安排的边界。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_boundary_money",
+              "reason": "历史中朋友逾期未还款，用户因房租动用备用金，且曾想询问还款安排；预测对应沟通欠款并顾及必要开支。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "three_route": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_boundary_favors",
+              "reason": "预测针对朋友的临时请求，调整答应帮忙时挪掉原有安排的做法，有历史事件支持。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_boundary_money",
+              "reason": "预测针对借钱的朋友询问逾期欠款的还款安排，有历史事件支持。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 0.6666666666666666,
+          "f1": 0.8,
+          "exact": false
+        }
+      }
     },
     {
       "id": "multi_12_cross_t60",
@@ -54445,7 +55426,24 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 470 (char 469)"
+      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 531 (char 530)",
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 470 (char 469)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 523 (char 522)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 529 (char 528)"
+        },
+        {
+          "retry": 3,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 531 (char 530)"
+        }
+      ]
     },
     {
       "id": "multi_13_long_t30",
@@ -59270,7 +60268,64 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 645 (char 644)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 645 (char 644)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "two_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_extra_classes",
+              "reason": "e041和e009支持本人因加课及作业安排发愁；预测提出调整负担、保留休息时间。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_canteen",
+              "reason": "e011和e038支持本人回避与宿舍同伴吃饭、事后失落；预测提出减少犹豫并尝试参与。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_privacy",
+              "reason": "e006和e018支持妈妈翻看日记引发的介意；预测提出向妈妈表达感受并建立隐私边界。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "three_route": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_peer_canteen",
+              "reason": "e011支持本人对同伴约饭犹豫且事后失落；预测指向调整参与方式。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_parent_privacy",
+              "reason": "e006和e018支持本人在意妈妈翻看日记；预测指向表达隐私需求和边界。"
+            }
+          ],
+          "recall": 0.6666666666666666,
+          "precision": 1.0,
+          "f1": 0.8,
+          "exact": false
+        }
+      }
     },
     {
       "id": "multi_14_long_t30",
@@ -64104,7 +65159,77 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 597 (char 596)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 597 (char 596)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 693 (char 692)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 677 (char 676)"
+        },
+        {
+          "retry": 3,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "two_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_extra_classes",
+              "reason": "新增物理课挤占休息时间，支持与家长澄清并调整补习安排。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_club",
+              "reason": "社团中未找到搭档、未参与集体拍照，支持减少回避并加入互动。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_emotion",
+              "reason": "实习受挫后对父母中断或掩饰表达，符合说出真实感受的目标。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "three_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_extra_classes",
+              "reason": "辅导课与作业占满日常，周末课程挤占休息，符合调整学习负担的目标。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_club",
+              "reason": "社团中未找到搭档，坐到同学身边后又离开，支持主动加入合作的目标。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_emotion",
+              "reason": "实习受挫后对父母咽回话语或称自己挺好，符合表达真实难过的目标。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_15_long_t30",
@@ -66497,7 +67622,69 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 686 (char 685)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 686 (char 685)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "three_route": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_exam_schedule",
+              "reason": "针对过满的复习计划提出减量调整；历史事件支持这一目标。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_peer_canteen",
+              "reason": "针对想与室友吃饭却犹豫退开的情况，提出回应邀约、参与活动。"
+            },
+            {
+              "prediction_id": "p4",
+              "gold_id": "gold_parent_privacy",
+              "reason": "针对妈妈翻看日记，提出表达感受并说明隐私边界。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 0.75,
+          "f1": 0.8571428571428571,
+          "exact": false
+        },
+        "two_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_exam_schedule",
+              "reason": "针对不断加码的复习计划提出减量调整；历史事件支持这一目标。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_canteen",
+              "reason": "针对与室友吃饭时想参与却退开的情况，提出回应或主动加入。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_privacy",
+              "reason": "针对妈妈翻看日记，提出表达介意并明确隐私边界。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_15_cross_t30",
@@ -67410,7 +68597,69 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 751 (char 750)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 751 (char 750)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "three_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_exam_schedule",
+              "reason": "复习安排过密影响睡眠和吃饭，预测提出调整计划；有e002、e013支持。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_canteen",
+              "reason": "与室友约饭时犹豫、退开后失落，预测提出调整参与方式；有e005、e021支持。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_privacy",
+              "reason": "妈妈翻看日记后，预测提出表达介意并沟通隐私边界；有e007、e024支持。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "two_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_exam_schedule",
+              "reason": "预测针对过密复习计划及受影响的饮食、睡眠，符合调整目标；有e002、e013支持。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_canteen",
+              "reason": "预测针对与室友同行吃饭时的犹豫和退开后的失落，符合减少回避的方向；有e005、e021支持。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_privacy",
+              "reason": "预测针对妈妈翻看日记，提出表达感受和个人物品边界；有e007、e024支持。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_15_cross_t60",
@@ -72241,7 +73490,73 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 694 (char 693)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 694 (char 693)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 649 (char 648)"
+        },
+        {
+          "retry": 2,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "two_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_exam_schedule",
+              "reason": "历史事件支持复习安排挤占睡眠和吃饭时间，预测指向调整计划、恢复状态。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_group_project",
+              "reason": "历史事件支持用户在课程项目分工和同组讨论中保持沉默，预测指向表达想法并参与合作。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_emotion",
+              "reason": "历史事件支持用户因父亲先前的回应而咽回实习受挫的感受，预测指向向父母说出真实难过。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "three_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_exam_schedule",
+              "reason": "历史事件支持复习加码导致少睡、漏餐和表现变差，预测指向调整复习计划。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_group_project",
+              "reason": "历史事件支持用户在同组讨论中删掉想法、未参与表达，预测指向说出想法。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_emotion",
+              "reason": "历史事件支持用户因父亲的回应而咽回话、删掉消息，预测指向向父母表达实习受挫的真实感受。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_16_cross_t60",
@@ -73662,7 +74977,69 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 805 (char 804)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 805 (char 804)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "three_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_exam_schedule",
+              "reason": "均指调整过密的复习计划，为睡眠和休息留出时间；历史事件支持。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_group_project",
+              "reason": "均指在课程项目小组合作中向同组同学表达想法和建议；历史事件支持。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_emotion",
+              "reason": "均指向父母说出实习受挫后的真实难过，而非隐瞒情绪；历史事件支持。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "two_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_exam_schedule",
+              "reason": "均指从排满的复习计划中做取舍，减轻对睡眠和状态的影响；历史事件支持。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_group_project",
+              "reason": "均指在小组合作中把已有想法告诉同组同学；历史事件支持。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_emotion",
+              "reason": "均指向父母表达实习受挫时的真实感受；历史事件支持。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_17_long_t30",
@@ -76056,7 +77433,73 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 801 (char 800)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 801 (char 800)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 703 (char 702)"
+        },
+        {
+          "retry": 2,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "two_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_committee",
+              "reason": "历史中的班级任务挤占学习时间，预测提出与老师澄清任务量并调整安排。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_club",
+              "reason": "历史显示在社团搭档和集体互动中回避，预测指向加入同学合作与互动。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_privacy",
+              "reason": "历史记录妈妈翻看日记及后续追问，预测指向向妈妈表达感受并明确隐私边界。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "three_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_committee",
+              "reason": "历史记录班级事务占用作业、复习和休息时间，预测指向协调与老师的任务安排。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_club",
+              "reason": "历史中的社团搭档和参与困难支持减少回避、加入同学合作的目标。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_privacy",
+              "reason": "历史中妈妈翻看并追问日记内容，支持与妈妈沟通私人物品隐私边界的目标。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_17_cross_t30",
@@ -78448,7 +79891,69 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 863 (char 862)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 863 (char 862)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "two_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_committee",
+              "reason": "历史中老师询问是否接下次活动，且学习负担曾影响作息；预测指向协调班级任务与学习休息。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_club",
+              "reason": "历史中多次在社团合作时退到一旁；预测指向减少回避、加入同学互动。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_privacy",
+              "reason": "历史中妈妈翻看日记后，用户减少了书写；预测指向表达感受并与妈妈沟通隐私边界。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "three_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_study_committee",
+              "reason": "班级事务曾挤占作业和复习时间，老师又提出新活动任务；预测指向调整任务与学习安排。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_peer_club",
+              "reason": "历史中用户在寻找搭档及参与合作时退缩；预测指向加入社团同学的合作。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_parent_privacy",
+              "reason": "妈妈翻看日记及追问内容的经历支持用户表达感受、澄清隐私边界的目标。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_18_long_t30",
@@ -84224,7 +85729,24 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 779 (char 778)"
+      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 754 (char 753)",
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 779 (char 778)"
+        },
+        {
+          "retry": 1,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 789 (char 788)"
+        },
+        {
+          "retry": 2,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 457 (char 456)"
+        },
+        {
+          "retry": 3,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 754 (char 753)"
+        }
+      ]
     },
     {
       "id": "multi_19_long_t60",
@@ -95385,7 +96907,69 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 826 (char 825)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 826 (char 825)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "two_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_parent_emotion",
+              "reason": "历史事件支持用户向父母表达实习受挫的真实难过，并希望获得倾听与支持。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_sleep_bed_work",
+              "reason": "历史事件支持用户减少在床上处理资料，区分工作与就寝环境以改善入睡。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_boundary_money",
+              "reason": "历史事件支持用户与借钱的朋友沟通旧款还款及新借款请求，同时顾及自身开支。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "three_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_parent_emotion",
+              "reason": "历史事件支持用户不再向父母隐瞒实习受挫的情绪，尝试表达真实感受。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_sleep_bed_work",
+              "reason": "历史事件支持调整床上处理资料的习惯，建立工作与睡眠空间的边界以改善入睡。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_boundary_money",
+              "reason": "历史事件支持用户向朋友澄清旧款还款安排，并结合房租等必要支出设定后续借款边界。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_21_cross_t30",
@@ -100243,7 +101827,69 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 846 (char 845)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 846 (char 845)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "three_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_phone",
+              "reason": "历史中多次提到睡前看手机导致晚睡、起床困难或次日头昏，主体、对象和期望改变一致。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_weekend",
+              "reason": "周末处理同事发来的工作及周日晚不敢关闭工作群通知，支持协调休息日回应安排、保留私人时间。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_boundary_roommate",
+              "reason": "室友借用耳机未明确归还时间，还曾把用户物品给别人用，支持协商物品借用和使用边界。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "two_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_phone",
+              "reason": "睡前使用手机拖延入睡并影响次日状态有历史事件支持，与减少睡前刷手机的目标一致。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_weekend",
+              "reason": "同事周末发来工作、用户持续关注工作群，支持澄清非工作时间的回复和通知规则。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_boundary_roommate",
+              "reason": "室友借用及转借用户物品的经历，支持向室友明确征得同意、归还和转借的边界。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_22_cross_t30",
@@ -101154,7 +102800,69 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 797 (char 796)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 797 (char 796)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "two_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_phone",
+              "reason": "历史记录显示睡前刷手机至深夜、次日难起；预测对应调整手机使用以改善休息。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_weekend",
+              "reason": "周六曾因同事临时发来工作而中断陪伴家人；预测对应协调休息日响应并保留私人时间。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_boundary_roommate",
+              "reason": "室友借耳机未说明归还时间、又拿走护肤品；预测对应协商个人物品的使用边界。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "three_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_phone",
+              "reason": "睡前刷手机至深夜及早晨难醒有历史记录支持，对应减少手机使用对休息的影响。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_weekend",
+              "reason": "周六因同事临时工作消息立即处理的经历，支持澄清休息日响应安排。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_boundary_roommate",
+              "reason": "室友借用耳机和拿走护肤品的经历，支持与室友说清个人物品的使用、归还边界。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        }
+      }
     },
     {
       "id": "multi_22_cross_t60",
@@ -112347,7 +114055,69 @@
           }
         ]
       },
-      "judge_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 718 (char 717)"
+      "judge_retry_history": [
+        {
+          "initial_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 718 (char 717)"
+        },
+        {
+          "retry": 1,
+          "status": "accepted_first_valid_response"
+        }
+      ],
+      "intent_scores": {
+        "three_route": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_bed_work",
+              "reason": "历史记录显示用户在床上处理资料，入睡时仍想到工作；预测提出分离床上工作与就寝。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_leave",
+              "reason": "历史记录显示已有替班联系人，用户休假时仍处理单位消息；预测提出按交接安排减少本人介入。"
+            },
+            {
+              "prediction_id": "p3",
+              "gold_id": "gold_boundary_money",
+              "reason": "历史记录支持朋友旧款未还、再次借款及用户需支付房租等开支；预测涵盖沟通还款、回应新请求和保护必要支出。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "exact": true
+        },
+        "two_route": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 0,
+          "matches": [
+            {
+              "prediction_id": "p1",
+              "gold_id": "gold_sleep_bed_work",
+              "reason": "历史记录支持床上处理资料与入睡困难之间的关联，预测提出调整这一习惯。"
+            },
+            {
+              "prediction_id": "p2",
+              "gold_id": "gold_work_leave",
+              "reason": "已有交接表和替班联系人，预测提出区分休假期间须本人处理与可交接的联系。"
+            },
+            {
+              "prediction_id": "p4",
+              "gold_id": "gold_boundary_money",
+              "reason": "相较仅涉及旧款还款的p3，p4还涉及朋友的新借款请求及用户自身开支，与参考目标重合更多；两项预测不能重复匹配同一参考。"
+            }
+          ],
+          "recall": 1.0,
+          "precision": 0.75,
+          "f1": 0.8571428571428571,
+          "exact": false
+        }
+      }
     },
     {
       "id": "multi_25_long_t30",
@@ -136767,14 +138537,14 @@
             }
           },
           "intent": {
-            "scored_nodes": 82,
-            "tp": 143,
-            "fp": 14,
+            "scored_nodes": 109,
+            "tp": 209,
+            "fp": 19,
             "fn": 8,
-            "micro_recall": 0.9470198675496688,
-            "micro_precision": 0.910828025477707,
-            "micro_f1": 0.9285714285714286,
-            "exact_nodes": 67
+            "micro_recall": 0.9631336405529954,
+            "micro_precision": 0.9166666666666666,
+            "micro_f1": 0.9393258426966292,
+            "exact_nodes": 89
           }
         },
         "three_route": {
@@ -136796,14 +138566,14 @@
             }
           },
           "intent": {
-            "scored_nodes": 82,
-            "tp": 142,
-            "fp": 13,
-            "fn": 9,
-            "micro_recall": 0.9403973509933775,
-            "micro_precision": 0.9161290322580645,
-            "micro_f1": 0.9281045751633987,
-            "exact_nodes": 68
+            "scored_nodes": 109,
+            "tp": 207,
+            "fp": 18,
+            "fn": 10,
+            "micro_recall": 0.9539170506912442,
+            "micro_precision": 0.92,
+            "micro_f1": 0.9366515837104072,
+            "exact_nodes": 90
           }
         }
       },
@@ -136827,14 +138597,14 @@
             }
           },
           "intent": {
-            "scored_nodes": 58,
-            "tp": 143,
-            "fp": 13,
+            "scored_nodes": 85,
+            "tp": 209,
+            "fp": 18,
             "fn": 8,
-            "micro_recall": 0.9470198675496688,
-            "micro_precision": 0.9166666666666666,
-            "micro_f1": 0.9315960912052117,
-            "exact_nodes": 44
+            "micro_recall": 0.9631336405529954,
+            "micro_precision": 0.920704845814978,
+            "micro_f1": 0.9414414414414415,
+            "exact_nodes": 66
           }
         },
         "three_route": {
@@ -136856,14 +138626,14 @@
             }
           },
           "intent": {
-            "scored_nodes": 58,
-            "tp": 142,
-            "fp": 12,
-            "fn": 9,
-            "micro_recall": 0.9403973509933775,
-            "micro_precision": 0.922077922077922,
-            "micro_f1": 0.9311475409836065,
-            "exact_nodes": 45
+            "scored_nodes": 85,
+            "tp": 207,
+            "fp": 17,
+            "fn": 10,
+            "micro_recall": 0.9539170506912442,
+            "micro_precision": 0.9241071428571429,
+            "micro_f1": 0.9387755102040817,
+            "exact_nodes": 67
           }
         }
       },
@@ -136950,14 +138720,14 @@
             }
           },
           "intent": {
-            "scored_nodes": 43,
-            "tp": 77,
-            "fp": 9,
+            "scored_nodes": 54,
+            "tp": 103,
+            "fp": 13,
             "fn": 4,
-            "micro_recall": 0.9506172839506173,
-            "micro_precision": 0.8953488372093024,
-            "micro_f1": 0.9221556886227545,
-            "exact_nodes": 34
+            "micro_recall": 0.9626168224299065,
+            "micro_precision": 0.8879310344827587,
+            "micro_f1": 0.9237668161434978,
+            "exact_nodes": 41
           }
         },
         "three_route": {
@@ -136979,14 +138749,14 @@
             }
           },
           "intent": {
-            "scored_nodes": 43,
-            "tp": 76,
-            "fp": 5,
+            "scored_nodes": 54,
+            "tp": 102,
+            "fp": 9,
             "fn": 5,
-            "micro_recall": 0.9382716049382716,
-            "micro_precision": 0.9382716049382716,
-            "micro_f1": 0.9382716049382716,
-            "exact_nodes": 36
+            "micro_recall": 0.9532710280373832,
+            "micro_precision": 0.918918918918919,
+            "micro_f1": 0.9357798165137615,
+            "exact_nodes": 44
           }
         }
       },
@@ -137010,14 +138780,14 @@
             }
           },
           "intent": {
-            "scored_nodes": 31,
-            "tp": 77,
-            "fp": 8,
+            "scored_nodes": 42,
+            "tp": 103,
+            "fp": 12,
             "fn": 4,
-            "micro_recall": 0.9506172839506173,
-            "micro_precision": 0.9058823529411765,
-            "micro_f1": 0.927710843373494,
-            "exact_nodes": 23
+            "micro_recall": 0.9626168224299065,
+            "micro_precision": 0.8956521739130435,
+            "micro_f1": 0.9279279279279279,
+            "exact_nodes": 30
           }
         },
         "three_route": {
@@ -137039,14 +138809,14 @@
             }
           },
           "intent": {
-            "scored_nodes": 31,
-            "tp": 76,
-            "fp": 5,
+            "scored_nodes": 42,
+            "tp": 102,
+            "fp": 9,
             "fn": 5,
-            "micro_recall": 0.9382716049382716,
-            "micro_precision": 0.9382716049382716,
-            "micro_f1": 0.9382716049382716,
-            "exact_nodes": 24
+            "micro_recall": 0.9532710280373832,
+            "micro_precision": 0.918918918918919,
+            "micro_f1": 0.9357798165137615,
+            "exact_nodes": 32
           }
         }
       },
@@ -137133,14 +138903,14 @@
             }
           },
           "intent": {
-            "scored_nodes": 39,
-            "tp": 66,
-            "fp": 5,
+            "scored_nodes": 55,
+            "tp": 106,
+            "fp": 6,
             "fn": 4,
-            "micro_recall": 0.9428571428571428,
-            "micro_precision": 0.9295774647887324,
-            "micro_f1": 0.9361702127659575,
-            "exact_nodes": 33
+            "micro_recall": 0.9636363636363636,
+            "micro_precision": 0.9464285714285714,
+            "micro_f1": 0.954954954954955,
+            "exact_nodes": 48
           }
         },
         "three_route": {
@@ -137162,14 +138932,14 @@
             }
           },
           "intent": {
-            "scored_nodes": 39,
-            "tp": 66,
-            "fp": 8,
-            "fn": 4,
-            "micro_recall": 0.9428571428571428,
-            "micro_precision": 0.8918918918918919,
-            "micro_f1": 0.9166666666666666,
-            "exact_nodes": 32
+            "scored_nodes": 55,
+            "tp": 105,
+            "fp": 9,
+            "fn": 5,
+            "micro_recall": 0.9545454545454546,
+            "micro_precision": 0.9210526315789473,
+            "micro_f1": 0.9375,
+            "exact_nodes": 46
           }
         }
       },
@@ -137193,14 +138963,14 @@
             }
           },
           "intent": {
-            "scored_nodes": 27,
-            "tp": 66,
-            "fp": 5,
+            "scored_nodes": 43,
+            "tp": 106,
+            "fp": 6,
             "fn": 4,
-            "micro_recall": 0.9428571428571428,
-            "micro_precision": 0.9295774647887324,
-            "micro_f1": 0.9361702127659575,
-            "exact_nodes": 21
+            "micro_recall": 0.9636363636363636,
+            "micro_precision": 0.9464285714285714,
+            "micro_f1": 0.954954954954955,
+            "exact_nodes": 36
           }
         },
         "three_route": {
@@ -137222,14 +138992,14 @@
             }
           },
           "intent": {
-            "scored_nodes": 27,
-            "tp": 66,
-            "fp": 7,
-            "fn": 4,
-            "micro_recall": 0.9428571428571428,
-            "micro_precision": 0.9041095890410958,
-            "micro_f1": 0.9230769230769231,
-            "exact_nodes": 21
+            "scored_nodes": 43,
+            "tp": 105,
+            "fp": 8,
+            "fn": 5,
+            "micro_recall": 0.9545454545454546,
+            "micro_precision": 0.9292035398230089,
+            "micro_f1": 0.9417040358744395,
+            "exact_nodes": 35
           }
         }
       },
@@ -137294,5 +139064,8 @@
         }
       }
     }
-  }
+  },
+  "original_result_sha256": "e628652cf9787c025f8b1cadfebce5e863867b74d3f6ae872a5392fcd7689a61",
+  "frozen_predictions_sha256": "a829a8e1bcf2b5dd8c78eac6972bfa567fdb1f0fea4d2ce9232567696f4fee04",
+  "rejudge_note": "Only prior JSON parsing failures retried; identical predictions, evidence, prompt and model; successful initial judgments retained; all attempts logged."
 }
