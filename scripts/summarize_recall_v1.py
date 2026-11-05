@@ -60,6 +60,10 @@ def summarize(dataset,result,cache):
             'judge_errors':[{'id':r['id'],'error':r['judge_error']} for r in rows.values() if 'judge_error' in r],
             'unique_tagged_texts':len(cache['tags']),'summary':{},'r10_regressions':errors,'r10_improvements':improvements,
             'evidence_coverage':coverage,'limitations':result['limitations']}
+    if 'rejudge_note' in result:
+        output['rejudge_note']=result['rejudge_note']
+        output['original_result_sha256']=result['original_result_sha256']
+        output['frozen_predictions_sha256']=result['frozen_predictions_sha256']
     for mode in ['all','long','cross']:
         for cutoff in [None,30,60]:
             name=mode+('' if cutoff is None else '_t'+str(cutoff))
@@ -131,6 +135,8 @@ def report(summary):
       '- 长/跨会话使用配对文字，本轮无时间检索或生产图谱构建，初始召回的差异不应归因于跨会话推理能力。',
       '- 每组最多十个完整事件，但 token 数未严格相等；不声称总成本更低。执行并发为 1。','',
       '[实验协议](docs/recall-ablation-v1.md) · [冻结数据](data/recall_dataset_v1.json) · [完整结果](data/recall_v1_results.json) · [指标与错误](data/recall_v1_summary.json) · [标签及向量](data/recall_v1_cache.json) · [调用记录](data/recall_v1_model_calls.jsonl)','']
+    if summary.get('rejudge_note'):
+        lines+=['初次评分有 38 个 JSON 解析错误，本次仅对这些节点按原提示词重试并接受首个有效输出；原始预测、检索结果及初次成功评分均未改变。全部重试记录保留。[初次结果](data/recall_v1_initial_results.json)。','']
     return '\n'.join(lines)
 
 
